@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>20 匹配路由&异常捕获：如何用转化器实现匹配规则？ - 极客时间文档</title>
+        <title>20 匹配路由&amp;异常捕获：如何用转化器实现匹配规则？ - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              20 匹配路由&异常捕获：如何用转化器实现匹配规则？
+              20 匹配路由&amp;异常捕获：如何用转化器实现匹配规则？
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -3238,7 +3237,7 @@
           
   
   <span class="md-ellipsis">
-    20 匹配路由&异常捕获：如何用转化器实现匹配规则？
+    20 匹配路由&amp;异常捕获：如何用转化器实现匹配规则？
     
   </span>
   
@@ -3250,7 +3249,7 @@
         
   
   <span class="md-ellipsis">
-    20 匹配路由&异常捕获：如何用转化器实现匹配规则？
+    20 匹配路由&amp;异常捕获：如何用转化器实现匹配规则？
     
   </span>
   
@@ -3885,7 +3884,7 @@
         
   
   <span class="md-ellipsis">
-    09 ElementU & CSS：如何设计页面逻辑与功能点？
+    09 ElementU &amp; CSS：如何设计页面逻辑与功能点？
     
   </span>
   
@@ -4083,7 +4082,7 @@
         
   
   <span class="md-ellipsis">
-    答疑篇 前导篇&前端实战篇思考题答案
+    答疑篇 前导篇&amp;前端实战篇思考题答案
     
   </span>
   
@@ -9931,7 +9930,7 @@
       
   
   <span class="md-ellipsis">
-    深入拆解Tomcat & Jetty
+    深入拆解Tomcat &amp; Jetty
     
   </span>
   
@@ -13244,7 +13243,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -13399,20 +13398,20 @@
 <p>接下来，我们通过一个简单的案例来测试一下。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="err">（</span><span class="vm">__name__</span><span class="err">）</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/index/&lt;name&gt;&#39;</span><span class="p">)</span>  
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/index/&lt;name&gt;'</span><span class="p">)</span>  
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># http://127.0.0.1:5000/index/flask</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;当前URL中的动态参数为：</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span> 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="k">return</span> <span class="sa">f</span><span class="s1">'当前URL中的动态参数为：</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">'</span> 
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> <span class="c1"># 当前请求的动态参数为：flask</span>
 </code></pre></div>
 <p>在上面的例子当中，index()函数可以返回URL中输入的动态参数name。当我们在URL中输入 “<strong>127.0.0.1:5000/index/flask</strong>”时，页面也同样会打印我们传入的动态参数flask。</p>
 <p>还有另一种方式就是在输入路由的时候指定传入参数。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="err">（</span><span class="vm">__name__</span><span class="err">）</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/index/n=&lt;name&gt;&#39;</span><span class="p">)</span>  
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/index/n=&lt;name&gt;'</span><span class="p">)</span>  
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># http://127.0.0.1:5000/index/n=flask</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;当前URL中的动态参数为：</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span> 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="k">return</span> <span class="sa">f</span><span class="s1">'当前URL中的动态参数为：</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">'</span> 
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> <span class="c1"># 当前请求的动态参数为：flask</span>
 </code></pre></div>
 <p>其实我们使用赋值的方式，同样可以传入这个参数，在URL中输入以下域名地址就能实现和上一段代码相同的效果。</p>
@@ -13426,17 +13425,17 @@
 <p>下面我会通过一个Int转化器的案例，带你了解一下系统自带转化器的应用方法。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/index/&lt;int:id&gt;&quot;</span><span class="p">,)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/index/&lt;int:id&gt;"</span><span class="p">,)</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  <span class="k">if</span> <span class="nb">id</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">return</span> <span class="s1">&#39;first&#39;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">return</span> <span class="s1">'first'</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="k">elif</span> <span class="nb">id</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">return</span> <span class="s1">&#39;second&#39;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">return</span> <span class="s1">'second'</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  <span class="k">elif</span> <span class="nb">id</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">return</span> <span class="s1">&#39;thrid&#39;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">return</span> <span class="s1">'thrid'</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="k">return</span> <span class="s1">&#39;hello world!&#39;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="k">return</span> <span class="s1">'hello world!'</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 <p>上一段代码中使用了path转化器。在 @app.route(“/index/&lt;int:id&gt;”) 这行代码中，使用了&lt;int:id&gt;来定义一个整数类型的参数id，并将其绑定到URL路径中的变量id。</p>
@@ -13464,7 +13463,7 @@
 <p>当然，我们在 Flask 中使用自定义转换器之前，还需要将其注册到应用中。具体的代码是后面这样。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Flask_DIY_Converter</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Flask_DIY_Converter</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">#将自定义的转换器my_cv，</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">#添加到Flask类下url_map属性（一个Map类的实例）包含的转换器字典属性中</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># converters就是这个转换器字典</span>
@@ -13475,10 +13474,10 @@
 <p>其中converters是一个字典，它的键是自定义参数转换器的名称，值是实现参数转换逻辑的函数或类。</p>
 <p>在前面的代码中，自定义的参数转换器是my_cv，对应的实现逻辑是 Flask_DIY_Converter 类。my_cv 被用在 URL 映射规则中，这意味着在匹配 URL 路径时，Flask 会使用 my_cv 对应的参数转换逻辑来转换 URL 路径中的参数，从而实现参数的类型转化。</p>
 <p>在app实例对象当中添加好转化器字典以后，就可以在 URL 规则中使用自定义转换器了。使用方法和系统自带转换器大体一样，只需要把函数换成我们自己定义的my_cv转化器即可。具体代码我给你写在了后面，供你参考。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/user/&lt;my_cv:user_id&gt;&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/user/&lt;my_cv:user_id&gt;'</span><span class="p">)</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">show_</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  <span class="c1"># user_id 是一个整数类型的变量</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  <span class="k">return</span> <span class="s1">&#39;User </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">user_id</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  <span class="k">return</span> <span class="s1">'User </span><span class="si">%d</span><span class="s1">'</span> <span class="o">%</span> <span class="n">user_id</span>
 </code></pre></div>
 <p>接下来，我们使用 my_cv 转换器来将 URL 中的字符串转换成整数类型的变量。这样一来，在视图函数中就可以直接使用整数类型的变量了。</p>
 <p>我把具体的代码都整合在一起了，你可以对照文稿来理解。</p>
@@ -13492,17 +13491,17 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="c1"># 将变量转换成字符串</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Flask_DIY_Converter</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/user/&lt;my_cv:user_id&gt;&#39;</span><span class="p">)</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># 实现和 @app.route(&#39;/user/&lt;int:user_id&gt;&#39;)一样的功能</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Flask_DIY_Converter</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/user/&lt;my_cv:user_id&gt;'</span><span class="p">)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># 实现和 @app.route('/user/&lt;int:user_id&gt;')一样的功能</span>
 <a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">show_</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
 <a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  <span class="c1"># user_id 是一个整数类型的变量</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  <span class="k">return</span> <span class="s1">&#39;User </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">user_id</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  <span class="k">return</span> <span class="s1">'User </span><span class="si">%d</span><span class="s1">'</span> <span class="o">%</span> <span class="n">user_id</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 <p>运行前面这段代码，页面就会呈现后面的截图。运行到这里，我们已经成功通过自定义的路由参数转化器，将字符串类型的用户 ID 参数转换成了整数类型。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/5f/35/5f35c296aa87ff52a63277779f557235.jpg?wh=2600x650" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/5f/35/5f35c296aa87ff52a63277779f557235.jpg?wh=2600x650"></p>
 <h3 id="_5">正则匹配路由</h3>
 <p>说到这里，你或许会有疑问：为了修改自定义转换器的功能，我们每次都需要在自定义类Flask_DIY_Converter中，修改其中的to_url()和to_python()函数的返回值太不方便了，有没有更简便的方式呢？</p>
 <p>这个当然是有的，我们可以使用regex。那什么是regex？</p>
@@ -13511,7 +13510,7 @@
 <p>普通字符是正则表达式中除了元字符以外的所有字符，例如字母、数字、标点符号等。</p>
 <p>我们在Flask当中用正则表达式去匹配路由，能够很好地利用正则的匹配字符串的模式、数据校验字符串筛选等等。</p>
 <p>跟住我的思路，我带你结合例子了解一下什么是正则表达式，还有如何用它来实现我们想要的自定义匹配。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="sa">r</span><span class="s1">&#39;^1[3-9]\d</span><span class="si">{9}</span><span class="s1">$&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="sa">r</span><span class="s1">'^1[3-9]\d</span><span class="si">{9}</span><span class="s1">$'</span>
 </code></pre></div>
 <p>下面我也写了对应的验证条件，你可以看一下，这个就是我们常用到的手机号格式验证。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">^</span><span class="mi">1</span><span class="err">：</span><span class="n">开头必须为1</span>
@@ -13537,13 +13536,13 @@
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="c1">#这样，就可以在类中使用self.regex来匹配字符串或执行其他与正则表达式相关的操作</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    <span class="k">return</span> <span class="n">value</span> <span class="c1"># 由于使用了regex，这里无需再手动定义返回什么类型 </span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c1"># 此处my_cv后括号内的匹配语句，被自动传给我们定义的转换器中的regex属性</span>
 <a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="c1"># user_id值会与该语句匹配，匹配成功则传达给url映射的视图函数</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/user/&lt;my_cv(&#39;1\d</span><span class="si">{10}</span><span class="s2">&#39;):user_id&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/user/&lt;my_cv('1\d</span><span class="si">{10}</span><span class="s2">'):user_id&gt;"</span><span class="p">)</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="k">def</span><span class="w"> </span><span class="nf">show_</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>  <span class="k">return</span> <span class="s1">&#39;User </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">user_id</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>  <span class="k">return</span> <span class="s1">'User </span><span class="si">%d</span><span class="s1">'</span> <span class="o">%</span> <span class="n">user_id</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 <p>在这段代码中我们先要定义一个类，同时需要定义这个类的属性。我们先使用super继承RegexConverter类中的url_map属性，再自定义一个regex属性，这样就可以直接设定规则并且使用，无需在类的操作to_python中再去手动定义返回类型了。</p>
@@ -13558,18 +13557,18 @@
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">regex</span> <span class="o">=</span> <span class="n">regex</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="k">return</span> <span class="n">value</span>  
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;my_cv(r&#39;1[3456789]\d</span><span class="si">{9}</span><span class="s2">&#39;):user_id&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/&lt;my_cv(r'1[3456789]\d</span><span class="si">{9}</span><span class="s2">'):user_id&gt;"</span><span class="p">)</span>
 <a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  <span class="k">return</span> <span class="s1">&#39;格式正确&#39;</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  <span class="k">return</span> <span class="s1">'格式正确'</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">return</span>  
 </code></pre></div>
 <p>后面截图展示了输入格式正确情况下的运行结果。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/fe/98/feb4751850c27bff31210334608eb898.jpg?wh=2600x526" /></p>
-<p>如果不按照规则，比如多输入一位数字4，则会显示界面找不到。<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/c0/39/c07bbdb4a358d8e346370070b4096e39.jpg?wh=2523x526" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/fe/98/feb4751850c27bff31210334608eb898.jpg?wh=2600x526"></p>
+<p>如果不按照规则，比如多输入一位数字4，则会显示界面找不到。<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/c0/39/c07bbdb4a358d8e346370070b4096e39.jpg?wh=2523x526"></p>
 <p>但是像上面的这种情况，如果用户遇到错误之后，我们程序中没有任何异常处理的话，体感非常不好。所以我们要尽可能全面地去捕获异常错误，优化程序运行过程的同时，也要去提升用户体验，我们趁热打铁，继续学习如何进行异常捕获。</p>
 <h2 id="_6">异常捕获</h2>
 <p>异常捕获通常指的是接口异常捕获。当程序出现异常的时候，刚好用户请求了服务器资源，而这个资源又不存在，那么用户就得不到有效的反馈，这种情况就需要我们用到接口异常捕获。我们先捕捉到错误，然后再进行优化处理，这样就能提高用户体验和代码流畅度。</p>
@@ -13588,16 +13587,16 @@
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">regex</span> <span class="o">=</span> <span class="n">regex</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="k">return</span> <span class="n">value</span>  
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;my_cv(r&#39;1[3456789]\d</span><span class="si">{9}</span><span class="s2">&#39;):user_id&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/&lt;my_cv(r'1[3456789]\d</span><span class="si">{9}</span><span class="s2">'):user_id&gt;"</span><span class="p">)</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;1[3456789]\d</span><span class="si">{9}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">'1[3456789]\d</span><span class="si">{9}</span><span class="s1">'</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
 <a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="c1"># abort的用法类似于python中的raise，在网页中主动抛出错误</span>
 <a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>    <span class="k">return</span> <span class="kc">None</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="k">return</span> <span class="s1">&#39;格式正确&#39;</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="k">return</span> <span class="s1">'格式正确'</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 <p>对照代码可以看到，我们同样需要在路由中自定义规则。其中，re是Python中的正则表达式模块。re模块中包含了许多函数和方法，re.match就是用来检测user_id和我们自定义的规则是否吻合。如果不符合，我们就可以直接使用about函数，对应括号当中404会主动抛出这样一个错误；如果符合，则返回“格式正确”的字样。</p>
@@ -13606,7 +13605,7 @@
 <p>此时，我们可以使用errorhandler这个注释装饰器来修改。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">page_not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  <span class="k">return</span> <span class="s2">&quot;404错误，您访问的页面不存在，原因是您所输入的URL格式有误！&quot;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  <span class="k">return</span> <span class="s2">"404错误，您访问的页面不存在，原因是您所输入的URL格式有误！"</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># 比如说404，当abort抛出这个404异常之后，就会访问以下的这个代码。</span>
 </code></pre></div>
 <p>这里我们定义了一个名叫 page_not_found的函数，它会接收一个参数error，表示发生的错误。函数返回一个包含错误消息的响应， 例如提示用户访问的页面不存在。</p>
@@ -13623,31 +13622,31 @@
 <a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">regex</span> <span class="o">=</span> <span class="n">regex</span>
 <a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="k">return</span> <span class="n">value</span>  
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
 <a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">page_not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  <span class="k">return</span> <span class="s2">&quot;404错误，您访问的页面不存在，原因是您所输入的URL格式有误！&quot;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  <span class="k">return</span> <span class="s2">"404错误，您访问的页面不存在，原因是您所输入的URL格式有误！"</span>
 <a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="c1"># 比如说404，当abort抛出这个404异常之后，就会访问以下的这个代码。</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;my_cv(r&#39;1[3456789]</span><span class="se">\\</span><span class="s2">d</span><span class="si">{9}</span><span class="s2">&#39;):user_id&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/&lt;my_cv(r'1[3456789]</span><span class="se">\\</span><span class="s2">d</span><span class="si">{9}</span><span class="s2">'):user_id&gt;"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
 <a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>  <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;1[3456789]</span><span class="se">\\</span><span class="s1">d</span><span class="si">{9}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>  <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">'1[3456789]</span><span class="se">\\</span><span class="s1">d</span><span class="si">{9}</span><span class="s1">'</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
 <a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="c1"># abort的用法类似于python中的raise，在网页中主动抛出错误</span>
 <a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>    <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
 <a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>    <span class="k">return</span> <span class="kc">None</span>
 <a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>  <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>    <span class="k">return</span> <span class="s1">&#39;格式正确&#39;</span>
-<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>    <span class="k">return</span> <span class="s1">'格式正确'</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
-<p>此时异常捕获后，就会给用户展示后面这样的界面。<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/b4/08/b4c4c56c9f933d36567c78d645049b08.jpg?wh=2523x526" /></p>
+<p>此时异常捕获后，就会给用户展示后面这样的界面。<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/b4/08/b4c4c56c9f933d36567c78d645049b08.jpg?wh=2523x526"></p>
 <h3 id="try-except">try-except语法结构</h3>
 <p>前面两块应用都是对异常的处理以及对异常信息做友好的提示，方便用户知道系统出现问题的原因，提升产品体验。</p>
 <p>但如果出现程序崩溃的情况我们又该如何处理呢？这时候我们就需要用到try-except语法结构。</p>
 <p>使用try-except语法结构主要有两点好处。首先就是避免程序崩溃。异常处理是一种保护机制，可以避免程序因未处理的异常而崩溃。要知道如果程序出现异常错误并崩溃，用户体验将受到很大影响，使用try-except可以避免这种情况的发生。</p>
 <p>另外，使用try-except还支持错误信息处理，我们在except块中可以获取并处理错误信息。</p>
-<p>我们来看一个出现异常的例子。在Practice下新建lb_03.py，注意，此时的templates中只有两个模板，不存在index2.html。<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/cf/8d/cfb43ed61012f7daff85738bd372da8d.jpg?wh=2428x526" /></p>
+<p>我们来看一个出现异常的例子。在Practice下新建lb_03.py，注意，此时的templates中只有两个模板，不存在index2.html。<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/cf/8d/cfb43ed61012f7daff85738bd372da8d.jpg?wh=2428x526"></p>
 <p>lb_03.py代码如下。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span><span class="n">render_template</span><span class="p">,</span><span class="n">abort</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
@@ -13659,16 +13658,16 @@
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">regex</span> <span class="o">=</span> <span class="n">regex</span>
 <a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    <span class="k">return</span> <span class="n">value</span>  
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;my_cv(r&#39;1[3456789]</span><span class="se">\\</span><span class="s2">d</span><span class="si">{9}</span><span class="s2">&#39;):user_id&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/&lt;my_cv(r'1[3456789]</span><span class="se">\\</span><span class="s2">d</span><span class="si">{9}</span><span class="s2">'):user_id&gt;"</span><span class="p">)</span>
 <a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;1[3456789]\d</span><span class="si">{9}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>      <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index2.html&#39;</span><span class="p">)</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">'1[3456789]\d</span><span class="si">{9}</span><span class="s1">'</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>      <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'index2.html'</span><span class="p">)</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 <p>这段代码中，我们先不进行异常处理。在user_id正确匹配格式时，我们渲染一个并不存在的模板index2.html，来测试一下会发生什么异常。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/66/e5/6693ee9071b04920ed38a909211e00e5.jpg?wh=2428x526" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/66/e5/6693ee9071b04920ed38a909211e00e5.jpg?wh=2428x526"></p>
 <p>虽然我们的url输入了正确的格式，执行语句render_template(‘index2.html’)，但却因为我们渲染了一个不存在的index2.html，就会导致程序崩溃。</p>
 <p>这里我们可以使用try-except Exception as e，不让程序崩溃，并且处理这个异常，然后返回给用户。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span><span class="n">render_template</span><span class="p">,</span><span class="n">abort</span>
@@ -13681,19 +13680,19 @@
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">regex</span> <span class="o">=</span> <span class="n">regex</span>
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="k">return</span> <span class="n">value</span>  
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">&#39;my_cv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;my_cv(r&#39;1[3456789]</span><span class="se">\\</span><span class="s2">d</span><span class="si">{9}</span><span class="s2">&#39;):user_id&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">app</span><span class="o">.</span><span class="n">url_map</span><span class="o">.</span><span class="n">converters</span><span class="p">[</span><span class="s1">'my_cv'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegexConverter</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/&lt;my_cv(r'1[3456789]</span><span class="se">\\</span><span class="s2">d</span><span class="si">{9}</span><span class="s2">'):user_id&gt;"</span><span class="p">)</span>
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
 <a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>  <span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;1[3456789]\d</span><span class="si">{9}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>      <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index2.html&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">'1[3456789]\d</span><span class="si">{9}</span><span class="s1">'</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>      <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'index2.html'</span><span class="p">)</span>
 <a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>  <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>      <span class="k">return</span> <span class="s2">&quot;出现异常：&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>      <span class="k">return</span> <span class="s2">"出现异常："</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
 <a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 <p>运行结果是后面这样。</p>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/d5/d6/d53e206a703e73a4812c558373c976d6.png?wh=1920x397" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/d5/d6/d53e206a703e73a4812c558373c976d6.png?wh=1920x397"></p>
 <p>你可以看一下效果图。我们不仅捕获了异常，还避免了程序发生崩溃。在此基础上又对程序进行了简单处理，提示用户index2.html这个模板出现异常，帮助用户精准定位问题。</p>
 <p>在整个在线视频平台中try-except这种异常捕获的方法用得比较多，因为这种异常捕获方式允许我们对异常进行操作处理。使用try-except机制来处理可能出现的异常，可以保证程序的稳定性和可靠性。</p>
 <h1 id="_7">总结</h1>
@@ -13708,14 +13707,22 @@
 <p>欢迎你在留言区和我交流讨论，如果这节课对你有启发，也推荐你把它发给身边更多朋友。</p>
 <div><strong>精选留言（4）</strong></div>
 <ul>
-<li><span>长林啊</span> 👍（1） 💬（1）<p>正则的其他使用场景：数据格式校验、数据检索和提取</p>2023-06-09</li><br/><li><span>Rongfan Leo</span> 👍（0） 💬（1）<p>动态路由可以根据界面的不同，生成不一样的 URL。不同于静态路由，动态路由往往在后边会有一个变量作为动态参数，我们通常将其命名为。
+<li>
+<span>长林啊</span> 👍（1） 💬（1）<p>正则的其他使用场景：数据格式校验、数据检索和提取</p>2023-06-09</li>
+<br><li>
+<span>Rongfan Leo</span> 👍（0） 💬（1）<p>动态路由可以根据界面的不同，生成不一样的 URL。不同于静态路由，动态路由往往在后边会有一个变量作为动态参数，我们通常将其命名为。
 
-如以上原文：命名为？命名为什么</p>2024-08-09</li><br/><li><span>peter</span> 👍（0） 💬（1）<p>Q1：“VSCode中编辑vue文件，而vue文件是node解析的，这个关系应该是在VSCode中指定的吧。请问，是在VSCode的什么地方指定的？”，我在第17课中问过这个问题，不过老师误解我的意思了。 我知道VSCode不是node.js。我的问题是：那么，vue怎么就自动找到node解析了？谁告诉vue去找node解析？就是说vue和node之间存在一种关系，这种关系是在哪里指定的？ （比如，一种可能是在VSCode中配置的）
+如以上原文：命名为？命名为什么</p>2024-08-09</li>
+<br><li>
+<span>peter</span> 👍（0） 💬（1）<p>Q1：“VSCode中编辑vue文件，而vue文件是node解析的，这个关系应该是在VSCode中指定的吧。请问，是在VSCode的什么地方指定的？”，我在第17课中问过这个问题，不过老师误解我的意思了。 我知道VSCode不是node.js。我的问题是：那么，vue怎么就自动找到node解析了？谁告诉vue去找node解析？就是说vue和node之间存在一种关系，这种关系是在哪里指定的？ （比如，一种可能是在VSCode中配置的）
 
 Q2：try .. except出异常后会自动施法资源吗？
-Q3：正则表达式字符串最前面的r表示什么？</p>2023-06-07</li><br/><li><span>Rongfan Leo</span> 👍（0） 💬（0）<p>我们在 Flask_DIY_Converter 里注册一个名为 my_cv 的转换器。这里的 app.url_map 和上节课的 app.add_url_to 用法类似。
+Q3：正则表达式字符串最前面的r表示什么？</p>2023-06-07</li>
+<br><li>
+<span>Rongfan Leo</span> 👍（0） 💬（0）<p>我们在 Flask_DIY_Converter 里注册一个名为 my_cv 的转换器。这里的 app.url_map 和上节课的 app.add_url_to 用法类似。
 
-上节课哪有app.add_url_to?</p>2024-08-10</li><br/>
+上节课哪有app.add_url_to?</p>2024-08-10</li>
+<br>
 </ul>
 
 
@@ -13741,7 +13748,7 @@ Q3：正则表达式字符串最前面的r表示什么？</p>2023-06-07</li><br/
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -13751,13 +13758,13 @@ Q3：正则表达式字符串最前面的r表示什么？</p>2023-06-07</li><br/
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../19-%E8%B7%AF%E7%94%B1%E5%AE%9A%E4%B9%89%E5%92%8C%E8%A7%86%E5%9B%BE%E5%B8%B8%E7%94%A8%E9%80%BB%E8%BE%91%EF%BC%9A%E8%B7%AF%E7%94%B1%E5%AE%9A%E4%B9%89%E5%92%8C%E8%A7%86%E5%9B%BE%E7%9A%84%E6%A0%B8%E5%BF%83%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 19 路由定义和视图常用逻辑：路由定义和视图的核心是什么？">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -13782,7 +13789,7 @@ Q3：正则表达式字符串最前面的r表示什么？</p>2023-06-07</li><br/
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>35 RESTful & Socket：行情数据对接和抓取 - 极客时间文档</title>
+        <title>35 RESTful &amp; Socket：行情数据对接和抓取 - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              35   RESTful & Socket：行情数据对接和抓取
+              35   RESTful &amp; Socket：行情数据对接和抓取
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -3901,7 +3900,7 @@
         
   
   <span class="md-ellipsis">
-    31   pdb & cProfile：调试和性能分析的法宝
+    31   pdb &amp; cProfile：调试和性能分析的法宝
     
   </span>
   
@@ -3967,7 +3966,7 @@
         
   
   <span class="md-ellipsis">
-    34   RESTful & Socket：搭建交易执行层核心
+    34   RESTful &amp; Socket：搭建交易执行层核心
     
   </span>
   
@@ -3996,7 +3995,7 @@
           
   
   <span class="md-ellipsis">
-    35   RESTful & Socket：行情数据对接和抓取
+    35   RESTful &amp; Socket：行情数据对接和抓取
     
   </span>
   
@@ -4008,7 +4007,7 @@
         
   
   <span class="md-ellipsis">
-    35   RESTful & Socket：行情数据对接和抓取
+    35   RESTful &amp; Socket：行情数据对接和抓取
     
   </span>
   
@@ -4093,7 +4092,7 @@
         
   
   <span class="md-ellipsis">
-    36   Pandas & Numpy：策略与回测系统
+    36   Pandas &amp; Numpy：策略与回测系统
     
   </span>
   
@@ -4115,7 +4114,7 @@
         
   
   <span class="md-ellipsis">
-    37   Kafka & ZMQ：自动化交易流水线
+    37   Kafka &amp; ZMQ：自动化交易流水线
     
   </span>
   
@@ -4269,7 +4268,7 @@
         
   
   <span class="md-ellipsis">
-    43   Q&A：聊一聊职业发展和选择
+    43   Q&amp;A：聊一聊职业发展和选择
     
   </span>
   
@@ -9975,7 +9974,7 @@
       
   
   <span class="md-ellipsis">
-    深入拆解Tomcat & Jetty
+    深入拆解Tomcat &amp; Jetty
     
   </span>
   
@@ -13288,7 +13287,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -13368,7 +13367,7 @@
   
 
 
-  <h1>35   RESTful & Socket：行情数据对接和抓取</h1>
+  <h1>35   RESTful &amp; Socket：行情数据对接和抓取</h1>
 
 <p>你好，我是景霄。</p>
 <p>上一节课，我们介绍了交易所的交易模式，数字货币交易所RESTful接口的常见概念，以及如何调用RESTful接口进行订单操作。众所周知，买卖操作的前提，是你需要已知市场的最新情况。这节课里，我将介绍交易系统底层另一个最重要的部分，行情数据的对接和抓取。</p>
@@ -13378,8 +13377,8 @@
 <p>回顾上一节我们提到的，交易所是一个买方、卖方之间的公开撮合平台。买卖方把需要/可提供的商品数量和愿意出/接受的价格提交给交易所，交易所按照公平原则进行撮合交易。</p>
 <p>那么撮合交易是怎么进行的呢？假设你是一个人肉比特币交易所，大量的交易订单往你这里汇总，你应该如何选择才能让交易公平呢？</p>
 <p>显然，最直观的操作就是，把买卖订单分成两个表，按照价格由高到低排列。下面的图，就是买入和卖出的委托表。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/6b/2d/6bade6ffe3b8d439b7826cbe6d84a22d.png?wh=1282%2A388" /></p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/0d/4c/0d7f5bcbb766097b84b7ad36d2b26a4c.png?wh=1272%2A344" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/6b/2d/6bade6ffe3b8d439b7826cbe6d84a22d.png?wh=1282%2A388"></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/0d/4c/0d7f5bcbb766097b84b7ad36d2b26a4c.png?wh=1272%2A344"></p>
 <p>如果最高的买入价格小于最低的卖出价格，那就不会有任何交易发生。这通常是你看到的委托列表的常态。</p>
 <p>如果最高的买入价格和最低的卖出价格相同，那么就尝试进行撮合。比如BTC在9002.01就会发生撮合，最后按照9002.01的价格，成交0.0330个BTC。当然，交易完成后，小林未完成部分的订单（余下0.1126 - 0.0330 = 0.0796 个 BTC 未卖出），还会继续在委托表里。</p>
 <p>不过你可能会想，如果买入和卖出的价格有交叉，那么成交价格又是什么呢？事实上，这种情况并不会发生。我们来试想一下下面这样的场景。</p>
@@ -13392,7 +13391,7 @@
 <li>中间的大字部分，9994.10 USD是当前的市场价格，也就是上一次成交交易的价格。</li>
 <li>下面绿色部分的含义与上半部分类似，不过指的是买入委托和对应的数量。</li>
 </ul>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/74/1e/740e88e95dcab334652f8761ca58171e.png?wh=932%2A964" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/74/1e/740e88e95dcab334652f8761ca58171e.png?wh=932%2A964"></p>
 <p>Gemini的委托账本，来自<a href="https://cryptowat.ch">https://cryptowat.ch</a></p>
 <p>这张图中，最低的卖出价格比最高的买入价格要高 6.51 USD，这个价差通常被称为Spread。这里验证了我们前面提到的，委托账本的价格永不交叉； 同时，Spread很小也能说明这是一个非常活跃的交易所。</p>
 <p>每一次撮合发生，意味着一笔交易（Trade）的发生。卖方买方都很开心，于是交易所也很开心地通知行情数据的订阅者：刚才发生了一笔交易，交易的价格是多少，成交数量是多少。这个数据就是活动行情Tick。</p>
@@ -13404,12 +13403,12 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>def get_orderbook():
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  orderbook = requests.get(&quot;https://api.gemini.com/v1/book/btcusd&quot;).json()
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  orderbook = requests.get("https://api.gemini.com/v1/book/btcusd").json()
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>n = 10
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>latency = timeit.timeit(&#39;get_orderbook()&#39;, setup=&#39;from __main__ import get_orderbook&#39;, number=n) * 1.0 / n
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>print(&#39;Latency is {} ms&#39;.format(latency * 1000))
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>latency = timeit.timeit('get_orderbook()', setup='from __main__ import get_orderbook', number=n) * 1.0 / n
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>print('Latency is {} ms'.format(latency * 1000))
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>###### 输出 #######
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
@@ -13418,7 +13417,7 @@
 <p>我在美国纽约附近城市的一个服务器上测试了这段代码，你可以看到，平均每次访问orderbook的延迟有0.25秒左右。显然，如果在国内，这个延迟只会更大。按理说，这两个美国城市的距离很短，为什么延迟会这么大呢？</p>
 <p>这是因为，REST接口本质上是一个HTTP接口，在这之下是TCP/TLS套接字（Socket）连接。每一次REST请求，通常都会重新建立一次TCP/TLS握手；然后，在请求结束之后，断开这个链接。这个过程，比我们想象的要慢很多。</p>
 <p>举个例子来验证这一点，在同一个城市我们试验一下。我从纽约附近的服务器和Gemini在纽约的服务器进行连接，TCP/SSL握手花了多少时间呢？</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl -w &quot;TCP handshake: %{time_connect}s, SSL handshake: %{time_appconnect}s\n&quot; -so /dev/null https://www.gemini.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl -w "TCP handshake: %{time_connect}s, SSL handshake: %{time_appconnect}s\n" -so /dev/null https://www.gemini.com
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>TCP handshake: 0.072758s, SSL handshake: 0.119409s
 </code></pre></div>
@@ -13431,7 +13430,7 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># 在接收到服务器发送消息时调用
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>def on_message(ws, message):
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    print(&#39;Received: &#39; + message)
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    print('Received: ' + message)
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a># 在和服务器建立完成连接时调用   
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>def on_open(ws):
@@ -13440,22 +13439,22 @@
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        # 往服务器依次发送0-4，每次发送完休息0.01秒
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        for i in range(5):
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            time.sleep(0.01)
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            msg=&quot;{0}&quot;.format(i)
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            msg="{0}".format(i)
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>            ws.send(msg)
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            print(&#39;Sent: &#39; + msg)
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            print('Sent: ' + msg)
 <a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        # 休息1秒用于接收服务器回复的消息
 <a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        time.sleep(1)
 <a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        # 关闭Websocket的连接
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        ws.close()
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        print(&quot;Websocket closed&quot;)
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        print("Websocket closed")
 <a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
 <a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    # 在另一个线程运行gao()函数
 <a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    thread.start_new_thread(gao, ())
 <a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
 <a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>if __name__ == &quot;__main__&quot;:
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    ws = websocket.WebSocketApp(&quot;ws://echo.websocket.org/&quot;,
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>if __name__ == "__main__":
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    ws = websocket.WebSocketApp("ws://echo.websocket.org/",
 <a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>                              on_message = on_message,
 <a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>                              on_open = on_open)
 <a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
@@ -13476,9 +13475,9 @@
 </code></pre></div>
 <p>这段代码尝试和<code>wss://echo.websocket.org</code>建立连接。当连接建立的时候，就会启动一条线程，连续向服务器发送5条消息。</p>
 <p>通过输出可以看出，我们在连续发送的同时，也在不断地接受消息。这并没有像REST一样，每发送一个请求，要等待服务器完成请求、完全回复之后，再进行下一个请求。换句话说，<strong>我们在请求的同时也在接受消息</strong>，这也就是前面所说的”全双工“。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/7b/b6/7bbb7936b56dcae7f1e5dfbc644b4fb6.png?wh=1876%2A2491" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/7b/b6/7bbb7936b56dcae7f1e5dfbc644b4fb6.png?wh=1876%2A2491"></p>
 <p>REST（HTTP）单工请求响应的示意图</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/9d/4c/9d4072dedfd5944a08e3bbee5059194c.png?wh=1681%2A2596" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/9d/4c/9d4072dedfd5944a08e3bbee5059194c.png?wh=1681%2A2596"></p>
 <p>Websocket全双工请求响应的示意图</p>
 <p>再来看第二段代码。为了解释”双向“，我们来看看获取Gemini的委托账单的例子。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import ssl
@@ -13496,18 +13495,18 @@
 <a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    if count == 0:
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        ws.close()
 <a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>if __name__ == "__main__":
 <a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    ws = websocket.WebSocketApp(
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        &quot;wss://api.gemini.com/v1/marketdata/btcusd?top_of_book=true&amp;offers=true&quot;,
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        "wss://api.gemini.com/v1/marketdata/btcusd?top_of_book=true&amp;offers=true",
 <a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        on_message=on_message)
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    ws.run_forever(sslopt={&quot;cert_reqs&quot;: ssl.CERT_NONE})
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    ws.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE})
 <a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
 <a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>###### 输出 #######
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>{&quot;type&quot;:&quot;update&quot;,&quot;eventId&quot;:7275473603,&quot;socket_sequence&quot;:0,&quot;events&quot;:[{&quot;type&quot;:&quot;change&quot;,&quot;reason&quot;:&quot;initial&quot;,&quot;price&quot;:&quot;11386.12&quot;,&quot;delta&quot;:&quot;1.307&quot;,&quot;remaining&quot;:&quot;1.307&quot;,&quot;side&quot;:&quot;ask&quot;}]}
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>{&quot;type&quot;:&quot;update&quot;,&quot;eventId&quot;:7275475120,&quot;timestamp&quot;:1562380981,&quot;timestampms&quot;:1562380981991,&quot;socket_sequence&quot;:1,&quot;events&quot;:[{&quot;type&quot;:&quot;change&quot;,&quot;side&quot;:&quot;ask&quot;,&quot;price&quot;:&quot;11386.62&quot;,&quot;remaining&quot;:&quot;1&quot;,&quot;reason&quot;:&quot;top-of-book&quot;}]}
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>{&quot;type&quot;:&quot;update&quot;,&quot;eventId&quot;:7275475271,&quot;timestamp&quot;:1562380982,&quot;timestampms&quot;:1562380982387,&quot;socket_sequence&quot;:2,&quot;events&quot;:[{&quot;type&quot;:&quot;change&quot;,&quot;side&quot;:&quot;ask&quot;,&quot;price&quot;:&quot;11386.12&quot;,&quot;remaining&quot;:&quot;1.3148&quot;,&quot;reason&quot;:&quot;top-of-book&quot;}]}
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>{&quot;type&quot;:&quot;update&quot;,&quot;eventId&quot;:7275475838,&quot;timestamp&quot;:1562380986,&quot;timestampms&quot;:1562380986270,&quot;socket_sequence&quot;:3,&quot;events&quot;:[{&quot;type&quot;:&quot;change&quot;,&quot;side&quot;:&quot;ask&quot;,&quot;price&quot;:&quot;11387.16&quot;,&quot;remaining&quot;:&quot;0.072949&quot;,&quot;reason&quot;:&quot;top-of-book&quot;}]}
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>{&quot;type&quot;:&quot;update&quot;,&quot;eventId&quot;:7275475935,&quot;timestamp&quot;:1562380986,&quot;timestampms&quot;:1562380986767,&quot;socket_sequence&quot;:4,&quot;events&quot;:[{&quot;type&quot;:&quot;change&quot;,&quot;side&quot;:&quot;ask&quot;,&quot;price&quot;:&quot;11389.22&quot;,&quot;remaining&quot;:&quot;0.06204196&quot;,&quot;reason&quot;:&quot;top-of-book&quot;}]}
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>{"type":"update","eventId":7275473603,"socket_sequence":0,"events":[{"type":"change","reason":"initial","price":"11386.12","delta":"1.307","remaining":"1.307","side":"ask"}]}
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>{"type":"update","eventId":7275475120,"timestamp":1562380981,"timestampms":1562380981991,"socket_sequence":1,"events":[{"type":"change","side":"ask","price":"11386.62","remaining":"1","reason":"top-of-book"}]}
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>{"type":"update","eventId":7275475271,"timestamp":1562380982,"timestampms":1562380982387,"socket_sequence":2,"events":[{"type":"change","side":"ask","price":"11386.12","remaining":"1.3148","reason":"top-of-book"}]}
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>{"type":"update","eventId":7275475838,"timestamp":1562380986,"timestampms":1562380986270,"socket_sequence":3,"events":[{"type":"change","side":"ask","price":"11387.16","remaining":"0.072949","reason":"top-of-book"}]}
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>{"type":"update","eventId":7275475935,"timestamp":1562380986,"timestampms":1562380986767,"socket_sequence":4,"events":[{"type":"change","side":"ask","price":"11389.22","remaining":"0.06204196","reason":"top-of-book"}]}
 </code></pre></div>
 <p>可以看到，在和Gemini建立连接后，我们并没有向服务器发送任何消息，没有任何请求，但是服务器却源源不断地向我们推送数据。这可比REST接口“每请求一次获得一次回复”的沟通方式高效多了！</p>
 <p>因此，相对于REST来说，Websocket是一种更加实时、高效的数据交换方式。当然缺点也很明显：因为请求和回复是异步的，这让我们程序的状态控制逻辑更加复杂。这一点，后面的内容里我们会有更深刻的体会。</p>
@@ -13526,8 +13525,8 @@
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>class OrderBook(object):
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    BIDS = &#39;bid&#39;
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    ASKS = &#39;ask&#39;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    BIDS = 'bid'
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    ASKS = 'ask'
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
 <a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    def __init__(self, limit=20):
 <a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
@@ -13554,7 +13553,7 @@
 <a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>            else:
 <a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>                self.asks[price] = amount
 <a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        else:
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>            print(&#39;WARNING: unknown direction {}&#39;.format(direction))
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>            print('WARNING: unknown direction {}'.format(direction))
 <a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>
 <a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    def sort_and_truncate(self):
 <a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>        # sort
@@ -13578,42 +13577,42 @@
 <a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>        self.orderbook = OrderBook(limit=10)
 <a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>        self.output_file = output_file
 <a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>
-<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>        self.ws = websocket.WebSocketApp(&#39;wss://api.gemini.com/v1/marketdata/{}&#39;.format(symbol),
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>        self.ws = websocket.WebSocketApp('wss://api.gemini.com/v1/marketdata/{}'.format(symbol),
 <a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>                                         on_message = lambda ws, message: self.on_message(message))
-<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>        self.ws.run_forever(sslopt={&#39;cert_reqs&#39;: ssl.CERT_NONE})
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>        self.ws.run_forever(sslopt={'cert_reqs': ssl.CERT_NONE})
 <a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>
 <a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>    def on_message(self, message):
 <a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>        # 对收到的信息进行处理，然后送给 orderbook
 <a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>        data = json.loads(message)
-<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>        for event in data[&#39;events&#39;]:
-<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>            price, amount, direction = float(event[&#39;price&#39;]), float(event[&#39;remaining&#39;]), event[&#39;side&#39;]
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>        for event in data['events']:
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>            price, amount, direction = float(event['price']), float(event['remaining']), event['side']
 <a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>            self.orderbook.insert(price, amount, direction)
 <a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>
 <a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>        # 整理 orderbook，排序，只选取我们需要的前几个
 <a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>        self.orderbook.sort_and_truncate()
 <a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>
 <a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>        # 输出到文件
-<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>        with open(self.output_file, &#39;a+&#39;) as f:
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>        with open(self.output_file, 'a+') as f:
 <a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>            bids, asks = self.orderbook.get_copy_of_bids_and_asks()
 <a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>            output = {
-<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>                &#39;bids&#39;: bids,
-<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>                &#39;asks&#39;: asks,
-<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>                &#39;ts&#39;: int(time.time() * 1000)
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>                'bids': bids,
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>                'asks': asks,
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>                'ts': int(time.time() * 1000)
 <a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>            }
-<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>            f.write(json.dumps(output) + &#39;\n&#39;)
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>            f.write(json.dumps(output) + '\n')
 <a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>
 <a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>
-<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>if __name__ == &#39;__main__&#39;:
-<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>    crawler = Crawler(symbol=&#39;BTCUSD&#39;, output_file=&#39;BTCUSD.txt&#39;)
+<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>if __name__ == '__main__':
+<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>    crawler = Crawler(symbol='BTCUSD', output_file='BTCUSD.txt')
 <a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a>
 <a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>###### 输出 #######
 <a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a>
-<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>{&quot;bids&quot;: [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], &quot;asks&quot;: [[11407.42, 1.30814001], [11407.92, 1.0], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11412.42, 1.0], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], &quot;ts&quot;: 1562558996535}
-<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a>{&quot;bids&quot;: [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], &quot;asks&quot;: [[11407.42, 1.30814001], [11407.92, 1.0], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11412.42, 1.0], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], &quot;ts&quot;: 1562558997377}
-<a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a>{&quot;bids&quot;: [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], &quot;asks&quot;: [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11412.42, 1.0], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], &quot;ts&quot;: 1562558997765}
-<a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>{&quot;bids&quot;: [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], &quot;asks&quot;: [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], &quot;ts&quot;: 1562558998638}
-<a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a>{&quot;bids&quot;: [[11398.73, 0.97131753], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], &quot;asks&quot;: [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], &quot;ts&quot;: 1562558998645}
-<a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>{&quot;bids&quot;: [[11398.73, 0.97131753], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], &quot;asks&quot;: [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], &quot;ts&quot;: 1562558998748}
+<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>{"bids": [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], "asks": [[11407.42, 1.30814001], [11407.92, 1.0], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11412.42, 1.0], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], "ts": 1562558996535}
+<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a>{"bids": [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], "asks": [[11407.42, 1.30814001], [11407.92, 1.0], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11412.42, 1.0], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], "ts": 1562558997377}
+<a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a>{"bids": [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], "asks": [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11412.42, 1.0], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], "ts": 1562558997765}
+<a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>{"bids": [[11398.73, 0.96304843], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], "asks": [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], "ts": 1562558998638}
+<a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a>{"bids": [[11398.73, 0.97131753], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.95, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], "asks": [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], "ts": 1562558998645}
+<a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>{"bids": [[11398.73, 0.97131753], [11398.72, 0.98914437], [11397.32, 1.0], [11396.13, 2.0], [11395.87, 1.0], [11394.09, 0.11803397], [11394.08, 1.0], [11393.59, 0.1612581], [11392.96, 1.0]], "asks": [[11407.42, 1.30814001], [11409.48, 2.0], [11409.66, 2.0], [11412.15, 0.525], [11413.77, 0.11803397], [11413.99, 0.5], [11414.28, 1.0], [11414.72, 1.0]], "ts": 1562558998748}
 </code></pre></div>
 <p>代码比较长，接下来我们具体解释一下。</p>
 <p>这段代码的最开始，封装了一个叫做 orderbook 的 class，专门用来存放与之相关的数据结构。其中的 bids 和 asks 两个字典，用来存储当前时刻下的买方挂单和卖方挂单。</p>
@@ -13631,16 +13630,33 @@
 <p>最后给你留一道思考题。WebSocket 会丢包吗？如果丢包的话， Orderbook 爬虫又会发生什么？这一点应该如何避免呢？欢迎留言和我讨论，也欢迎你把这篇文章分享出去。</p>
 <div><strong>精选留言（15）</strong></div>
 <ul>
-<li><span>Jingxiao</span> 👍（58） 💬（0）<p>思考题答案：
-Websocket 可能丢包。TCP 协议保证了所有的包按顺序抵达（即使是乱序抵达，在前面的包收到之前，TCP 协议下的底层程序也会讲先到达的靠后的包缓存，直到前面的包抵达，才送给上层的应用程序），但是并不能保证不可恢复的错误发生的时候，包不会丢失。这种情况发生的时候，就会出现 Orderbook 中一个或多个（价格，数量）信息没得到及时更新。这种错误越积攒越多的情况下，就会导致本地的 Orderbook 充满垃圾信息，变得完全不可靠。因此一个很好的做法是，可以设置一个时间间隔，通过 RESTFul 或者其他方式重新抓一下 Orderbook 的 Snapshot，然后和本地的 Orderbook 进行比对，纠正错误。</p>2019-08-01</li><br/><li><span>SCAR</span> 👍（47） 💬（1）<p>思考题：
+<li>
+<span>Jingxiao</span> 👍（58） 💬（0）<p>思考题答案：
+Websocket 可能丢包。TCP 协议保证了所有的包按顺序抵达（即使是乱序抵达，在前面的包收到之前，TCP 协议下的底层程序也会讲先到达的靠后的包缓存，直到前面的包抵达，才送给上层的应用程序），但是并不能保证不可恢复的错误发生的时候，包不会丢失。这种情况发生的时候，就会出现 Orderbook 中一个或多个（价格，数量）信息没得到及时更新。这种错误越积攒越多的情况下，就会导致本地的 Orderbook 充满垃圾信息，变得完全不可靠。因此一个很好的做法是，可以设置一个时间间隔，通过 RESTFul 或者其他方式重新抓一下 Orderbook 的 Snapshot，然后和本地的 Orderbook 进行比对，纠正错误。</p>2019-08-01</li>
+<br><li>
+<span>SCAR</span> 👍（47） 💬（1）<p>思考题：
 1. websocket基于tcp的，虽然协议上有纠错，重传和等待的机制，但一些特殊的情况还是可能会有丢包的情况，比如同时有超过服务器负载的客户端在请求数据。
 2.如果丢包的情况发生时，类似开大会会场人人都发微信图片，看着WiFi信号满格，却发不出去，差不多一样的道理爬虫也是收不到数据的。
-3.查了下websocket的WebSocketApp的函数，有个参数on_error，是websocket发生错误的时候触发的，那么我们可以编写这个对应的回调函数来让服务器重发或者其他有效的处理。</p>2019-07-29</li><br/><li><span>JustDoDT</span> 👍（6） 💬（1）<p>websocket资料
-https:&#47;&#47;pypi.org&#47;project&#47;websocket_client&#47;</p>2019-07-29</li><br/><li><span>Geek_adeba6</span> 👍（4） 💬（1）<p>想请问是否可以使用STOMP协议与Gemini这样的交易平台通信, 像消息队列rabbitmq 有 stomp的plugins</p>2019-07-30</li><br/><li><span>shiziwen</span> 👍（3） 💬（1）<p>请问文章中，接口获取的数据中，bids和ask是什么意思呢？</p>2020-05-20</li><br/><li><span>Merlin</span> 👍（3） 💬（1）<p>对于web socket的编程，可以用asyncio，我觉得用asyncio来开发web socket更为方便</p>2019-11-26</li><br/><li><span>_stuView</span> 👍（1） 💬（2）<p>我之前看到Linux公众号讲python并不是一个解释型语言，而是一个运行在虚拟机上的语言https:&#47;&#47;mp.weixin.qq.com&#47;s&#47;Yqwk_eXO1t5N2cjRz_u0sw</p>2019-07-31</li><br/><li><span>tt</span> 👍（45） 💬（1）<p>websocket包的安装使用如下命令:
+3.查了下websocket的WebSocketApp的函数，有个参数on_error，是websocket发生错误的时候触发的，那么我们可以编写这个对应的回调函数来让服务器重发或者其他有效的处理。</p>2019-07-29</li>
+<br><li>
+<span>JustDoDT</span> 👍（6） 💬（1）<p>websocket资料
+https://pypi.org/project/websocket_client/</p>2019-07-29</li>
+<br><li>
+<span>Geek_adeba6</span> 👍（4） 💬（1）<p>想请问是否可以使用STOMP协议与Gemini这样的交易平台通信, 像消息队列rabbitmq 有 stomp的plugins</p>2019-07-30</li>
+<br><li>
+<span>shiziwen</span> 👍（3） 💬（1）<p>请问文章中，接口获取的数据中，bids和ask是什么意思呢？</p>2020-05-20</li>
+<br><li>
+<span>Merlin</span> 👍（3） 💬（1）<p>对于web socket的编程，可以用asyncio，我觉得用asyncio来开发web socket更为方便</p>2019-11-26</li>
+<br><li>
+<span>_stuView</span> 👍（1） 💬（2）<p>我之前看到Linux公众号讲python并不是一个解释型语言，而是一个运行在虚拟机上的语言https://mp.weixin.qq.com/s/Yqwk_eXO1t5N2cjRz_u0sw</p>2019-07-31</li>
+<br><li>
+<span>tt</span> 👍（45） 💬（1）<p>websocket包的安装使用如下命令:
 
 pip -m install websocket_client安装。
 
-pip -m install websocket会安装另外一个完全不同的包</p>2019-07-29</li><br/><li><span>tux</span> 👍（16） 💬（0）<p>干布球和tt 的提示，解决了报错。
+pip -m install websocket会安装另外一个完全不同的包</p>2019-07-29</li>
+<br><li>
+<span>tux</span> 👍（16） 💬（0）<p>干布球和tt 的提示，解决了报错。
 import websocket     #pip install websocket-client
 import _thread as thread
 
@@ -13650,17 +13666,30 @@ try:
     import thread
 except ImportError:
     import _thread as thread
-</p>2019-07-29</li><br/><li><span>干布球</span> 👍（8） 💬（1）<p>第二段代码少了个import time，python3里面thread用import _thread，不知是不是这样？</p>2019-07-29</li><br/><li><span>Claywoow</span> 👍（7） 💬（1）<p>老师，请教个问题，为什么我把这两个类分成两个模块来测试的时候，程序会进入无响应的状态，好像一直在运行，这会是什么原因呢？</p>2019-08-04</li><br/><li><span>SCAR</span> 👍（7） 💬（3）<p>尝试回答下Destroy的问题：
+</p>2019-07-29</li>
+<br><li>
+<span>干布球</span> 👍（8） 💬（1）<p>第二段代码少了个import time，python3里面thread用import _thread，不知是不是这样？</p>2019-07-29</li>
+<br><li>
+<span>Claywoow</span> 👍（7） 💬（1）<p>老师，请教个问题，为什么我把这两个类分成两个模块来测试的时候，程序会进入无响应的状态，好像一直在运行，这会是什么原因呢？</p>2019-08-04</li>
+<br><li>
+<span>SCAR</span> 👍（7） 💬（3）<p>尝试回答下Destroy的问题：
 查看WebsocketApp函数：
 on_message: callable object which is called when received data.
  on_message has 2 arguments.
  The 1st argument is this class object.
  The 2nd argument is utf-8 string which we get from the server.
 你如果直接on_message = self.on_message，那么会缺少第一个参数，因为class Crawler类里on_message(self,message)是缺少如最上面老师例子def on_message(ws, message)里的ws的。所以
-on_message = lambda ws, message: self.on_message(message)是通过lambda补上第一个参数ws。</p>2019-07-29</li><br/><li><span>jxs1211</span> 👍（4） 💬（0）<p>实测on_message = self.on_message没有问题，源码中_callback中只是对回调函数做了类型判断，self.on_message是和method，所以直接将返回data给了形参message，执行接受数据的处理</p>2019-08-03</li><br/><li><span>Geek_688e7c</span> 👍（3） 💬（2）<p>按照老师的代码来都没有反应，是不是Url失效了？ 我直接在浏览器里访问Url是说无法访问。
-出现程序运行没有报错但是没有任何输出和结果的情况，是不是就是服务端出了问题呢</p>2022-02-07</li><br/><li><span>TKbook</span> 👍（3） 💬（2）<p>因此，应该你注意到了，它的第一个参数是 self，这里如果直接写成 on_message = self.on_message 将会出错。
+on_message = lambda ws, message: self.on_message(message)是通过lambda补上第一个参数ws。</p>2019-07-29</li>
+<br><li>
+<span>jxs1211</span> 👍（4） 💬（0）<p>实测on_message = self.on_message没有问题，源码中_callback中只是对回调函数做了类型判断，self.on_message是和method，所以直接将返回data给了形参message，执行接受数据的处理</p>2019-08-03</li>
+<br><li>
+<span>Geek_688e7c</span> 👍（3） 💬（2）<p>按照老师的代码来都没有反应，是不是Url失效了？ 我直接在浏览器里访问Url是说无法访问。
+出现程序运行没有报错但是没有任何输出和结果的情况，是不是就是服务端出了问题呢</p>2022-02-07</li>
+<br><li>
+<span>TKbook</span> 👍（3） 💬（2）<p>因此，应该你注意到了，它的第一个参数是 self，这里如果直接写成 on_message = self.on_message 将会出错。
 为了避免这个问题，我们需要将函数再次包装一下。这里我使用了前面学过的匿名函数，来传递中间状态，注意我们只需要 message，因此传入 message 即可。
-这段没看懂，老师或者哪位大神能解释一下？</p>2019-07-29</li><br/>
+这段没看懂，老师或者哪位大神能解释一下？</p>2019-07-29</li>
+<br>
 </ul>
 
 
@@ -13686,7 +13715,7 @@ on_message = lambda ws, message: self.on_message(message)是通过lambda补上�
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -13696,20 +13725,20 @@ on_message = lambda ws, message: self.on_message(message)是通过lambda补上�
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../34%20-%20RESTful%20%26%20Socket%EF%BC%9A%E6%90%AD%E5%BB%BA%E4%BA%A4%E6%98%93%E6%89%A7%E8%A1%8C%E5%B1%82%E6%A0%B8%E5%BF%83/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 34   RESTful &amp; Socket：搭建交易执行层核心">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 上一页
               </span>
               <div class="md-ellipsis">
-                34   RESTful & Socket：搭建交易执行层核心
+                34   RESTful &amp; Socket：搭建交易执行层核心
               </div>
             </div>
           </a>
@@ -13722,12 +13751,12 @@ on_message = lambda ws, message: self.on_message(message)是通过lambda补上�
                 下一页
               </span>
               <div class="md-ellipsis">
-                36   Pandas & Numpy：策略与回测系统
+                36   Pandas &amp; Numpy：策略与回测系统
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>16 数据结构：Vec、&[T]、Box ，你真的了解集合容器么？ - 极客时间文档</title>
+        <title>16 数据结构：Vec、&amp;[T]、Box ，你真的了解集合容器么？ - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,9 +129,9 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              16 数据结构：Vec<T>、&[T]、Box<[T]> ，你真的了解集合容器么？
+              16 数据结构：Vec<t>、&amp;[T]、Box&lt;[T]&gt; ，你真的了解集合容器么？
             
-          </span>
+          </t></span>
         </div>
       </div>
     </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -8830,7 +8829,7 @@
       
   
   <span class="md-ellipsis">
-    深入拆解Tomcat & Jetty
+    深入拆解Tomcat &amp; Jetty
     
   </span>
   
@@ -11846,9 +11845,9 @@
           
   
   <span class="md-ellipsis">
-    16 数据结构：Vec<T>、&[T]、Box<[T]> ，你真的了解集合容器么？
+    16 数据结构：Vec<t>、&amp;[T]、Box&lt;[T]&gt; ，你真的了解集合容器么？
     
-  </span>
+  </t></span>
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -11858,9 +11857,9 @@
         
   
   <span class="md-ellipsis">
-    16 数据结构：Vec<T>、&[T]、Box<[T]> ，你真的了解集合容器么？
+    16 数据结构：Vec<t>、&amp;[T]、Box&lt;[T]&gt; ，你真的了解集合容器么？
     
-  </span>
+  </t></span>
   
 
       </a>
@@ -13717,7 +13716,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -13830,11 +13829,12 @@
   
 
 
-  <h1>16 数据结构：Vec<T>、&[T]、Box<[T]> ，你真的了解集合容器么？</h1>
+  <h1>16 数据结构：Vec<t>、&amp;[T]、Box&lt;[T]&gt; ，你真的了解集合容器么？</t>
+</h1>
 
 <p>你好，我是陈天。今天来学集合容器。</p>
-<p>现在我们接触到了越来越多的数据结构，我把 Rust 中主要的数据结构从原生类型、容器类型和系统相关类型几个维度整理一下，你可以数数自己掌握了哪些。<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/d9/4c/d9c1d7ce878b5ef17eb1c8c69e17404c.jpg?wh=2364x1718" /><br />
+<p>现在我们接触到了越来越多的数据结构，我把 Rust 中主要的数据结构从原生类型、容器类型和系统相关类型几个维度整理一下，你可以数数自己掌握了哪些。<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/d9/4c/d9c1d7ce878b5ef17eb1c8c69e17404c.jpg?wh=2364x1718"><br>
 可以看到，容器占据了数据结构的半壁江山。</p>
 <p>提到容器，很可能你首先会想到的就是数组、列表这些可以遍历的容器，但其实<strong>只要把某种特定的数据封装在某个数据结构中</strong>，这个数据结构就是一个容器。比如 Option&lt;T&gt;，它是一个包裹了 T 存在或不存在的容器，而Cow 是一个封装了内部数据 B 或被借用或拥有所有权的容器。</p>
 <p>对于容器的两小类，到目前为止，像 Cow 这样，为特定目的而产生的容器我们已经介绍了不少，包括 Box、Rc、Arc、RefCell、还没讲到的 Option 和 Result 等。</p>
@@ -13863,7 +13863,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="o">..</span><span class="mi">2</span><span class="p">];</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vec</span><span class="p">[</span><span class="o">..</span><span class="mi">2</span><span class="p">];</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;s1: {:?}, s2: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"s1: {:?}, s2: {:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">// &amp;[T] 和 &amp;[T] 是否相等取决于长度和内容是否相等</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
@@ -13873,8 +13873,8 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </code></pre></div>
 <p>对于 array 和 vector，虽然是不同的数据结构，一个放在栈上，一个放在堆上，但它们的切片是类似的；而且对于相同内容数据的相同切片，比如 &amp;arr[1…3] 和 &amp;vec[1…3]，这两者是等价的。除此之外，切片和对应的数据结构也可以直接比较，这是因为它们之间实现了 PartialEq trait（<a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#impl-PartialEq%3C%26%27_%20%5BU%5D%3E">源码参考资料</a>）。</p>
-<p>下图比较清晰地呈现了切片和数据之间的关系：<img alt="" src="https://static001.geekbang.org/resource/image/79/b2/798cd47df85772e243b6af4ba17f18b2.jpg?wh=2364x1422" /></p>
-<p>另外在 Rust 下，切片日常中都是使用引用 &amp;[T]，所以很多同学容易搞不清楚 &amp;[T] 和 &amp;Vec&lt;T&gt; 的区别。我画了张图，帮助你更好地理解它们的关系：<img alt="" src="https://static001.geekbang.org/resource/image/91/b7/91b4f63c619bf35cf2e5fc22c6d486b7.jpg?wh=2364x1422" /></p>
+<p>下图比较清晰地呈现了切片和数据之间的关系：<img alt="" src="https://static001.geekbang.org/resource/image/79/b2/798cd47df85772e243b6af4ba17f18b2.jpg?wh=2364x1422"></p>
+<p>另外在 Rust 下，切片日常中都是使用引用 &amp;[T]，所以很多同学容易搞不清楚 &amp;[T] 和 &amp;Vec&lt;T&gt; 的区别。我画了张图，帮助你更好地理解它们的关系：<img alt="" src="https://static001.geekbang.org/resource/image/91/b7/91b4f63c619bf35cf2e5fc22c6d486b7.jpg?wh=2364x1422"></p>
 <p>在使用的时候，支持切片的具体数据类型，你可以根据需要，解引用转换成切片类型。比如 Vec&lt;T&gt; 和 [T; n] 会转化成为 &amp;[T]，这是因为 Vec&lt;T&gt; 实现了 Deref trait，而 array 内建了到 &amp;[T] 的解引用。我们可以写一段代码验证这一行为（<a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2018&amp;gist=984d9ee43c82f3774798f16c9176761e">代码</a>）：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">fmt</span><span class="p">;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -13903,7 +13903,7 @@
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
 <a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="c1">// 注意下面的泛型函数的使用</span>
 <a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_slice</span><span class="o">&lt;</span><span class="n">T</span><span class="p">:</span><span class="w"> </span><span class="nc">fmt</span><span class="p">::</span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="n">T</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
 <a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="p">}</span>
 <a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
 <a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_slice1</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span>
@@ -13911,7 +13911,7 @@
 <a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="n">T</span><span class="p">:</span><span class="w"> </span><span class="nb">AsRef</span><span class="o">&lt;</span><span class="p">[</span><span class="n">U</span><span class="p">]</span><span class="o">&gt;</span><span class="p">,</span>
 <a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="n">U</span><span class="p">:</span><span class="w"> </span><span class="nc">fmt</span><span class="p">::</span><span class="n">Debug</span><span class="p">,</span>
 <a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="p">{</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
 <a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="p">}</span>
 </code></pre></div>
 <p>这也就意味着，通过解引用，这几个和切片有关的数据结构都会获得切片的所有能力，包括：binary_search、chunks、concat、contains、start_with、end_with、group_by、iter、join、sort、split、swap 等一系列丰富的功能，感兴趣的同学可以看<a href="https://doc.rust-lang.org/std/primitive.slice.html">切片的文档</a>。</p>
@@ -13923,7 +13923,7 @@
 <li>Item 定义了每次我们从迭代器中取出的数据类型；</li>
 <li>next() 是从迭代器里取下一个值的方法。当一个迭代器的 next() 方法返回 None 时，表明迭代器中没有数据了。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#[must_use = </span><span class="s">&quot;iterators are lazy and do nothing unless consumed&quot;</span><span class="cp">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#[must_use = </span><span class="s">"iterators are lazy and do nothing unless consumed"</span><span class="cp">]</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">pub</span><span class="w"> </span><span class="k">trait</span><span class="w"> </span><span class="nb">Iterator</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">type</span><span class="w"> </span><span class="nc">Item</span><span class="p">;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">fn</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;</span><span class="bp">Self</span><span class="p">::</span><span class="n">Item</span><span class="o">&gt;</span><span class="p">;</span>
@@ -13943,12 +13943,12 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">.</span><span class="n">collect</span><span class="p">::</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
 </code></pre></div>
 <p>需要注意的是 Rust 下的迭代器是个懒接口（lazy interface），也就是说<strong>这段代码直到运行到 collect 时才真正开始执行，之前的部分不过是在不断地生成新的结构</strong>，来累积处理逻辑而已。你可能好奇，这是怎么做到的呢？</p>
-<p>在 VS Code 里，如果你使用了 rust-analyzer 插件，就可以发现这一奥秘：<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/49/3b/49b8692d2b03df66c0e4e02390a4153b.png?wh=1658x582" /></p>
+<p>在 VS Code 里，如果你使用了 rust-analyzer 插件，就可以发现这一奥秘：<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/49/3b/49b8692d2b03df66c0e4e02390a4153b.png?wh=1658x582"></p>
 <p>原来，Iterator 大部分方法都返回一个实现了 Iterator 的数据结构，所以可以这样一路链式下去，在 Rust 标准库中，这些数据结构被称为 <a href="https://doc.rust-lang.org/src/core/iter/adapters/mod.rs.html">Iterator Adapter</a>。比如上面的 map 方法，它返回 Map 结构，而 Map 结构实现了 Iterator（<a href="https://doc.rust-lang.org/src/core/iter/adapters/map.rs.html#93-133">源码</a>）。</p>
 <p>整个过程是这样的（链接均为源码资料）：</p>
 <ul>
@@ -13965,23 +13965,23 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">use</span><span class="w"> </span><span class="n">itertools</span><span class="p">::</span><span class="n">Itertools</span><span class="p">;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">err_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bad happened&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">err_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"bad happened"</span><span class="p">;</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="nb">Ok</span><span class="p">(</span><span class="mi">21</span><span class="p">),</span><span class="w"> </span><span class="nb">Err</span><span class="p">(</span><span class="n">err_str</span><span class="p">),</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(</span><span class="mi">7</span><span class="p">)];</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="p">.</span><span class="n">into_iter</span><span class="p">()</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="p">.</span><span class="n">filter_map_ok</span><span class="p">(</span><span class="o">|</span><span class="n">i</span><span class="o">|</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">None</span><span class="w"> </span><span class="p">});</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">// 结果应该是：vec![Ok(42), Err(err_str)]</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">collect</span><span class="p">::</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;&gt;</span><span class="p">());</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">collect</span><span class="p">::</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;&gt;</span><span class="p">());</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
 </code></pre></div>
 <p>在实际开发中，我们可能从一组 Future 中汇聚出一组结果，里面有成功执行的结果，也有失败的错误信息。如果想对成功的结果进一步做 filter/map，那么标准库就无法帮忙了，就需要用 itertools 里的 filter_map_ok()。</p>
 <h2 id="str">特殊的切片：&amp;str</h2>
 <p>好，学完了普通的切片 &amp;[T]，我们来看一种特殊的切片：&amp;str。之前讲过，String 是一个特殊的 Vec&lt;u8&gt;，所以在 String 上做切片，也是一个特殊的结构 &amp;str。</p>
-<p>对于 String、&amp;String、&amp;str，很多人也经常分不清它们的区别，我们在之前的一篇加餐中简单聊了这个问题，在上一讲智能指针中，也对比过String和&amp;str。对于&amp;String 和 &amp;str，如果你理解了上文中 &amp;Vec&lt;T&gt; 和 &amp;[T] 的区别，那么它们也是一样的：<img alt="" src="https://static001.geekbang.org/resource/image/ea/0a/ea816d6fbdd1d14b00bb6ea6c7ef3a0a.jpg?wh=2364x1422" /></p>
+<p>对于 String、&amp;String、&amp;str，很多人也经常分不清它们的区别，我们在之前的一篇加餐中简单聊了这个问题，在上一讲智能指针中，也对比过String和&amp;str。对于&amp;String 和 &amp;str，如果你理解了上文中 &amp;Vec&lt;T&gt; 和 &amp;[T] 的区别，那么它们也是一样的：<img alt="" src="https://static001.geekbang.org/resource/image/ea/0a/ea816d6fbdd1d14b00bb6ea6c7ef3a0a.jpg?wh=2364x1422"></p>
 <p><strong>String 在解引用时，会转换成 &amp;str</strong>。可以用下面的代码验证（<a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2018&amp;gist=fc4ceb67d2da2e99e11c390f4ce6317d">代码</a>）：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">fmt</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="c1">// &amp;String 会被解引用成 &amp;str</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">print_slice</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">);</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">// &amp;s[..] 和 s.as_str() 一样，都会得到 &amp;str</span>
@@ -14000,11 +14000,11 @@
 <a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">}</span>
 <a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
 <a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_slice</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
 <a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="p">}</span>
 <a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
 <a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_slice1</span><span class="o">&lt;</span><span class="n">T</span><span class="p">:</span><span class="w"> </span><span class="nb">AsRef</span><span class="o">&lt;</span><span class="kt">str</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
 <a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="p">}</span>
 <a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>
 <a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_slice2</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span>
@@ -14012,21 +14012,21 @@
 <a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">    </span><span class="n">T</span><span class="p">:</span><span class="w"> </span><span class="nb">AsRef</span><span class="o">&lt;</span><span class="p">[</span><span class="n">U</span><span class="p">]</span><span class="o">&gt;</span><span class="p">,</span>
 <a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">    </span><span class="n">U</span><span class="p">:</span><span class="w"> </span><span class="nc">fmt</span><span class="p">::</span><span class="n">Debug</span><span class="p">,</span>
 <a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="p">{</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
 <a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="p">}</span>
 </code></pre></div>
 <p>有同学会有疑问：那么字符的列表和字符串有什么关系和区别？我们直接写一段代码来看看：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">iter</span><span class="p">::</span><span class="n">FromIterator</span><span class="p">;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="sc">&#39;h&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">];</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="sc">&#39;h&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">];</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="sc">'h'</span><span class="p">,</span><span class="w"> </span><span class="sc">'e'</span><span class="p">,</span><span class="w"> </span><span class="sc">'l'</span><span class="p">,</span><span class="w"> </span><span class="sc">'l'</span><span class="p">,</span><span class="w"> </span><span class="sc">'o'</span><span class="p">];</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="sc">'h'</span><span class="p">,</span><span class="w"> </span><span class="sc">'e'</span><span class="p">,</span><span class="w"> </span><span class="sc">'l'</span><span class="p">,</span><span class="w"> </span><span class="sc">'l'</span><span class="p">,</span><span class="w"> </span><span class="sc">'o'</span><span class="p">];</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vec</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="c1">// &amp;str 本身就是一个特殊的 slice</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;s1: {:?}, s2: {:?}, s3: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">s3</span><span class="p">);</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"s1: {:?}, s2: {:?}, s3: {:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">s3</span><span class="p">);</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="c1">// &amp;[char] 和 &amp;[char] 是否相等取决于长度和内容是否相等</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
@@ -14037,37 +14037,37 @@
 <a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
 </code></pre></div>
 <p>可以看到，字符列表可以通过迭代器转换成 String，String 也可以通过 chars() 函数转换成字符列表，如果不转换，二者不能比较。</p>
-<p>下图我把数组、列表、字符串以及它们的切片放在一起比较，可以帮你更好地理解它们的区别：<img alt="" src="https://static001.geekbang.org/resource/image/e0/93/e05210d20yy4d20bf54e670e958a7a93.jpg?wh=2364x1422" /></p>
+<p>下图我把数组、列表、字符串以及它们的切片放在一起比较，可以帮你更好地理解它们的区别：<img alt="" src="https://static001.geekbang.org/resource/image/e0/93/e05210d20yy4d20bf54e670e958a7a93.jpg?wh=2364x1422"></p>
 <h2 id="_3">切片的引用和堆上的切片，它们是一回事么？</h2>
 <p>开头我们讲过，切片主要有三种使用方式：切片的只读引用 &amp;[T]、切片的可变引用 &amp;mut [T] 以及 Box&lt;[T]&gt;。刚才已经详细学习了只读切片 &amp;[T]，也和其他各种数据结构进行了对比帮助理解，可变切片 &amp;mut [T] 和它类似，不必介绍。</p>
 <p>现在我们来看看 Box&lt;[T]&gt;。</p>
 <p>Box&lt;[T]&gt; 是一个比较有意思的存在，它和 Vec&lt;T&gt; 有一点点差别：Vec&lt;T&gt; 有额外的 capacity，可以增长；<strong>而 Box&lt;[T]&gt; 一旦生成就固定下来，没有 capacity，也无法增长</strong>。</p>
-<p>Box&lt;[T]&gt;和切片的引用&amp;[T] 也很类似：它们都是在栈上有一个包含长度的胖指针，指向存储数据的内存位置。区别是：Box&lt;[T]&gt; 只会指向堆，&amp;[T] 指向的位置可以是栈也可以是堆；此外，Box&lt;[T]&gt; 对数据具有所有权，而 &amp;[T] 只是一个借用。<img alt="" src="https://static001.geekbang.org/resource/image/a1/eb/a12b61b5e70a9a4625c071576f0717eb.jpg?wh=2364x1532" /></p>
+<p>Box&lt;[T]&gt;和切片的引用&amp;[T] 也很类似：它们都是在栈上有一个包含长度的胖指针，指向存储数据的内存位置。区别是：Box&lt;[T]&gt; 只会指向堆，&amp;[T] 指向的位置可以是栈也可以是堆；此外，Box&lt;[T]&gt; 对数据具有所有权，而 &amp;[T] 只是一个借用。<img alt="" src="https://static001.geekbang.org/resource/image/a1/eb/a12b61b5e70a9a4625c071576f0717eb.jpg?wh=2364x1532"></p>
 <p>那么如何产生 Box&lt;[T]&gt; 呢？目前可用的接口就只有一个：从已有的 Vec&lt;T&gt; 中转换。我们看代码：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">ops</span><span class="p">::</span><span class="n">Deref</span><span class="p">;</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">v1</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;cap should be 8: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"cap should be 8: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="c1">// 从 Vec&lt;T&gt; 转换成 Box&lt;[T]&gt;，此时会丢弃多余的 capacity</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="n">into_boxed_slice</span><span class="p">();</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b1</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
 <a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b1</span><span class="p">.</span><span class="n">into_vec</span><span class="p">();</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;cap should be exactly 5: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"cap should be exactly 5: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span>
 <a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
 <a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="fm">assert!</span><span class="p">(</span><span class="n">b2</span><span class="p">.</span><span class="n">deref</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">v2</span><span class="p">);</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
 <a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="c1">// Box&lt;[T]&gt; 可以更改其内部数据，但无法 push</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="n">b2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="c1">// b2.push(6);</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;b2: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="p">);</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"b2: {:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="p">);</span>
 <a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
 <a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="c1">// 注意 Box&lt;[T]&gt; 和 Box&lt;[T; n]&gt; 并不相同</span>
 <a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Box</span><span class="p">::</span><span class="n">new</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]);</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;b3: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b3</span><span class="p">);</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"b3: {:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">b3</span><span class="p">);</span>
 <a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
 <a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">    </span><span class="c1">// b2 和 b3 相等，但 b3.deref() 和 v2 无法比较</span>
 <a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">    </span><span class="fm">assert!</span><span class="p">(</span><span class="n">b2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b3</span><span class="p">);</span>
@@ -14080,13 +14080,13 @@
 <h2 id="_4">小结</h2>
 <p>我们讨论了切片以及和切片相关的主要数据类型。切片是一个很重要的数据类型，你可以着重理解它存在的意义，以及使用方式。</p>
 <p>今天学完相信你也看到了，围绕着切片有很多数据结构，而<strong>切片将它们抽象成相同的访问方式，实现了在不同数据结构之上的同一抽象</strong>，这种方法很值得我们学习。此外，当我们构建自己的数据结构时，如果它内部也有连续排列的等长的数据结构，可以考虑 AsRef 或者 Deref 到切片。</p>
-<p>下图描述了切片和数组 [T;n]、列表 Vec&lt;T&gt;、切片引用 &amp;[T] /&amp;mut [T]，以及在堆上分配的切片 Box&lt;[T]&gt; 之间的关系。建议你花些时间理解这张图，也可以用相同的方式去总结学到的其他有关联的数据结构。<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/62/91/62c55a1733d7b674a9e815c45d4a6f91.jpg?wh=2364x1740" /></p>
+<p>下图描述了切片和数组 [T;n]、列表 Vec&lt;T&gt;、切片引用 &amp;[T] /&amp;mut [T]，以及在堆上分配的切片 Box&lt;[T]&gt; 之间的关系。建议你花些时间理解这张图，也可以用相同的方式去总结学到的其他有关联的数据结构。<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/62/91/62c55a1733d7b674a9e815c45d4a6f91.jpg?wh=2364x1740"></p>
 <p>下一讲我们继续学习哈希表……</p>
 <h3 id="_5">思考题</h3>
 <p>1.在讲 &amp;str 时，里面的 print_slice1 函数，如果写成这样可不可以？你可以尝试一下，然后说明理由。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// fn print_slice1&lt;T: AsRef&lt;str&gt;&gt;(s: T) {</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">//    println!(&quot;{:?}&quot;, s.as_ref());</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">//    println!("{:?}", s.as_ref());</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">// }</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_slice1</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span>
@@ -14094,23 +14094,26 @@
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="n">T</span><span class="p">:</span><span class="w"> </span><span class="nb">AsRef</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="p">,</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="n">U</span><span class="p">:</span><span class="w"> </span><span class="nc">fmt</span><span class="p">::</span><span class="n">Debug</span><span class="p">,</span>
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">{</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">}</span>
 </code></pre></div>
-<p>2.类似 itertools，你可以试着开发一个新的 Iterator trait IteratorExt，为其提供 window_count 函数，使其可以做下图中的动作（<a href="https://rxjs.dev/api/operators/windowCount">来源</a>）：<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/f3/5b/f30947af9dff50521ccd4ddae42f0d5b.png?wh=1280x634" /></p>
+<p>2.类似 itertools，你可以试着开发一个新的 Iterator trait IteratorExt，为其提供 window_count 函数，使其可以做下图中的动作（<a href="https://rxjs.dev/api/operators/windowCount">来源</a>）：<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/f3/5b/f30947af9dff50521ccd4ddae42f0d5b.png?wh=1280x634"></p>
 <p>感谢你的阅读，如果你觉得有收获，也欢迎你分享给你身边的朋友，邀他一起讨论。你已经完成了Rust学习的第16次打卡啦，我们下节课见。</p>
 <h3 id="rust-iterator">参考资料：Rust 的 Iterator 究竟有多快？</h3>
 <p>当使用 Iterator 提供的这种函数式编程风格的时候，我们往往会担心性能。虽然我告诉你 Rust 大量使用 inline 来优化，但你可能还心存疑惑。</p>
 <p>下面的代码和截图来自一个 Youtube 视频：<a href="https://youtu.be/-hGbMp0sBvM?t=913">Sharing code between iOS &amp; Android with Rust</a>，演讲者通过在使用 Iterator 处理一个很大的图片，比较 Rust / Swift / Kotlin native / C 这几种语言的性能。你也可以看到在处理迭代器时， Rust 代码和 Kotlin 或者 Swift 代码非常类似。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/6d/81/6de6b2d91fe28b0228e748220dbe3281.png?wh=1388x1022" title="Rust / Kotlin 代码" /></p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/73/af/73dd5214bd0d15409006f99ac78fbdaf.png?wh=1390x1022" title="Swift 代码" /></p>
-<p>运行结果，在函数式编程方式下（C 没有函数式编程支持，所以直接使用了 for 循环），Rust 和 C 几乎相当在1s 左右，C 比 Rust 快 20%，Swift 花了 11.8s，而 Kotlin native 直接超时：<br />
-<img alt="" src="https://static001.geekbang.org/resource/image/c1/d4/c1e1c1909b761cfa3348115bb417d4d4.png?wh=1430x1072" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/6d/81/6de6b2d91fe28b0228e748220dbe3281.png?wh=1388x1022" title="Rust / Kotlin 代码"></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/73/af/73dd5214bd0d15409006f99ac78fbdaf.png?wh=1390x1022" title="Swift 代码"></p>
+<p>运行结果，在函数式编程方式下（C 没有函数式编程支持，所以直接使用了 for 循环），Rust 和 C 几乎相当在1s 左右，C 比 Rust 快 20%，Swift 花了 11.8s，而 Kotlin native 直接超时：<br>
+<img alt="" src="https://static001.geekbang.org/resource/image/c1/d4/c1e1c1909b761cfa3348115bb417d4d4.png?wh=1430x1072"></p>
 <p>所以 Rust 在对函数式编程，尤其是 Iterator 上的优化，还是非常不错的。这里面除了 inline 外，Rust 闭包的优异性能也提供了很多支持（未来我们会讲为什么）。在使用时，你完全不用担心性能。</p>
 <div><strong>精选留言（14）</strong></div>
 <ul>
-<li><span>pedro</span> 👍（24） 💬（1）<p>问老师一个工程性上的问题，也困扰了我好久，之前我在用rust开发项目的时候，数据解析性项目，会存在一个字段被多个类，或者函数使用，由于所有权的问题，导致代码中出现了大量的clone函数，后面在做性能分析的时候，发现20%的时间竟然浪费在clone上，求问老师，如何减少clone的调用次数？</p>2021-09-29</li><br/><li><span>lisiur</span> 👍（12） 💬（4）<p>1. 不可以，但稍微改造下也是可以的
+<li>
+<span>pedro</span> 👍（24） 💬（1）<p>问老师一个工程性上的问题，也困扰了我好久，之前我在用rust开发项目的时候，数据解析性项目，会存在一个字段被多个类，或者函数使用，由于所有权的问题，导致代码中出现了大量的clone函数，后面在做性能分析的时候，发现20%的时间竟然浪费在clone上，求问老师，如何减少clone的调用次数？</p>2021-09-29</li>
+<br><li>
+<span>lisiur</span> 👍（12） 💬（4）<p>1. 不可以，但稍微改造下也是可以的
 
 str 实现了 AsRef&lt;[u8]&gt;，AsRef&lt;OsStr&gt;，AsRef&lt;Path&gt;，AsRef&lt;str&gt;
 
@@ -14120,6 +14123,7 @@ str 实现了 AsRef&lt;[u8]&gt;，AsRef&lt;OsStr&gt;，AsRef&lt;Path&gt;，AsRef
 
 问题的关键就在于编译器无法推断出 U 的类型，因此如果稍微改造下，其实还是可以通过手动标记来通过编译的：
 
+</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">fmt</span><span class="p">;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -14238,7 +14242,7 @@ where
             }
         }
 
-        &#47;&#47; advance steps
+        // advance steps
         for _ in 0..self.start_window_every {
             if self.iter.next().is_none() {
                 break;
@@ -14266,13 +14270,19 @@ trait IteratorExt: Iterator {
 }
 
 impl&lt;T: Iterator&gt; IteratorExt for T {}
-```</p>2021-09-30</li><br/><li><span>给我点阳光就灿烂</span> 👍（1） 💬（1）<p>写了一个缓存库，想问一下老师如何优化hashmap的性能，目前为了算法上的O1，使用了box和raw指针，但是会box和rebox又让性能慢了一些。https:&#47;&#47;github.com&#47;al8n&#47;caches-rs</p>2021-09-29</li><br/><li><span>朱中喜</span> 👍（0） 💬（2）<p> let b1 = v1.into_boxed_slice();
+```2021-09-30</li>
+<br><li>
+<span>给我点阳光就灿烂</span> 👍（1） 💬（1）<p>写了一个缓存库，想问一下老师如何优化hashmap的性能，目前为了算法上的O1，使用了box和raw指针，但是会box和rebox又让性能慢了一些。https://github.com/al8n/caches-rs</p>2021-09-29</li>
+<br><li>
+<span>朱中喜</span> 👍（0） 💬（2）<p> let b1 = v1.into_boxed_slice();
     let mut b2 = b1.clone();
     let v2 = b1.into_vec();
-    println!(&quot;cap should be exactly 5: {}&quot;, v2.capacity());
+    println!("cap should be exactly 5: {}", v2.capacity());
     assert!(b2.deref() == v2);
 
-b2的类型是Box([T]), 为何对b2做deref就变成Vec了？在标准库里没找到针对Box slice的Deref实现😭</p>2021-10-17</li><br/><li><span>D. D</span> 👍（0） 💬（2）<p>1. 可以为同一个具体类型实现不同的AsRef Trait, 编译器无法从上下文中推断出U的具体类型，所以不能这样写。
+b2的类型是Box([T]), 为何对b2做deref就变成Vec了？在标准库里没找到针对Box slice的Deref实现😭</p>2021-10-17</li>
+<br><li>
+<span>D. D</span> 👍（0） 💬（2）<p>1. 可以为同一个具体类型实现不同的AsRef Trait, 编译器无法从上下文中推断出U的具体类型，所以不能这样写。
 
 2. 不知道实现的符不符合要求，以及有什么问题。
 pub struct Window&lt;I&gt; {
@@ -14319,21 +14329,21 @@ impl&lt;I: Iterator&gt; Iterator for Window&lt;I&gt; {
 
 #[test]
 fn if_it_works() {
-    let v1 = vec![&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;];
+    let v1 = vec!['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
 
     let mut window = v1.iter().window_count(0, 0);
     assert_eq!(window.next(), None);
 
     let mut window = v1.into_iter().window_count(3, 0);
-    assert_eq!(window.next(), Some(vec![&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]));
-    assert_eq!(window.next(), Some(vec![&#39;d&#39;, &#39;e&#39;, &#39;f&#39;]));
-    assert_eq!(window.next(), Some(vec![&#39;g&#39;, &#39;h&#39;, &#39;i&#39;]));
+    assert_eq!(window.next(), Some(vec!['a', 'b', 'c']));
+    assert_eq!(window.next(), Some(vec!['d', 'e', 'f']));
+    assert_eq!(window.next(), Some(vec!['g', 'h', 'i']));
     assert_eq!(window.next(), None);
 
-    let v2 = vec![&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;];
+    let v2 = vec!['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     let mut window = v2.into_iter().window_count(3, 0);
-    assert_eq!(window.next(), Some(vec![&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]));
-    assert_eq!(window.next(), Some(vec![&#39;d&#39;, &#39;e&#39;, &#39;f&#39;]));
+    assert_eq!(window.next(), Some(vec!['a', 'b', 'c']));
+    assert_eq!(window.next(), Some(vec!['d', 'e', 'f']));
     assert_eq!(window.next(), None);
 
     let v3 = vec![1, 2, 3, 4, 5, 6, 7, 8];
@@ -14345,24 +14355,35 @@ fn if_it_works() {
     let mut window = v4.iter().window_count(3, 100);
     assert_eq!(window.next(), None);
 }
-</p>2021-09-29</li><br/><li><span>罗杰</span> 👍（0） 💬（4）<p>漂亮，老师叕解答了我的好多疑惑。现在唯一有点要适应的就是函数数式编程。C++ 和 Go 写多了，一上来就是 for 循环，要适应 Rust 的想法也是个不小的挑战。</p>2021-09-29</li><br/><li><span>陈溯</span> 👍（0） 💬（0）<p>第二题。 按照陈老师的思路让gpt写了代码。基本是一样的。就是有一行微调了。
+</p>2021-09-29</li>
+<br><li>
+<span>罗杰</span> 👍（0） 💬（4）<p>漂亮，老师叕解答了我的好多疑惑。现在唯一有点要适应的就是函数数式编程。C++ 和 Go 写多了，一上来就是 for 循环，要适应 Rust 的想法也是个不小的挑战。</p>2021-09-29</li>
+<br><li>
+<span>陈溯</span> 👍（0） 💬（0）<p>第二题。 按照陈老师的思路让gpt写了代码。基本是一样的。就是有一行微调了。
 
-&#47;&#47; 这句很重要，它让所有实现了 Iterator 的 T 都自动实现 IteratorExt
+// 这句很重要，它让所有实现了 Iterator 的 T 都自动实现 IteratorExt
 impl&lt;T: ?Sized&gt; IteratorExt for T where T: Iterator {}
 
 微调成：
 
-&#47;&#47; Implement IteratorExt for all types that implement the Iterator trait
+// Implement IteratorExt for all types that implement the Iterator trait
 impl&lt;I: Iterator&gt; IteratorExt for I {}
-</p>2024-08-29</li><br/><li><span>哈哈哈哈哈哈哈</span> 👍（0） 💬（0）<p>第二题可以结合slice的chunks, 加上文中的函数式调用：
+</p>2024-08-29</li>
+<br><li>
+<span>哈哈哈哈哈哈哈</span> 👍（0） 💬（0）<p>第二题可以结合slice的chunks, 加上文中的函数式调用：
+</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">as_slice</span><span class="p">().</span><span class="n">chunks</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">collect</span><span class="p">::</span><span class="kp">&amp;</span><span class="nc">lt</span><span class="p">;</span><span class="nb">Vec</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">_</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;();</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;{:</span><span class="o">?</span><span class="p">}</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span><span class="w"> </span><span class="n">ret</span><span class="p">);</span>
 </code></pre></div>
-不过这种解法可能脱离这题的初衷了</p>2024-06-28</li><br/><li><span>Geek_a6c6ce</span> 👍（0） 💬（0）<p>咔哒</p>2022-09-05</li><br/><li><span>沈畅</span> 👍（0） 💬（1）<p>官方文档 filter里面用了两个 **
+不过这种解法可能脱离这题的初衷了2024-06-28</li>
+<br><li>
+<span>Geek_a6c6ce</span> 👍（0） 💬（0）<p>咔哒</p>2022-09-05</li>
+<br><li>
+<span>沈畅</span> 👍（0） 💬（1）<p>官方文档 filter里面用了两个 **
 let a = [0, 1, 2];
 
-let mut iter = a.iter().filter(|x| **x &gt; 1); &#47;&#47; need two *s!
+let mut iter = a.iter().filter(|x| **x &gt; 1); // need two *s!
 
 assert_eq!(iter.next(), Some(&amp;2));
 assert_eq!(iter.next(), None);
@@ -14373,7 +14394,8 @@ let v = vec![1,2,3,4];
                .map(|v| v*v)
                .filter(|v| *v &lt; 16)
                .take(5)
-               .collect::&lt;Vec&lt;_&gt;&gt;();</p>2022-07-25</li><br/>
+               .collect::&lt;Vec&lt;_&gt;&gt;();</p>2022-07-25</li>
+<br>
 </ul>
 
 
@@ -14399,7 +14421,7 @@ let v = vec![1,2,3,4];
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -14409,13 +14431,13 @@ let v = vec![1,2,3,4];
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../15-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E8%BF%99%E4%BA%9B%E6%B5%93%E7%9C%89%E5%A4%A7%E7%9C%BC%E7%9A%84%E7%BB%93%E6%9E%84%E7%AB%9F%E7%84%B6%E9%83%BD%E6%98%AF%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%EF%BC%9F/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 15 数据结构：这些浓眉大眼的结构竟然都是智能指针？">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -14440,7 +14462,7 @@ let v = vec![1,2,3,4];
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

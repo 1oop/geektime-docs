@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>36 Pandas & Numpy：策略与回测系统 - 极客时间文档</title>
+        <title>36 Pandas &amp; Numpy：策略与回测系统 - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              36   Pandas & Numpy：策略与回测系统
+              36   Pandas &amp; Numpy：策略与回测系统
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -3901,7 +3900,7 @@
         
   
   <span class="md-ellipsis">
-    31   pdb & cProfile：调试和性能分析的法宝
+    31   pdb &amp; cProfile：调试和性能分析的法宝
     
   </span>
   
@@ -3967,7 +3966,7 @@
         
   
   <span class="md-ellipsis">
-    34   RESTful & Socket：搭建交易执行层核心
+    34   RESTful &amp; Socket：搭建交易执行层核心
     
   </span>
   
@@ -3989,7 +3988,7 @@
         
   
   <span class="md-ellipsis">
-    35   RESTful & Socket：行情数据对接和抓取
+    35   RESTful &amp; Socket：行情数据对接和抓取
     
   </span>
   
@@ -4018,7 +4017,7 @@
           
   
   <span class="md-ellipsis">
-    36   Pandas & Numpy：策略与回测系统
+    36   Pandas &amp; Numpy：策略与回测系统
     
   </span>
   
@@ -4030,7 +4029,7 @@
         
   
   <span class="md-ellipsis">
-    36   Pandas & Numpy：策略与回测系统
+    36   Pandas &amp; Numpy：策略与回测系统
     
   </span>
   
@@ -4124,7 +4123,7 @@
         
   
   <span class="md-ellipsis">
-    37   Kafka & ZMQ：自动化交易流水线
+    37   Kafka &amp; ZMQ：自动化交易流水线
     
   </span>
   
@@ -4278,7 +4277,7 @@
         
   
   <span class="md-ellipsis">
-    43   Q&A：聊一聊职业发展和选择
+    43   Q&amp;A：聊一聊职业发展和选择
     
   </span>
   
@@ -9984,7 +9983,7 @@
       
   
   <span class="md-ellipsis">
-    深入拆解Tomcat & Jetty
+    深入拆解Tomcat &amp; Jetty
     
   </span>
   
@@ -13297,7 +13296,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -13386,7 +13385,7 @@
   
 
 
-  <h1>36   Pandas & Numpy：策略与回测系统</h1>
+  <h1>36   Pandas &amp; Numpy：策略与回测系统</h1>
 
 <p>大家好，我是景霄。</p>
 <p>上节课，我们介绍了交易所的数据抓取，特别是orderbook和tick数据的抓取。今天这节课，我们考虑的是，怎么在这些历史数据上测试一个交易策略。</p>
@@ -13394,10 +13393,10 @@
 <p>此外，为了进行回测，我们需要一个交易策略，还需要一个测试框架。目前已存在很多成熟的回测框架，但是为了Python学习，我决定带你搭建一个简单的回测框架，并且从中简单一窥Pandas的优势。</p>
 <h2 id="ohlcv">OHLCV数据</h2>
 <p>了解过一些股票交易的同学，可能知道K线这种东西。K线又称“蜡烛线”，是一种反映价格走势的图线。它的特色在于，一个线段内记录了多项讯息，相当易读易懂且实用有效，因此被广泛用于股票、期货、贵金属、数字货币等行情的技术分析。下面便是一个K线示意图。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/47/9b/470a68b8eaff3807efd89bc616e5659b.png?wh=730%2A320" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/47/9b/470a68b8eaff3807efd89bc616e5659b.png?wh=730%2A320"></p>
 <p>K线示意图</p>
 <p>其中，每一个小蜡烛，都代表着当天的开盘价（Open）、最高价（High）、最低价（Low）和收盘价（Close），也就是我画的第二张图表示的这样。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/58/57/58ce87e32aa4655211da02ce88223757.png?wh=1200%2A1200" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/58/57/58ce87e32aa4655211da02ce88223757.png?wh=1200%2A1200"></p>
 <p>K线的“小蜡烛” -- OHLC</p>
 <p>类似的，除了日K线之外，还有周K线、小时K线、分钟K线等等。那么这个K线是怎么计算来的呢？</p>
 <p>我们以小时K线图为例，还记得我们当时抓取的tick数据吗？也就是每一笔交易的价格和数量。那么，如果从上午10:00开始，我们开始积累tick的交易数据，以10:00开始的第一个交易作为Open数据，11:00前的最后一笔交易作为Close值，并把这一个小时最低和最高的成交价格分别作为High和Low的值，我们就可以绘制出这一个小时对应的“小蜡烛”形状了。</p>
@@ -13414,7 +13413,7 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    filepath = path.join(path.dirname(__file__), filename)
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    # 判定文件是否存在
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    assert_msg(path.exists(filepath), &quot;文件不存在&quot;)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    assert_msg(path.exists(filepath), "文件不存在")
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    # 读取CSV文件并返回
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    return pd.read_csv(filepath,
@@ -13422,8 +13421,8 @@
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                       parse_dates=True,
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                       infer_datetime_format=True)
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>BTCUSD = read_file(&#39;BTCUSD_GEMINI.csv&#39;)
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>assert_msg(BTCUSD.__len__() &gt; 0, &#39;读取失败&#39;)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>BTCUSD = read_file('BTCUSD_GEMINI.csv')
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>assert_msg(BTCUSD.__len__() &gt; 0, '读取失败')
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>print(BTCUSD.head())
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
@@ -13484,7 +13483,7 @@
 </ul>
 <p>对此，你可以参考下面这段代码：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>class Backtest:
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &quot;&quot;&quot;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    """
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Backtest回测类，用于读取历史行情数据、执行策略、模拟交易并估计
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    收益。
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
@@ -13492,7 +13491,7 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    instance, or `backtesting.backtesting.Backtest.optimize` to
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    optimize it.
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    &quot;&quot;&quot;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    """
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    def __init__(self,
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                 data: pd.DataFrame,
@@ -13500,7 +13499,7 @@
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                 broker_type: type(ExchangeAPI),
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                 cash: float = 10000,
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                 commission: float = .0):
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        &quot;&quot;&quot;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        """
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        构造回测对象。需要的参数包括：历史数据，策略对象，初始资金数量，手续费率等。
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        初始化过程包括检测输入类型，填充数据空值等。
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
@@ -13510,26 +13509,26 @@
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        :param strategy_type:   type(Strategy)      策略类型
 <a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        :param cash:            float               初始资金数量
 <a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>        :param commission:       float               每次交易手续费率。如2%的手续费此处为0.02
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        &quot;&quot;&quot;
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        """
 <a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>        assert_msg(issubclass(strategy_type, Strategy), &#39;strategy_type不是一个Strategy类型&#39;)
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>        assert_msg(issubclass(broker_type, ExchangeAPI), &#39;strategy_type不是一个Strategy类型&#39;)
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>        assert_msg(isinstance(commission, Number), &#39;commission不是浮点数值类型&#39;)
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>        assert_msg(issubclass(strategy_type, Strategy), 'strategy_type不是一个Strategy类型')
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>        assert_msg(issubclass(broker_type, ExchangeAPI), 'strategy_type不是一个Strategy类型')
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>        assert_msg(isinstance(commission, Number), 'commission不是浮点数值类型')
 <a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
 <a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>        data = data.copy(False)
 <a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
 <a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        # 如果没有Volumn列，填充NaN
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        if &#39;Volume&#39; not in data:
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>            data[&#39;Volume&#39;] = np.nan
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        if 'Volume' not in data:
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>            data['Volume'] = np.nan
 <a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
 <a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>        # 验证OHLC数据格式
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>        assert_msg(len(data.columns &amp; {&#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;, &#39;Close&#39;, &#39;Volume&#39;}) == 5,
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>                   (&quot;输入的`data`格式不正确，至少需要包含这些列：&quot;
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>                    &quot;&#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;, &#39;Close&#39;&quot;))
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>        assert_msg(len(data.columns &amp; {'Open', 'High', 'Low', 'Close', 'Volume'}) == 5,
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>                   ("输入的`data`格式不正确，至少需要包含这些列："
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>                    "'Open', 'High', 'Low', 'Close'"))
 <a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
 <a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>        # 检查缺失值
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>        assert_msg(not data[[&#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;, &#39;Close&#39;]].max().isnull().any(),
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>            (&#39;部分OHLC包含缺失值，请去掉那些行或者通过差值填充. &#39;))
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>        assert_msg(not data[['Open', 'High', 'Low', 'Close']].max().isnull().any(),
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>            ('部分OHLC包含缺失值，请去掉那些行或者通过差值填充. '))
 <a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
 <a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>        # 如果行情数据没有按照时间排序，重新排序一下
 <a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>        if not data.index.is_monotonic_increasing:
@@ -13542,12 +13541,12 @@
 <a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>        self._results = None
 <a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>
 <a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>    def run(self):
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>        &quot;&quot;&quot;
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>        """
 <a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>        运行回测，迭代历史数据，执行模拟交易并返回回测结果。
 <a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>        Run the backtest. Returns `pd.Series` with results and statistics.
 <a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
 <a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>        Keyword arguments are interpreted as strategy parameters.
-<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>        &quot;&quot;&quot;
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>        """
 <a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>        strategy = self._strategy
 <a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>        broker = self._broker
 <a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>
@@ -13570,9 +13569,9 @@
 <a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>
 <a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>    def _compute_result(self, broker):
 <a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>        s = pd.Series()
-<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>        s[&#39;初始市值&#39;] = broker.initial_cash
-<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>        s[&#39;结束市值&#39;] = broker.market_value
-<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>        s[&#39;收益&#39;] = broker.market_value - broker.initial_cash
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>        s['初始市值'] = broker.initial_cash
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>        s['结束市值'] = broker.market_value
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>        s['收益'] = broker.market_value - broker.initial_cash
 <a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>        return s
 </code></pre></div>
 <p>这段代码有点长，但是核心其实就两部分。</p>
@@ -13597,7 +13596,7 @@
 <p>为了了解这个策略，我们先了解一下，什么叫做简单移动均值（Simple Moving Average，简称为SMA，以下皆用SMA表示简单移动均值）。我们知道，N个数的序列 x[0]、x[1] .…… x[N] 的均值，就是这N个数的和除以N。</p>
 <p>现在，我假设一个比较小的数K，比N小很多。我们用一个K大小的滑动窗口，在原始的数组上滑动。通过对每次框住的K个元素求均值，我们就可以得到，原始数组的窗口大小为K的SMA了。</p>
 <p>SMA，实质上就是对原始数组进行了一个简单平滑处理。比如，某支股票的价格波动很大，那么，我们用SMA平滑之后，就会得到下面这张图的效果。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/b5/0f/b543927903fbbaa33980a2046651530f.png?wh=1204%2A706" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/b5/0f/b543927903fbbaa33980a2046651530f.png?wh=1204%2A706"></p>
 <p>某个投资品价格的SMA，窗口大小为50</p>
 <p>你可以看出，如果窗口大小越大，那么SMA应该越平滑，变化越慢；反之，如果SMA比较小，那么短期的变化也会越快地反映在SMA上。</p>
 <p>于是，我们想到，能不能对投资品的价格设置两个指标呢？这俩指标，一个是小窗口的SMA，一个是大窗口的SMA。</p>
@@ -13606,21 +13605,21 @@
 <li>反之，如果大窗口的SMA从下方突破小窗口SMA，那么说明，投资品的价格在短期内快速下跌，我们应该考虑卖出。</li>
 </ul>
 <p>下面这幅图，就展示了这两种情况。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/40/66/408ff342683f6ac1af798ba3d488c266.png?wh=1161%2A841" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/40/66/408ff342683f6ac1af798ba3d488c266.png?wh=1161%2A841"></p>
 <p>明白了这里的概念和原理后，接下来的操作就不难了。利用Pandas，我们可以非常简单地计算SMA和SMA交叉。比如，你可以引入下面两个工具函数：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>def SMA(values, n):
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &quot;&quot;&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    """
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    返回简单滑动平均
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;&quot;&quot;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    """
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    return pd.Series(values).rolling(n).mean()
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>def crossover(series1, series2) -&gt; bool:
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &quot;&quot;&quot;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    """
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    检查两个序列是否在结尾交叉
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    :param series1:  序列1
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    :param series2:  序列2
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    :return:         如果交叉返回True，反之False
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    &quot;&quot;&quot;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    """
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    return series1[-2] &lt; series2[-2] and series1[-1] &gt; series2[-1]
 </code></pre></div>
 <p>如代码所示，对于输入的一个数组，Pandas的rolling(k)函数，可以方便地计算窗内口大小为K的SMA数组；而想要检查某个时刻两个SMA是否交叉，你只需要查看两个数组末尾的两个元素即可。</p>
@@ -13647,37 +13646,37 @@
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>from typing import Callable
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>class Strategy(metaclass=abc.ABCMeta):
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    &quot;&quot;&quot;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    """
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    抽象策略类，用于定义交易策略。
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    如果要定义自己的策略类，需要继承这个基类，并实现两个抽象方法：
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    Strategy.init
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    Strategy.next
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    &quot;&quot;&quot;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    """
 <a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    def __init__(self, broker, data):
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        """
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        构造策略对象。
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        @params broker:  ExchangeAPI    交易API接口，用于模拟交易
 <a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        @params data:    list           行情数据数据
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        """
 <a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        self._indicators = []
 <a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        self._broker = broker  # type: _Broker
 <a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        self._data = data  # type: _Data
 <a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        self._tick = 0
 <a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
 <a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    def I(self, func: Callable, *args) -&gt; np.ndarray:
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        """
 <a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        计算买卖指标向量。买卖指标向量是一个数组，长度和历史数据对应；
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        用于判定这个时间点上需要进行&quot;买&quot;还是&quot;卖&quot;。
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        用于判定这个时间点上需要进行"买"还是"卖"。
 <a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
 <a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>        例如计算滑动平均：
 <a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>        def init():
 <a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>            self.sma = self.I(utils.SMA, self.data.Close, N)
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>        """
 <a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>        value = func(*args)
 <a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>        value = np.asarray(value)
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>        assert_msg(value.shape[-1] == len(self._data.Close), &#39;指示器长度必须和data长度相同&#39;)
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>        assert_msg(value.shape[-1] == len(self._data.Close), '指示器长度必须和data长度相同')
 <a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
 <a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        self._indicators.append(value)
 <a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>        return value
@@ -13688,19 +13687,19 @@
 <a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
 <a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    @abc.abstractmethod
 <a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    def init(self):
-<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>        """
 <a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>        初始化策略。在策略回测/执行过程中调用一次，用于初始化策略内部状态。
 <a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>        这里也可以预计算策略的辅助参数。比如根据历史行情数据：
 <a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>        计算买卖的指示器向量；
 <a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>        训练模型/初始化模型参数
-<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>        """
 <a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>        pass
 <a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>
 <a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>    @abc.abstractmethod
 <a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>    def next(self, tick):
-<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>        &quot;&quot;&quot;
-<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>        步进函数，执行第tick步的策略。tick代表当前的&quot;时间&quot;。比如data[tick]用于访问当前的市场价格。
-<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>        &quot;&quot;&quot;
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>        """
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>        步进函数，执行第tick步的策略。tick代表当前的"时间"。比如data[tick]用于访问当前的市场价格。
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>        """
 <a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>        pass
 <a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>
 <a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>    def buy(self):
@@ -13760,8 +13759,8 @@
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>class ExchangeAPI:
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    def __init__(self, data, cash, commission):
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        assert_msg(0 &lt; cash, &quot;初始现金数量大于0，输入的现金数量：{}&quot;.format(cash))
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        assert_msg(0 &lt;= commission &lt;= 0.05, &quot;合理的手续费率一般不会超过5%，输入的费率：{}&quot;.format(commission))
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        assert_msg(0 &lt; cash, "初始现金数量大于0，输入的现金数量：{}".format(cash))
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        assert_msg(0 &lt;= commission &lt;= 0.05, "合理的手续费率一般不会超过5%，输入的费率：{}".format(commission))
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        self._inital_cash = cash
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        self._data = data
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        self._commission = commission
@@ -13771,50 +13770,50 @@
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    @property
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    def cash(self):
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        """
 <a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        :return: 返回当前账户现金数量
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        """
 <a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>        return self._cash
 <a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
 <a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    @property
 <a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    def position(self):
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>        """
 <a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>        :return: 返回当前账户仓位
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>        """
 <a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>        return self._position
 <a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>
 <a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    @property
 <a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>    def initial_cash(self):
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>        """
 <a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>        :return: 返回初始现金数量
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>        """
 <a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>        return self._inital_cash
 <a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>
 <a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>    @property
 <a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>    def market_value(self):
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>        """
 <a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>        :return: 返回当前市值
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>        """
 <a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>        return self._cash + self._position * self.current_price
 <a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>
 <a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>    @property
 <a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>    def current_price(self):
-<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>        """
 <a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>        :return: 返回当前市场价格
-<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>        """
 <a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a>        return self._data.Close[self._i]
 <a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>
 <a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>    def buy(self):
-<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>        """
 <a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a>        用当前账户剩余资金，按照市场价格全部买入
-<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>        """
 <a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a>        self._position = float(self._cash / (self.current_price * (1 + self._commission)))
 <a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>        self._cash = 0.0
 <a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a>
 <a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a>    def sell(self):
-<a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a>        """
 <a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a>        卖出当前账户剩余持仓
-<a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a>        &quot;&quot;&quot;
+<a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a>        """
 <a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a>        self._cash += float(self._position * self.current_price * (1 - self._commission))
 <a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a>        self._position = 0.0
 <a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a>
@@ -13825,11 +13824,11 @@
 <p>有了所有的这些部分，我们就可以来模拟回测啦！</p>
 <p>首先，我们设置初始资金量为10000.00美元，交易所手续费率为0。这里你可以猜一下，如果我们从2015年到现在，都按照SMA来买卖，现在应该有多少钱呢？</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>def main():
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    BTCUSD = read_file(&#39;BTCUSD_GEMINI.csv&#39;)
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    BTCUSD = read_file('BTCUSD_GEMINI.csv')
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    ret = Backtest(BTCUSD, SmaCross, ExchangeAPI, 10000.0, 0.00).run()
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    print(ret)
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>if __name__ == &#39;__main__&#39;:
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>if __name__ == '__main__':
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    main()
 </code></pre></div>
 <p>铛铛铛，答案揭晓，程序将输出：</p>
@@ -13852,30 +13851,60 @@
 <p>最后，给你留一个思考题。之前我们介绍了如何抓取tick数据，你可以根据抓取的tick数据，生成5分钟、每小时和每天的OHLCV数据吗？欢迎在留言区写下你的答案和问题，也欢迎你把这篇文章分享出去。</p>
 <div><strong>精选留言（15）</strong></div>
 <ul>
-<li><span>Jingxiao</span> 👍（44） 💬（1）<p>整理后的代码在这里：https:&#47;&#47;github.com&#47;Eyelidstl&#47;GeekTimePythonClass</p>2019-08-01</li><br/><li><span>自由民</span> 👍（2） 💬（1）<p>这章比较难了，照着课程敲代码，调了半天可以运行了，结果却不对。把老师的代码下载回来仔细研究，终于清楚一些了。</p>2019-11-01</li><br/><li><span>方向</span> 👍（9） 💬（0）<p>有没有整理后的源代码，想统一查看</p>2019-07-31</li><br/><li><span>fy</span> 👍（6） 💬（0）<p>老师，可以用git管理每次分析的代码么？</p>2019-07-31</li><br/><li><span>Geek_kuntena</span> 👍（5） 💬（0）<p>pandas 的 resample 函数方便的进行合成大周期的k线数据</p>2020-03-17</li><br/><li><span>马建华</span> 👍（3） 💬（0）<p>    def buy(self):
-        &quot;&quot;&quot;
+<li>
+<span>Jingxiao</span> 👍（44） 💬（1）<p>整理后的代码在这里：https://github.com/Eyelidstl/GeekTimePythonClass</p>2019-08-01</li>
+<br><li>
+<span>自由民</span> 👍（2） 💬（1）<p>这章比较难了，照着课程敲代码，调了半天可以运行了，结果却不对。把老师的代码下载回来仔细研究，终于清楚一些了。</p>2019-11-01</li>
+<br><li>
+<span>方向</span> 👍（9） 💬（0）<p>有没有整理后的源代码，想统一查看</p>2019-07-31</li>
+<br><li>
+<span>fy</span> 👍（6） 💬（0）<p>老师，可以用git管理每次分析的代码么？</p>2019-07-31</li>
+<br><li>
+<span>Geek_kuntena</span> 👍（5） 💬（0）<p>pandas 的 resample 函数方便的进行合成大周期的k线数据</p>2020-03-17</li>
+<br><li>
+<span>马建华</span> 👍（3） 💬（0）<p>    def buy(self):
+        """
         用当前账户剩余资金，按照市场价格全部买入
         :return:
-        &quot;&quot;&quot;
-        self._position = float(self._cash &#47; (self.current_price * (1 + self._commission)))
+        """
+        self._position = float(self._cash / (self.current_price * (1 + self._commission)))
         self._cash = 0.0
 
-老师，这里应该是：self._position = float(self._cash * (1-self._commission) &#47; (self.current_price))吧？</p>2020-08-11</li><br/><li><span>马建华</span> 👍（3） 💬（0）<p>assert_msg(isinstance(commission, Number), &#39;commission不是浮点数值类型&#39;)为何不是用float而是number</p>2020-08-10</li><br/><li><span>宋强</span> 👍（2） 💬（1）<p>按照代码逻辑实现了一遍，发现即便是交易经手费是0，最后的收益也很大取决于数据本身。策略并不一定能盈利</p>2020-02-11</li><br/><li><span>小侠龙旋风</span> 👍（1） 💬（0）<p>SMA函数只做了一件事：pd.Series(values).rolling(n).mean()
+老师，这里应该是：self._position = float(self._cash * (1-self._commission) / (self.current_price))吧？</p>2020-08-11</li>
+<br><li>
+<span>马建华</span> 👍（3） 💬（0）<p>assert_msg(isinstance(commission, Number), 'commission不是浮点数值类型')为何不是用float而是number</p>2020-08-10</li>
+<br><li>
+<span>宋强</span> 👍（2） 💬（1）<p>按照代码逻辑实现了一遍，发现即便是交易经手费是0，最后的收益也很大取决于数据本身。策略并不一定能盈利</p>2020-02-11</li>
+<br><li>
+<span>小侠龙旋风</span> 👍（1） 💬（0）<p>SMA函数只做了一件事：pd.Series(values).rolling(n).mean()
 将传入的values转成一位数组以n个数据为单位滚动切分取平均值，返回一个均值数组
 SMA的调用位置：
 SmaCross在继承Strategy后必须要重写的抽象方法init中：
 self.sma1 = self.I(SMA, self.data.Close, self.fast)  # 用收盘价计算的10日均线
 self.sma2 = self.I(SMA, self.data.Close, self.slow)  # 用收盘价计算的20日均线
 
-提议：数据可视化更能直观表达实现策略的方案。</p>2019-09-01</li><br/><li><span>小侠龙旋风</span> 👍（1） 💬（0）<p>30日均线、10日均线、5日均线、小时、分钟...
+提议：数据可视化更能直观表达实现策略的方案。</p>2019-09-01</li>
+<br><li>
+<span>小侠龙旋风</span> 👍（1） 💬（0）<p>30日均线、10日均线、5日均线、小时、分钟...
 大窗口SMA -&gt; 小窗口SMA
 策略：小窗口SMA从下穿过大窗口SMA，买入。大窗口SMA从下方突破小窗口 SMA，卖出。
-这要先看看股市的简单策略分析才能明白。刚开始看，完全不懂。。。</p>2019-09-01</li><br/><li><span>长青</span> 👍（1） 💬（1）<p>老师iself._indicators.append(value)这一步有有什么意义呢   没大看明白。还有
+这要先看看股市的简单策略分析才能明白。刚开始看，完全不懂。。。</p>2019-09-01</li>
+<br><li>
+<span>长青</span> 👍（1） 💬（1）<p>老师iself._indicators.append(value)这一步有有什么意义呢   没大看明白。还有
 buy和sell是不是应该在下一根K线执行才对？比如我指标计算时用的15分钟K线   在10:15分出现买卖信号后，应该在10:30执行操作 ，因为指标时根据收盘价计算的
 
-</p>2019-08-12</li><br/><li><span>张申傲</span> 👍（0） 💬（0）<p>第36讲打卡~</p>2024-07-17</li><br/><li><span>杨宇</span> 👍（0） 💬（0）<p>def __init__(self, data: pd.DataFrame, ...)
+</p>2019-08-12</li>
+<br><li>
+<span>张申傲</span> 👍（0） 💬（0）<p>第36讲打卡~</p>2024-07-17</li>
+<br><li>
+<span>杨宇</span> 👍（0） 💬（0）<p>def __init__(self, data: pd.DataFrame, ...)
 def crossover(series1, series2) -&gt; bool: ...
-——方法参数、返回值，怎么带类型了，之前的课没教过这种写法吧？</p>2021-12-05</li><br/><li><span>rock feng</span> 👍（0） 💬（0）<p>这堂课，看得我迷糊，第一次接触量化交易，太多知识点....</p>2021-09-08</li><br/><li><span>忧伤的胡萝卜</span> 👍（0） 💬（0）<p>assert_msg(not data[[&#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;, &#39;Close&#39;]].max().isnull().any(), (&#39;部分OHLC包含缺失值，请去掉那些行或者通过差值填充. &#39;)) 请问这里为什么要用.max().isnull().any()来进行判空？</p>2021-05-11</li><br/>
+——方法参数、返回值，怎么带类型了，之前的课没教过这种写法吧？</p>2021-12-05</li>
+<br><li>
+<span>rock feng</span> 👍（0） 💬（0）<p>这堂课，看得我迷糊，第一次接触量化交易，太多知识点....</p>2021-09-08</li>
+<br><li>
+<span>忧伤的胡萝卜</span> 👍（0） 💬（0）<p>assert_msg(not data[['Open', 'High', 'Low', 'Close']].max().isnull().any(), ('部分OHLC包含缺失值，请去掉那些行或者通过差值填充. ')) 请问这里为什么要用.max().isnull().any()来进行判空？</p>2021-05-11</li>
+<br>
 </ul>
 
 
@@ -13901,7 +13930,7 @@ def crossover(series1, series2) -&gt; bool: ...
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -13911,20 +13940,20 @@ def crossover(series1, series2) -&gt; bool: ...
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../35%20-%20RESTful%20%26%20Socket%EF%BC%9A%E8%A1%8C%E6%83%85%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%8E%A5%E5%92%8C%E6%8A%93%E5%8F%96/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 35   RESTful &amp; Socket：行情数据对接和抓取">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 上一页
               </span>
               <div class="md-ellipsis">
-                35   RESTful & Socket：行情数据对接和抓取
+                35   RESTful &amp; Socket：行情数据对接和抓取
               </div>
             </div>
           </a>
@@ -13937,12 +13966,12 @@ def crossover(series1, series2) -&gt; bool: ...
                 下一页
               </span>
               <div class="md-ellipsis">
-                37   Kafka & ZMQ：自动化交易流水线
+                37   Kafka &amp; ZMQ：自动化交易流水线
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>10 广播变量 & 累加器：共享变量是用来做什么的？ - 极客时间文档</title>
+        <title>10 广播变量 &amp; 累加器：共享变量是用来做什么的？ - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10   广播变量 & 累加器：共享变量是用来做什么的？
+              10   广播变量 &amp; 累加器：共享变量是用来做什么的？
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -1621,7 +1620,7 @@
       
   
   <span class="md-ellipsis">
-    LLM & RAG快速应用小册
+    LLM &amp; RAG快速应用小册
     
   </span>
   
@@ -4695,7 +4694,7 @@
           
   
   <span class="md-ellipsis">
-    10   广播变量 & 累加器：共享变量是用来做什么的？
+    10   广播变量 &amp; 累加器：共享变量是用来做什么的？
     
   </span>
   
@@ -4707,7 +4706,7 @@
         
   
   <span class="md-ellipsis">
-    10   广播变量 & 累加器：共享变量是用来做什么的？
+    10   广播变量 &amp; 累加器：共享变量是用来做什么的？
     
   </span>
   
@@ -5269,7 +5268,7 @@
         
   
   <span class="md-ellipsis">
-    32 Window操作&Watermark：流处理引擎提供了哪些优秀机制？
+    32 Window操作&amp;Watermark：流处理引擎提供了哪些优秀机制？
     
   </span>
   
@@ -6229,7 +6228,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -6324,7 +6323,7 @@
   
 
 
-  <h1>10   广播变量 & 累加器：共享变量是用来做什么的？</h1>
+  <h1>10   广播变量 &amp; 累加器：共享变量是用来做什么的？</h1>
 
 <p>你好，我是吴磊。</p>
 <p>今天是国庆第一天，首先祝你节日快乐。专栏上线以来，有不少同学留言说期待后续内容，所以国庆期间我们仍旧更新正文内容，让我们一起把基础知识模块收个尾。</p>
@@ -6334,7 +6333,7 @@
 <p>今天这一讲，我就来和你聊聊Spark共享变量。按照创建与使用方式的不同，Spark提供了两类共享变量，分别是广播变量（Broadcast variables）和累加器（Accumulators）。接下来，我们就正式进入今天的学习，去深入了解这两种共享变量的用法、以及它们各自的适用场景。</p>
 <h2 id="broadcast-variables">广播变量（Broadcast variables）</h2>
 <p>我们先来说说广播变量。广播变量的用法很简单，给定普通变量x，通过调用SparkContext下的broadcast API即可完成广播变量的创建，我们结合代码例子看一下。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">val</span><span class="w"> </span><span class="n">list</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="s">&quot;Apache&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Spark&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">val</span><span class="w"> </span><span class="n">list</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="s">"Apache"</span><span class="p">,</span><span class="w"> </span><span class="s">"Spark"</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// sc为SparkContext实例</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">val</span><span class="w"> </span><span class="n">bc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">list</span><span class="p">)</span>
@@ -6357,14 +6356,14 @@
 <p>所谓定向计数，它指的是只对某些单词进行计数，例如，给定单词列表list，我们只对文件wikiOfSpark.txt当中的“Apache”和“Spark”这两个单词做计数，其他单词我们可以忽略。结合<a href="https://time.geekbang.org/column/article/415209">第1讲</a>Word Count的完整代码，这样的计算逻辑很容易实现，如下表所示。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org</span><span class="p">.</span><span class="nn">apache</span><span class="p">.</span><span class="nn">spark</span><span class="p">.</span><span class="nn">rdd</span><span class="p">.</span><span class="nc">RDD</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">val</span><span class="w"> </span><span class="n">rootPath</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">s&quot;</span><span class="si">${</span><span class="n">rootPath</span><span class="si">}</span><span class="s">/wikiOfSpark.txt&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">s"</span><span class="si">${</span><span class="n">rootPath</span><span class="si">}</span><span class="s">/wikiOfSpark.txt"</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// 读取文件内容</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">val</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spark</span><span class="p">.</span><span class="n">sparkContext</span><span class="p">.</span><span class="n">textFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// 以行为单位做分词</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">val</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">))</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">val</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">))</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w"> </span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">// 创建单词列表list</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kd">val</span><span class="w"> </span><span class="n">list</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="s">&quot;Apache&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Spark&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kd">val</span><span class="w"> </span><span class="n">list</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="s">"Apache"</span><span class="p">,</span><span class="w"> </span><span class="s">"Spark"</span><span class="p">)</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// 使用list列表对RDD进行过滤</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kd">val</span><span class="w"> </span><span class="n">cleanWordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">word</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1">// 把RDD元素转换为（Key，Value）的形式</span>
@@ -6376,7 +6375,7 @@
 <a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1">// Array[(String, Int)] = Array((Apache,34), (Spark,63))</span>
 </code></pre></div>
 <p>将上述代码丢进spark-shell，我们很快就能算出，在wikiOfSpark.txt文件中，“Apache”这个单词出现了34次，而“Spark”则出现了63次。虽说得出计算结果挺容易的，不过知其然，还要知其所以然，接下来，咱们一起来分析一下，这段代码在运行时是如何工作的。</p>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/8d/49/8dd52d329d74d212cfa6b188cfea2b49.jpg?wh=1920x1140" title="定向计数中list变量的全网分发" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/8d/49/8dd52d329d74d212cfa6b188cfea2b49.jpg?wh=1920x1140" title="定向计数中list变量的全网分发"></p>
 <p>如上图所示，list变量本身是在Driver端创建的，它并不是分布式数据集（如lineRDD、wordRDD）的一部分。因此，在分布式计算的过程中，Spark需要把list变量分发给每一个分布式任务（Task），从而对不同数据分区的内容进行过滤。</p>
 <p>在这种工作机制下，如果RDD并行度较高、或是变量的尺寸较大，那么重复的内容分发就会引入大量的网络开销与存储开销，而这些开销会大幅削弱作业的执行性能。为什么这么说呢？</p>
 <p>要知道，<strong>Driver端变量的分发是以Task为粒度的，系统中有多少个Task，变量就需要在网络中分发多少次</strong>。更要命的是，每个Task接收到变量之后，都需要把它暂存到内存，以备后续过滤之用。换句话说，在同一个Executor内部，多个不同的Task多次重复地缓存了同样的内容拷贝，毫无疑问，这对宝贵的内存资源是一种巨大的浪费。</p>
@@ -6386,14 +6385,14 @@
 <p>想要知道广播变量到底有啥优势，我们可以先用广播变量重写一下前面的代码实现，然后再做个对比，很容易就能发现广播变量为什么能解决普通变量的痛点。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org</span><span class="p">.</span><span class="nn">apache</span><span class="p">.</span><span class="nn">spark</span><span class="p">.</span><span class="nn">rdd</span><span class="p">.</span><span class="nc">RDD</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">val</span><span class="w"> </span><span class="n">rootPath</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">s&quot;</span><span class="si">${</span><span class="n">rootPath</span><span class="si">}</span><span class="s">/wikiOfSpark.txt&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">s"</span><span class="si">${</span><span class="n">rootPath</span><span class="si">}</span><span class="s">/wikiOfSpark.txt"</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// 读取文件内容</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">val</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spark</span><span class="p">.</span><span class="n">sparkContext</span><span class="p">.</span><span class="n">textFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// 以行为单位做分词</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kd">val</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">))</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kd">val</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">))</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w"> </span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">// 创建单词列表list</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="kd">val</span><span class="w"> </span><span class="n">list</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="s">&quot;Apache&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Spark&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="kd">val</span><span class="w"> </span><span class="n">list</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="s">"Apache"</span><span class="p">,</span><span class="w"> </span><span class="s">"Spark"</span><span class="p">)</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1">// 创建广播变量bc</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="kd">val</span><span class="w"> </span><span class="n">bc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">list</span><span class="p">)</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1">// 使用bc.value对RDD进行过滤</span>
@@ -6407,7 +6406,7 @@
 <a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c1">// Array[(String, Int)] = Array((Apache,34), (Spark,63))</span>
 </code></pre></div>
 <p>可以看到，代码的修改非常简单，我们先是使用broadcast函数来封装list变量，然后在RDD过滤的时候调用bc.value来访问list变量内容。<strong>你可不要小看这个改写，尽管代码的改动微乎其微，几乎可以忽略不计，但在运行时，整个计算过程却发生了翻天覆地的变化</strong>。</p>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/90/12/9050f159749465d0c9d3394f3335ee12.jpg?wh=1920x969" title="广播变量工作原理" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/90/12/9050f159749465d0c9d3394f3335ee12.jpg?wh=1920x969" title="广播变量工作原理"></p>
 <p>在使用广播变量之前，list变量的分发是以Task为粒度的，而在使用广播变量之后，变量分发的粒度变成了以Executors为单位，同一个Executor内多个不同的Tasks只需访问同一份数据拷贝即可。换句话说，变量在网络中分发与存储的次数，从RDD的分区数量，锐减到了集群中Executors的个数。</p>
 <p>要知道，在工业级系统中，Executors个数与RDD并行度相比，二者之间通常会相差至少两个数量级。在这样的量级下，广播变量节省的网络与内存开销会变得非常可观，省去了这些开销，对作业的执行性能自然大有裨益。</p>
 <p>好啦，到现在为止，我们讲解了广播变量的用法、工作原理，以及它的优势所在。在日常的开发工作中，<strong>当你遇到需要多个Task共享同一个大型变量（如列表、数组、映射等数据结构）的时候，就可以考虑使用广播变量来优化你的Spark作业</strong>。接下来，我们继续来说说Spark支持的第二种共享变量：累加器。</p>
@@ -6420,18 +6419,18 @@
 <p>那么，你自然会问：“不把filter环节去掉，怎么对空字符串做统计呢？”别着急，这样的计算需求，正是累加器可以施展拳脚的地方。你可以先扫一眼下表的代码实现，然后我们再一起来熟悉累加器的用法。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org</span><span class="p">.</span><span class="nn">apache</span><span class="p">.</span><span class="nn">spark</span><span class="p">.</span><span class="nn">rdd</span><span class="p">.</span><span class="nc">RDD</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">val</span><span class="w"> </span><span class="n">rootPath</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">s&quot;</span><span class="si">${</span><span class="n">rootPath</span><span class="si">}</span><span class="s">/wikiOfSpark.txt&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">s"</span><span class="si">${</span><span class="n">rootPath</span><span class="si">}</span><span class="s">/wikiOfSpark.txt"</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">// 读取文件内容</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">val</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spark</span><span class="p">.</span><span class="n">sparkContext</span><span class="p">.</span><span class="n">textFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// 以行为单位做分词</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kd">val</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">))</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kd">val</span><span class="w"> </span><span class="n">wordRDD</span><span class="p">:</span><span class="w"> </span><span class="nc">RDD</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineRDD</span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">))</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w"> </span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">// 定义Long类型的累加器</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">val</span><span class="w"> </span><span class="n">ac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">longAccumulator</span><span class="p">(</span><span class="s">&quot;Empty string&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">val</span><span class="w"> </span><span class="n">ac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">longAccumulator</span><span class="p">(</span><span class="s">"Empty string"</span><span class="p">)</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w"> </span>
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1">// 定义filter算子的判定函数f，注意，f的返回类型必须是Boolean</span>
 <a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="p">):</span><span class="w"> </span><span class="nc">Boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="s">""</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1">// 当遇到空字符串时，累加器加1</span>
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">ac</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="k">return</span><span class="w"> </span><span class="kc">false</span>
@@ -6485,11 +6484,12 @@
 <p>欢迎你在留言区跟我交流互动，也推荐你把这一讲的内容分享给你身边的朋友，说不定就能帮他解决一个难题。</p>
 <div><strong>精选留言（11）</strong></div>
 <ul>
-<li><span>Geek_2dfa9a</span> 👍（25） 💬（1）<p>1.使用普通变量是无法得到预期结果的，因为lambda里的必须是final型的变量，那这里我用两种方法做个测试：
+<li>
+<span>Geek_2dfa9a</span> 👍（25） 💬（1）<p>1.使用普通变量是无法得到预期结果的，因为lambda里的必须是final型的变量，那这里我用两种方法做个测试：
 首先是原子类，因字数限制，只放关键代码：
     var normal = new AtomicInteger(0)
     val  preRdd = wordRdd.filter(f =&gt;
-      if(f.contains(&quot;scala&quot;)) {
+      if(f.contains("scala")) {
         println(normal.incrementAndGet())
         false
       } else {
@@ -6501,7 +6501,7 @@
 传递给Executor，然后Executor再把闭包反序列化后作用在RDD上。因此Driver里的normal变量和Executor里的normal变量是多个进程里的多个变量。
 然后使用自定义类对象
 class IntHolder(var value: Int) {}
-测试，报了一个Exception in thread &quot;main&quot; org.apache.spark.SparkException: Task not serializable
+测试，报了一个Exception in thread "main" org.apache.spark.SparkException: Task not serializable
 从侧面也证明，闭包里的对象是要实现序列化的。变量是多个进程里的多个变量改进下再试，
 class IntHolder(var value: Int) extends Serializable {}
 发现每个Task都是从0开始计数，更说明每个Task里的对象是Driver丢过来的副本。这里我多想了下Task里的函数是串行执行还是并行执行的，如果我的IntHolder对象
@@ -6514,24 +6514,28 @@ collect收集到driver，再作为普通集合广播。
   def broadcast[T: ClassTag](value: T): Broadcast[T] = {
     assertNotStopped()
     require(!classOf[RDD[_]].isAssignableFrom(classTag[T].runtimeClass),
-      &quot;Can not directly broadcast RDDs; instead, call collect() and broadcast the result.&quot;)
+      "Can not directly broadcast RDDs; instead, call collect() and broadcast the result.")
     val bc = env.broadcastManager.newBroadcast[T](value, isLocal)
     val callSite = getCallSite
-    logInfo(&quot;Created broadcast &quot; + bc.id + &quot; from &quot; + callSite.shortForm)
+    logInfo("Created broadcast " + bc.id + " from " + callSite.shortForm)
     cleaner.foreach(_.registerBroadcastForCleanup(bc))
     bc
-  }</p>2021-10-03</li><br/><li><span>Geek_f39659</span> 👍（12） 💬（1）<p>第一题： driver中声明的非广播变量，如果executor需要用的话，会给每一个分区拷贝一个副本，所以每个分区都会给自己的这份副本加一加一。最后这些副本随着executor 进程的结束就都丢失了。所以driver 中的这个变量仍然还是0.</p>2021-10-03</li><br/><li><span>火炎焱燚</span> 👍（3） 💬（1）<p>python 版的代码对累加器这儿有些不一样，貌似没有longAccumulator，double之分，我这儿是这样的：
+  }</p>2021-10-03</li>
+<br><li>
+<span>Geek_f39659</span> 👍（12） 💬（1）<p>第一题： driver中声明的非广播变量，如果executor需要用的话，会给每一个分区拷贝一个副本，所以每个分区都会给自己的这份副本加一加一。最后这些副本随着executor 进程的结束就都丢失了。所以driver 中的这个变量仍然还是0.</p>2021-10-03</li>
+<br><li>
+<span>火炎焱燚</span> 👍（3） 💬（1）<p>python 版的代码对累加器这儿有些不一样，貌似没有longAccumulator，double之分，我这儿是这样的：
 
-file=&#39;~~~~&#47;chapter01&#47;wikiOfSpark.txt&#39;
+file='~~~~/chapter01/wikiOfSpark.txt'
 lineRDD=sc.textFile(file)
-lineRDD.first() # 会打印出lineRDD的第一行： u&#39;Apache Spark&#39;，如果没有打印出来，则报错
-wordRDD=lineRDD.flatMap(lambda line: line.split(&quot; &quot;))
+lineRDD.first() # 会打印出lineRDD的第一行： u'Apache Spark'，如果没有打印出来，则报错
+wordRDD=lineRDD.flatMap(lambda line: line.split(" "))
 
 # 定义累加器
 ac = sc.accumulator(0) # 这儿的定义方式不一样
 # 定义filter算子的判定函数f，注意，f的返回类型必须是Boolean
 def f(x):
-    if x==&#39;&#39;:
+    if x=='':
         ac.add(1)
         return False
     else:
@@ -6543,29 +6547,33 @@ kvRDD=cleanWordRDD.map(lambda word:(word,1))
 wordCounts=kvRDD.reduceByKey(lambda x,y:x+y)
 # 获取计算结果
 wordCounts.collect()
-# 结果：[(&#39;Spark&#39;, 63), (&#39;Apache&#39;, 34)]
+# 结果：[('Spark', 63), ('Apache', 34)]
 # wordCounts.map(lambda (k,v):(v,k)).sortByKey(False).take(5)
 
 # 作业执行完毕，通过调用value获取累加器结果
 ac.value
-# 79</p>2021-10-12</li><br/><li><span>welldo</span> 👍（2） 💬（1）<p>以前我写累加器，都是手动继承AccumulatorV2，现在找到更简单的方法了😁</p>2021-10-29</li><br/><li><span>GAC·DU</span> 👍（2） 💬（4）<p>写程序测试了一下老师的第一个思考题，在本机的idea中可以得到正确的结果79，但是在spark- shell或者提交到yarn集群上结果却是0，好纠结，请老师解惑，代码如下。
+# 79</p>2021-10-12</li>
+<br><li>
+<span>welldo</span> 👍（2） 💬（1）<p>以前我写累加器，都是手动继承AccumulatorV2，现在找到更简单的方法了😁</p>2021-10-29</li>
+<br><li>
+<span>GAC·DU</span> 👍（2） 💬（4）<p>写程序测试了一下老师的第一个思考题，在本机的idea中可以得到正确的结果79，但是在spark- shell或者提交到yarn集群上结果却是0，好纠结，请老师解惑，代码如下。
 第二个思考题，我认为广播变量是只读数据，参加计算时不能随着RDD一起变换形态破坏数据的一致性。
 
 import org.apache.spark.sql.SparkSession
 
 object BcAcOpt {
 
-  var n: Long = _ &#47;&#47; 全局变量
+  var n: Long = _ // 全局变量
 
   def main(args: Array[String]): Unit = {
 
-    val spark = SparkSession.builder.master(&quot;local[*]&quot;).appName(&quot;board&quot;).getOrCreate()
+    val spark = SparkSession.builder.master("local[*]").appName("board").getOrCreate()
 
-    val lineRDD = spark.sparkContext.textFile(&quot;wikiOfSpark.txt&quot;)
+    val lineRDD = spark.sparkContext.textFile("wikiOfSpark.txt")
 
     println(lineRDD.partitions.length)
 
-    val wordRDD = lineRDD.flatMap(word =&gt; word.split(&quot; &quot;))
+    val wordRDD = lineRDD.flatMap(word =&gt; word.split(" "))
 
     val filterRDD = wordRDD.filter(acf)
 
@@ -6582,7 +6590,7 @@ object BcAcOpt {
   }
 
   def acf(word: String): Boolean = {
-    if (&quot;&quot;.equals(word)) {
+    if ("".equals(word)) {
       n += 1
       false
     } else {
@@ -6590,7 +6598,9 @@ object BcAcOpt {
     }
   }
 }
-</p>2021-10-02</li><br/><li><span>welldo</span> 👍（1） 💬（1）<p>老师，广播变量有&quot;只读&quot; &#47; &quot;不可变&quot;特性，
+</p>2021-10-02</li>
+<br><li>
+<span>welldo</span> 👍（1） 💬（1）<p>老师，广播变量有"只读" / "不可变"特性，
 但广播引用数据类型时, 广播的实际上是地址值，那么地址值肯定不可变，而地址值指向的内容是可变的;
 
 我今天在idea和shell里做了一个测试，证明了这个说法是对的,
@@ -6600,25 +6610,29 @@ object BcAcOpt {
 var buffer: ListBuffer[String] = ListBuffer()
 var bufferBroad = spark.sparkContext.broadcast(buffer)
 val cleanWordRDD2: RDD[String] = wordRDD.filter(word =&gt; {
-  if (bc.value.contains(word)) {        &#47;&#47;bc是文章里的广播变量
-    bufferBroad.value.append(&quot;test&quot;)  &#47;&#47;关键的一行
+  if (bc.value.contains(word)) {        //bc是文章里的广播变量
+    bufferBroad.value.append("test")  //关键的一行
     true
   } else {
     false
   }
 })
 
-println(cleanWordRDD2.count())&#47;&#47;触发这条dag
-println(buffer)             &#47;&#47;97(34+63)个test
-println(bufferBroad.value)  &#47;&#47;97(34+63)个test
+println(cleanWordRDD2.count())//触发这条dag
+println(buffer)             //97(34+63)个test
+println(bufferBroad.value)  //97(34+63)个test
 
 老师，这个说法和我的证明没有问题吧？
-这个算不算“不可变”特性的漏洞 呢？</p>2021-10-31</li><br/><li><span>welldo</span> 👍（1） 💬（1）<p>老师，关于第一题，
+这个算不算“不可变”特性的漏洞 呢？</p>2021-10-31</li>
+<br><li>
+<span>welldo</span> 👍（1） 💬（1）<p>老师，关于第一题，
 我的答案：driver和executor是不一样的进程，普通变量会拷贝副本到executor上，
 “原本”和“副本”没有任何关系，
 spark-shell打印出来的是“原本”，数值是初始化时的值.
 
-我的问题：为何idea能计算正确呢？</p>2021-10-29</li><br/><li><span>Sun</span> 👍（1） 💬（1）<p>老师您好。关于第一题的实验，我使用自定义类，如下：
+我的问题：为何idea能计算正确呢？</p>2021-10-29</li>
+<br><li>
+<span>Sun</span> 👍（1） 💬（1）<p>老师您好。关于第一题的实验，我使用自定义类，如下：
 class MyCount implements Serializable{
     int num;
     public MyCount(){
@@ -6630,8 +6644,15 @@ class MyCount implements Serializable{
 }
 将它用于代替广播变量，是不行的，因为executor最后销毁了这些对象。
 但是我将这个对象置为静态对象，放在Driver中再运行后，这个对象成功得到了最后的结果。
-请问老师，为什么设置为静态对象就可以获取结果呢？静态对象在Driver和Executor是怎么一个工作机制？</p>2022-04-20</li><br/><li><span>唐方刚</span> 👍（0） 💬（0）<p>广播变量是以executor为粒度分发的，那么累加器是怎么分发的？最终的结果又是怎么算出来的？</p>2022-08-12</li><br/><li><span>杨帅</span> 👍（0） 💬（0）<p>老师，我有一个问题：一个worker上可以有多个executor吗？在读取文件阶段，一个executor（一个进程）里可以有多个task（多个线程）读取不同分区（RDD的分区）的数据吗？那RDD的分区的定义是什么呢，是不同机器上的数据，还是？</p>2022-06-18</li><br/><li><span>Spoon</span> 👍（0） 💬（0）<p>共享变量Java版本
-https:&#47;&#47;github.com&#47;Spoon94&#47;spark-practice&#47;blob&#47;master&#47;src&#47;main&#47;java&#47;com&#47;spoon&#47;spark&#47;core&#47;SharedVariableJob.java</p>2022-04-04</li><br/>
+请问老师，为什么设置为静态对象就可以获取结果呢？静态对象在Driver和Executor是怎么一个工作机制？</p>2022-04-20</li>
+<br><li>
+<span>唐方刚</span> 👍（0） 💬（0）<p>广播变量是以executor为粒度分发的，那么累加器是怎么分发的？最终的结果又是怎么算出来的？</p>2022-08-12</li>
+<br><li>
+<span>杨帅</span> 👍（0） 💬（0）<p>老师，我有一个问题：一个worker上可以有多个executor吗？在读取文件阶段，一个executor（一个进程）里可以有多个task（多个线程）读取不同分区（RDD的分区）的数据吗？那RDD的分区的定义是什么呢，是不同机器上的数据，还是？</p>2022-06-18</li>
+<br><li>
+<span>Spoon</span> 👍（0） 💬（0）<p>共享变量Java版本
+https://github.com/Spoon94/spark-practice/blob/master/src/main/java/com/spoon/spark/core/SharedVariableJob.java</p>2022-04-04</li>
+<br>
 </ul>
 
 
@@ -6657,7 +6678,7 @@ https:&#47;&#47;github.com&#47;Spoon94&#47;spark-practice&#47;blob&#47;master&#4
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -6667,13 +6688,13 @@ https:&#47;&#47;github.com&#47;Spoon94&#47;spark-practice&#47;blob&#47;master&#4
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../09%20-%20RDD%E5%B8%B8%E7%94%A8%E7%AE%97%E5%AD%90%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%9A%84%E5%87%86%E5%A4%87%E3%80%81%E9%87%8D%E5%88%86%E5%B8%83%E4%B8%8E%E6%8C%81%E4%B9%85%E5%8C%96/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 09   RDD常用算子（三）：数据的准备、重分布与持久化">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -6698,7 +6719,7 @@ https:&#47;&#47;github.com&#47;Spoon94&#47;spark-practice&#47;blob&#47;master&#4
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

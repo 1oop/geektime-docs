@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>01 CISC & RISC：从何而来，何至于此 - 极客时间文档</title>
+        <title>01 CISC &amp; RISC：从何而来，何至于此 - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01 CISC & RISC：从何而来，何至于此
+              01 CISC &amp; RISC：从何而来，何至于此
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -3486,7 +3485,7 @@
           
   
   <span class="md-ellipsis">
-    01 CISC & RISC：从何而来，何至于此
+    01 CISC &amp; RISC：从何而来，何至于此
     
   </span>
   
@@ -3498,7 +3497,7 @@
         
   
   <span class="md-ellipsis">
-    01 CISC & RISC：从何而来，何至于此
+    01 CISC &amp; RISC：从何而来，何至于此
     
   </span>
   
@@ -4160,7 +4159,7 @@
         
   
   <span class="md-ellipsis">
-    25 堆&栈：堆与栈的区别和应用
+    25 堆&amp;栈：堆与栈的区别和应用
     
   </span>
   
@@ -4732,7 +4731,7 @@
         
   
   <span class="md-ellipsis">
-    加餐02   学习攻略（一）：大数据&云计算，究竟怎么学？
+    加餐02   学习攻略（一）：大数据&amp;云计算，究竟怎么学？
     
   </span>
   
@@ -4754,7 +4753,7 @@
         
   
   <span class="md-ellipsis">
-    加餐03 学习攻略（二）：大数据&云计算，究竟怎么学？
+    加餐03 学习攻略（二）：大数据&amp;云计算，究竟怎么学？
     
   </span>
   
@@ -5803,7 +5802,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5910,7 +5909,7 @@
   
 
 
-  <h1>01 CISC & RISC：从何而来，何至于此</h1>
+  <h1>01 CISC &amp; RISC：从何而来，何至于此</h1>
 
 <p>你好，我是LMOS。</p>
 <p>这个专栏我会带你学习计算机基础。什么是基础？</p>
@@ -5919,7 +5918,7 @@
 <p>让我们先从最古老的算盘开始聊起，接着了解一下机械计算机、图灵机和电子计算机。最后我会带你一起看看芯片的发展，尤其是它的两种设计结构——CISC与RISC。</p>
 <h3 id="_1">从算盘到机械计算机</h3>
 <p>算盘就是一种辅助计算的工具，由中国古代劳动人民发明，迄今已有两千多年的历史，一直沿用至今。我准备了算盘的平面草图，你可以感受一下：</p>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/c7/d9/c7c942f024b13ce96e9443efa2c93bd9.jpg?wh=1920x795" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/c7/d9/c7c942f024b13ce96e9443efa2c93bd9.jpg?wh=1920x795"></p>
 <p>上图中周围一圈蓝色的是框架，一串一串的是算椽和算珠，一根算椽上有七颗算珠，可以上下拨动，从右至左有个、十、百……亿等计数位。有了算盘，计算的准确性和速度得到提高，我们从中可以感受到先辈的智慧。</p>
 <p>与其说算盘是计算机，还不如说它是个数据寄存器。“程序”的执行需要人工实现，按口诀拨动算珠。过了两千多年，人们开始思考，能不能有一种机器，不需要人实时操作就能自动完成一些计算呢？</p>
 <p>16世纪，苏格兰人John Napier发表了论文，提到他发明了一种精巧设备，可以进行四则运算和解决方根运算。之后到了18世纪，英国人Babbage设计了一台通用分析机。这期间还出现了计算尺等机械计算设备，主要是利用轴、杠杆、齿轮等机械部件来做计算。</p>
@@ -5936,7 +5935,7 @@
 <p>该方法以一个抽象自动机概念为基础，不但定义了什么“计算”，还首次将计算和自动机联系起来。这对后世影响巨大，而这种“自动机”后来就被我们称为“<strong>图灵机</strong>”。</p>
 <p>图灵机是一个抽象的自动机数学模型，它是这样运转的：<strong>有一条无限长的纸带，纸带上有无限个小格子，小格子中写有相关的信息。纸带上有一个读头，读头能根据纸带小格子里的信息做相关的操作，并且能来回移动。</strong></p>
 <p>如果你感觉文字叙述还不够形象，我再来画一幅示意图：</p>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/51/7b/51b1c0668bc479c53d7c382e27b5b27b.jpg?wh=1920x819" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/51/7b/51b1c0668bc479c53d7c382e27b5b27b.jpg?wh=1920x819"></p>
 <p>我们不妨想象一下，把自己写的一条条代码，放入上图纸带的格子中，随着读头的读取代码做相应的动作。读头移动到哪一个，就会读取哪一格的代码，然后执行相应的顺序、跳转、循环动作，完成相应计算工作。</p>
 <p>如果我们把读头及读头的运行规则理解为CPU，把纸带解释为内存，把纸带上信息理解为程序和数据，那这个模型就非常接近现代计算机了。在我看来，以最简单的方法抽象出统一的计算模型，这就是图灵的伟大之处。</p>
 <h3 id="_3">电子计算机</h3>
@@ -5985,7 +5984,7 @@
 <h3 id="_5">重点回顾</h3>
 <p>今天我们一起完成了一次“穿越之旅”，从最早的算盘、机械计算机，现代计算机雏形的图灵机，一路讲到芯片和CPU的两种指令架构集。</p>
 <p>其实仅仅一节课的时间，很难把计算机的历史一一道来，所以我选择了那些对计算机产生和演进最关键的事件或者技术，讲给你听。我把今天的重点内容为你梳理了一张思维导图。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/ac/66/ac779948df1c646cca16a2c1556fdf66.jpg?wh=2286x1572" /><br />
+<p><img alt="" src="https://static001.geekbang.org/resource/image/ac/66/ac779948df1c646cca16a2c1556fdf66.jpg?wh=2286x1572"><br>
 有了这些线索，你就能在脑海里大致勾勒出，计算机是如何一步步变成今天的样子。技术发展的“接力棒”现在传到了我们这代人手里，我对未来的发展充满了期待。</p>
 <p>就拿CPU的发展来说，我觉得未来的CPU可能是多种不同指令集的整合，一个CPU指令能执行多类型的指令，分别完成不同的功能。不同类型的指令由不同的CPU功能组件来执行，有的功能组件执行数字信号分析指令，有的功能组件执行图形加速指令，有的功能组件执行神经网络推算指令……</p>
 <h3 id="_6">思考题</h3>
@@ -5993,29 +5992,59 @@
 <p>欢迎你在留言区跟我交流互动，如果觉得这节课讲得不错，也推荐你分享给身边的朋友。</p>
 <div><strong>精选留言（15）</strong></div>
 <ul>
-<li><span>lisimmy</span> 👍（12） 💬（3）<p>小两口包饺子：夫擀饺子皮，妻包饺子
+<li>
+<span>lisimmy</span> 👍（12） 💬（3）<p>小两口包饺子：夫擀饺子皮，妻包饺子
 RISC-夫妻用的时间一致，完美流水线作业，并行（回答文中的问题）
 CISC-夫擀饺子皮，1分钟一个，妻包饺子，10s一个，就算流水线，虽能并行，也有时间的浪费
-因此流水线，会有加速比、效率等概念！</p>2022-08-21</li><br/><li><span>neohope</span> 👍（9） 💬（3）<p>意犹未尽的话，可以延申阅读：
+因此流水线，会有加速比、效率等概念！</p>2022-08-21</li>
+<br><li>
+<span>neohope</span> 👍（9） 💬（3）<p>意犹未尽的话，可以延申阅读：
 1、从MCU到SOC
 2、从冯诺依曼结构到存算一体
 3、Chiplet如何支撑后摩尔时代
 4、碳基芯片
-5、量子计算</p>2022-07-28</li><br/><li><span>pedro</span> 👍（32） 💬（3）<p>谈到指令并行，就不得不谈CPU里面最核心的流水线了。
+5、量子计算</p>2022-07-28</li>
+<br><li>
+<span>pedro</span> 👍（32） 💬（3）<p>谈到指令并行，就不得不谈CPU里面最核心的流水线了。
 
 现代处理器都是流水线结构，由多个流水级组成，多个流水线同时干活，比如5级流水线由取指，译码，执行，访存和写回组成。
 
 那么，理想情况下在同一个时钟周期内将会有5条处于不同流水阶段的指令，这就是指令并行。
 
-而这样的CPU就能同时执行多条指令。</p>2022-07-20</li><br/><li><span>西门吹牛</span> 👍（11） 💬（1）<p>指令流水线作业：取指令，指令译码，指令执行等都是独立的组合逻辑电路，每个阶段电路在完成对应任务之后，也不需要等待整个指令执行完成，而是可以直接执行下一条指令的对应阶段。就和工厂流水线一个道理。指令并行其实指的是，多个指令的不同阶段，可以在流水线上，并行的执行。
-CPU 指令乱序执行：在执行过程中，还会有指令重排序，有依赖的指令不会重排，但是不依赖的会重排，比如后面的指令不依赖前面的指令，那就不用等待前面的指令执行，它完全可以先执行，充分利用流水线上的空闲位置。</p>2022-07-21</li><br/><li><span>仰望星空</span> 👍（7） 💬（1）<p>为什么RISC的CPU能同时执行多条指令？其实就是CPU中的流水线在发挥作用，CPU执行指令的四个步骤：取指、译指、执行和回写，在执行A指令时也可以同时执行B指令</p>2022-07-21</li><br/><li><span>江同学</span> 👍（6） 💬（1）<p>CPU执行指令使用了流水线技术。以三级流水线为例。一个指令可拆分成“取指令 - 指令译码 - 执行指令”三个部分，因为三个部分资源依赖不一样，例如取指令依赖一个译码器把数据从内存取出写入寄存器，指令译码依赖另一个译码器，而执行依赖完成计算工作的ALU，那么第一个指令在译码阶段，第二个指令可以执行取指令了。所以在一定的拆分数量限制下，如果指令拆分得更多，增加更多的流水线，那么就可以同时执行更多的指令了。就好像我们做需求一样，产品经理除了需求后，开发进入开发阶段，产品经理可以继续准备新的需求。</p>2022-07-21</li><br/><li><span>贾献华</span> 👍（6） 💬（1）<p>hart  硬 件 线 程 （hardware thread）</p>2022-07-20</li><br/><li><span>小杰</span> 👍（4） 💬（1）<p>说一下我的理解，不知道是不是对的哈。RISC用的是精简指令，那cpu在执行是所需要的时间更少，一般来说，为了加快执行的速度，会采用多个指令流水线。所以我自己理解的CISC，也能同时执行多条指令，只是相对来说RISC会多一点。</p>2022-08-09</li><br/><li><span>惜心（伟祺）</span> 👍（4） 💬（1）<p>电阻、电容、晶体管，感觉是从器的层面做总结，不能很好的把握计算机的本质状态控制
+而这样的CPU就能同时执行多条指令。</p>2022-07-20</li>
+<br><li>
+<span>西门吹牛</span> 👍（11） 💬（1）<p>指令流水线作业：取指令，指令译码，指令执行等都是独立的组合逻辑电路，每个阶段电路在完成对应任务之后，也不需要等待整个指令执行完成，而是可以直接执行下一条指令的对应阶段。就和工厂流水线一个道理。指令并行其实指的是，多个指令的不同阶段，可以在流水线上，并行的执行。
+CPU 指令乱序执行：在执行过程中，还会有指令重排序，有依赖的指令不会重排，但是不依赖的会重排，比如后面的指令不依赖前面的指令，那就不用等待前面的指令执行，它完全可以先执行，充分利用流水线上的空闲位置。</p>2022-07-21</li>
+<br><li>
+<span>仰望星空</span> 👍（7） 💬（1）<p>为什么RISC的CPU能同时执行多条指令？其实就是CPU中的流水线在发挥作用，CPU执行指令的四个步骤：取指、译指、执行和回写，在执行A指令时也可以同时执行B指令</p>2022-07-21</li>
+<br><li>
+<span>江同学</span> 👍（6） 💬（1）<p>CPU执行指令使用了流水线技术。以三级流水线为例。一个指令可拆分成“取指令 - 指令译码 - 执行指令”三个部分，因为三个部分资源依赖不一样，例如取指令依赖一个译码器把数据从内存取出写入寄存器，指令译码依赖另一个译码器，而执行依赖完成计算工作的ALU，那么第一个指令在译码阶段，第二个指令可以执行取指令了。所以在一定的拆分数量限制下，如果指令拆分得更多，增加更多的流水线，那么就可以同时执行更多的指令了。就好像我们做需求一样，产品经理除了需求后，开发进入开发阶段，产品经理可以继续准备新的需求。</p>2022-07-21</li>
+<br><li>
+<span>贾献华</span> 👍（6） 💬（1）<p>hart  硬 件 线 程 （hardware thread）</p>2022-07-20</li>
+<br><li>
+<span>小杰</span> 👍（4） 💬（1）<p>说一下我的理解，不知道是不是对的哈。RISC用的是精简指令，那cpu在执行是所需要的时间更少，一般来说，为了加快执行的速度，会采用多个指令流水线。所以我自己理解的CISC，也能同时执行多条指令，只是相对来说RISC会多一点。</p>2022-08-09</li>
+<br><li>
+<span>惜心（伟祺）</span> 👍（4） 💬（1）<p>电阻、电容、晶体管，感觉是从器的层面做总结，不能很好的把握计算机的本质状态控制
 用电阻、电容、电感，感觉会更好传递计算机理论层分层思想，这三个东西实现了、状态变化、状态存储、控制跳转，才有了后面的更复杂的各种计算、应用
 Risc和cisc的差异，感觉是对控制元素的抽象、模块化认识的问题
 Cisc感觉有点异性封装，强调更强的包容性
 risc抽象更本质，把控制抽象成几个严格的模块，模块之间外在的格式形式也是固定的
-所以导致它更容易模块化和乐高化的扩展出更多高层应用</p>2022-07-29</li><br/><li><span>飞鹤Plus</span> 👍（4） 💬（1）<p>老师讲的真好。请问老师最后“计算机历史大事记”的图是用什么软件画的，感觉很简洁。</p>2022-07-20</li><br/><li><span>vampire</span> 👍（2） 💬（1）<p>通过流水线排布可以实现虚拟的并行，还只是在一个程序内部的指令级并行
+所以导致它更容易模块化和乐高化的扩展出更多高层应用</p>2022-07-29</li>
+<br><li>
+<span>飞鹤Plus</span> 👍（4） 💬（1）<p>老师讲的真好。请问老师最后“计算机历史大事记”的图是用什么软件画的，感觉很简洁。</p>2022-07-20</li>
+<br><li>
+<span>vampire</span> 👍（2） 💬（1）<p>通过流水线排布可以实现虚拟的并行，还只是在一个程序内部的指令级并行
 通过多发射可以实现多个程序的并行，也就是程序级并行
-通过多核可以实现多个处理器内核的并行执行，也就是业务级并行</p>2022-08-03</li><br/><li><span>牛年榴莲</span> 👍（2） 💬（1）<p>想起了被计算机系统结构支配的恐惧</p>2022-07-27</li><br/><li><span>顾琪瑶</span> 👍（2） 💬（1）<p>看了下面的回答, 发现还要补充下流水线的基础知识才能回答和思考本篇的提问</p>2022-07-27</li><br/><li><span>砥砺奋进</span> 👍（2） 💬（1）<p>指令流水线技术: 将指令拆分为多个流水线部分,有多少层级就可以有多少指令并行(但不是流水线级越多越多, 涉及流水线停顿等优化手段), 而指令的时钟周期由最复杂的流水线级操作决定, 所以RISC的精简指令可以最大化发挥cpu性能</p>2022-07-21</li><br/><li><span>Freddy</span> 👍（2） 💬（1）<p>CISC, RISC, 以及x86现在的外CISC内RISC，都是时代场景的最优选择；</p>2022-07-21</li><br/>
+通过多核可以实现多个处理器内核的并行执行，也就是业务级并行</p>2022-08-03</li>
+<br><li>
+<span>牛年榴莲</span> 👍（2） 💬（1）<p>想起了被计算机系统结构支配的恐惧</p>2022-07-27</li>
+<br><li>
+<span>顾琪瑶</span> 👍（2） 💬（1）<p>看了下面的回答, 发现还要补充下流水线的基础知识才能回答和思考本篇的提问</p>2022-07-27</li>
+<br><li>
+<span>砥砺奋进</span> 👍（2） 💬（1）<p>指令流水线技术: 将指令拆分为多个流水线部分,有多少层级就可以有多少指令并行(但不是流水线级越多越多, 涉及流水线停顿等优化手段), 而指令的时钟周期由最复杂的流水线级操作决定, 所以RISC的精简指令可以最大化发挥cpu性能</p>2022-07-21</li>
+<br><li>
+<span>Freddy</span> 👍（2） 💬（1）<p>CISC, RISC, 以及x86现在的外CISC内RISC，都是时代场景的最优选择；</p>2022-07-21</li>
+<br>
 </ul>
 
 
@@ -6041,7 +6070,7 @@ risc抽象更本质，把控制抽象成几个严格的模块，模块之间外�
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -6051,13 +6080,13 @@ risc抽象更本质，把控制抽象成几个严格的模块，模块之间外�
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../%E5%BC%80%E7%AF%87%E8%AF%8D-%E7%BB%83%E5%A5%BD%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%8C%E4%BC%98%E7%A7%80%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%88%90%E9%95%BF%E7%AC%AC%E4%B8%80%E6%AD%A5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 开篇词 练好基本功，优秀工程师成长第一步">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -6082,7 +6111,7 @@ risc抽象更本质，把控制抽象成几个严格的模块，模块之间外�
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

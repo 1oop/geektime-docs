@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>27 产品案例分析：Quartz&Hooked的对话式交互 - 极客时间文档</title>
+        <title>27 产品案例分析：Quartz&amp;Hooked的对话式交互 - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              27   产品案例分析：Quartz&Hooked的对话式交互
+              27   产品案例分析：Quartz&amp;Hooked的对话式交互
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -2720,7 +2719,7 @@
           
   
   <span class="md-ellipsis">
-    27   产品案例分析：Quartz&Hooked的对话式交互
+    27   产品案例分析：Quartz&amp;Hooked的对话式交互
     
   </span>
   
@@ -2732,7 +2731,7 @@
         
   
   <span class="md-ellipsis">
-    27   产品案例分析：Quartz&Hooked的对话式交互
+    27   产品案例分析：Quartz&amp;Hooked的对话式交互
     
   </span>
   
@@ -2918,7 +2917,7 @@
         
   
   <span class="md-ellipsis">
-    33   产品案例分析：Arts & Culture 的架构之美
+    33   产品案例分析：Arts &amp; Culture 的架构之美
     
   </span>
   
@@ -3929,7 +3928,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -4000,7 +3999,7 @@
   
 
 
-  <h1>27   产品案例分析：Quartz&Hooked的对话式交互</h1>
+  <h1>27   产品案例分析：Quartz&amp;Hooked的对话式交互</h1>
 
 <p>Quartz 是一款新闻应用，这个应用跟普通的新闻应用差异很大，它是完全基于对话的。</p>
 <h2 id="_1">聊天式界面的黏着力</h2>
@@ -4026,19 +4025,49 @@
 <p>其实对产品经理来说也是一样，比如做一个新人引导，或者一个表单提交，都可以改成这样的方式，在局部利用这样对话交互的优势。另外，最不济，可以学着在营销中用这样的方式去提高转化率。</p>
 <div><strong>精选留言（15）</strong></div>
 <ul>
-<li><span>Charles tong</span> 👍（20） 💬（1）<p>感谢邱哥的分享。看了今天的两款产品，两者都是在内容展现形式上做了创新。我自己也在思考，人们对于信息的获取，通过什么方式的获取效率最高？我想到一种方式，就是“道听途说”，在街边或者在某个场合，咱们听到一个人讲了某句话，咱们都能对这句话（或者说是这个信息）记忆很深刻。“道听途说”也可以延伸到交流沟通，交流过程中人们获取信息的效率是最高的。
-一个产品的形态的创新很像是把生活中的人类最熟悉的方式重新做一遍，只是以互联网产品为载体的去做，依然是场景感的问题，文中邱哥介绍的两款产品就应该是有这样的场景感了吧。</p>2018-01-20</li><br/><li><span>听天由己</span> 👍（7） 💬（2）<p>看完视频，我的第一反应就是售后和智能客服的表现，现在的智能客服系统的确已经越来越完善，诸如支付宝、携程旅行、老虎证券等，各家的 AI 技术日趋完善，辅以人工训练与帮助，整个解答过程就显得十分融洽。
+<li>
+<span>Charles tong</span> 👍（20） 💬（1）<p>感谢邱哥的分享。看了今天的两款产品，两者都是在内容展现形式上做了创新。我自己也在思考，人们对于信息的获取，通过什么方式的获取效率最高？我想到一种方式，就是“道听途说”，在街边或者在某个场合，咱们听到一个人讲了某句话，咱们都能对这句话（或者说是这个信息）记忆很深刻。“道听途说”也可以延伸到交流沟通，交流过程中人们获取信息的效率是最高的。
+一个产品的形态的创新很像是把生活中的人类最熟悉的方式重新做一遍，只是以互联网产品为载体的去做，依然是场景感的问题，文中邱哥介绍的两款产品就应该是有这样的场景感了吧。</p>2018-01-20</li>
+<br><li>
+<span>听天由己</span> 👍（7） 💬（2）<p>看完视频，我的第一反应就是售后和智能客服的表现，现在的智能客服系统的确已经越来越完善，诸如支付宝、携程旅行、老虎证券等，各家的 AI 技术日趋完善，辅以人工训练与帮助，整个解答过程就显得十分融洽。
 
 其实背后都展现了一种思想，未来机器或是科技将越来越了解我们的行为习惯，每一次的交互都是未来数据的积累。
 
-再联想到订场业务本身，我目前设想能够通过退款流程以及帮助引导的优化来借用对话式模式，让用户感知到产品的关怀。</p>2018-01-20</li><br/><li><span>Terence</span> 👍（0） 💬（2）<p>看到二爷的这个视频，我的一个反应是，或许公众号的写作方式以及版面设计，可以用这样的形式来做一个探讨。
+再联想到订场业务本身，我目前设想能够通过退款流程以及帮助引导的优化来借用对话式模式，让用户感知到产品的关怀。</p>2018-01-20</li>
+<br><li>
+<span>Terence</span> 👍（0） 💬（2）<p>看到二爷的这个视频，我的一个反应是，或许公众号的写作方式以及版面设计，可以用这样的形式来做一个探讨。
 
-似乎又回到了古希腊苏格拉底、意大利伽利略的写作方式，但加入产品的表现形式，做更自然的切割和信息承载。</p>2018-01-23</li><br/><li><span>Allen、Zhang</span> 👍（4） 💬（0）<p>感谢岳哥的分享
+似乎又回到了古希腊苏格拉底、意大利伽利略的写作方式，但加入产品的表现形式，做更自然的切割和信息承载。</p>2018-01-23</li>
+<br><li>
+<span>Allen、Zhang</span> 👍（4） 💬（0）<p>感谢岳哥的分享
 
 我听到您说到下意识的打开聊天形式的广告内容的时候。我第一感觉，根据个人也有同样的行为。我觉得是“人的好奇心和喜欢窥探别人隐私或者八卦的心理。”在朋友圈中我们对一些朋友发出来的聊天截图很有兴趣。个人觉得朋友圈缩略图的形式展示聊天内容你无法看清楚，加上是你认识的人，根据“窥探\八卦”这种心理然后查看。所以我们在潜意识中也被培养了这种意识。
 
-因此广告设计者也就是在设计中利用人类这样心理，从而达到传播目的。</p>2018-01-21</li><br/><li><span>疯子</span> 👍（3） 💬（0）<p>产品经理，总得试着去改变些什么，带来一些更好的东西给用户，</p>2018-04-23</li><br/><li><span>白竹</span> 👍（3） 💬（0）<p>国内一款app，下文估计有借鉴。估计人工编辑的。</p>2018-01-22</li><br/><li><span>皮特尔</span> 👍（2） 💬（0）<p>对话式交互的同时，加上语音自动播放、动画等，效果会更好。不过现在这个时间点，这种交换是不是已经很普遍了？</p>2020-07-01</li><br/><li><span>扶风</span> 👍（1） 💬（0）<p>想到了天涯，猫扑上的故事连载，也是比完整开放的长篇小说的可阅读性强的多</p>2019-01-18</li><br/><li><span>疯子</span> 👍（1） 💬（0）<p>市面上各行的应用基本都有现成的产品，当我们去做某一个产品的时候脑子里很容易就会有一个现成的模型，其实这个时候对产品经理的要求是更高的，我们必须通过自己对用户，场景，心理更加深入的理解去呈现更好的产品形态，
-没有最好，只有更好</p>2018-04-23</li><br/><li><span>刘容Caroline</span> 👍（1） 💬（0）<p>我最近也发现很多对话式的广告，原来如此</p>2018-04-22</li><br/><li><span>方薇</span> 👍（0） 💬（0）<p>非常好</p>2022-10-19</li><br/><li><span>刘洋3</span> 👍（0） 💬（0）<p>课程安排合理，推荐</p>2022-02-21</li><br/><li><span>刘洋3</span> 👍（0） 💬（0）<p>超级棒的课程，推荐</p>2022-02-21</li><br/><li><span>JianXu</span> 👍（0） 💬（0）<p>现在再看这些功能，就开始有意识思考功能背后所对应的人性了。怪不得二爷推荐我们去看关于游戏是怎么把我人性的书。</p>2020-12-20</li><br/><li><span>黄康德</span> 👍（0） 💬（1）<p>感觉很多书本，教程可以用这种方式，交互式阅读更容易读下去。不过变现方式可能不适合，当你读的津津有味时，突然让你等半小时，学习的小火苗说不定就浇灭了。</p>2020-07-02</li><br/>
+因此广告设计者也就是在设计中利用人类这样心理，从而达到传播目的。</p>2018-01-21</li>
+<br><li>
+<span>疯子</span> 👍（3） 💬（0）<p>产品经理，总得试着去改变些什么，带来一些更好的东西给用户，</p>2018-04-23</li>
+<br><li>
+<span>白竹</span> 👍（3） 💬（0）<p>国内一款app，下文估计有借鉴。估计人工编辑的。</p>2018-01-22</li>
+<br><li>
+<span>皮特尔</span> 👍（2） 💬（0）<p>对话式交互的同时，加上语音自动播放、动画等，效果会更好。不过现在这个时间点，这种交换是不是已经很普遍了？</p>2020-07-01</li>
+<br><li>
+<span>扶风</span> 👍（1） 💬（0）<p>想到了天涯，猫扑上的故事连载，也是比完整开放的长篇小说的可阅读性强的多</p>2019-01-18</li>
+<br><li>
+<span>疯子</span> 👍（1） 💬（0）<p>市面上各行的应用基本都有现成的产品，当我们去做某一个产品的时候脑子里很容易就会有一个现成的模型，其实这个时候对产品经理的要求是更高的，我们必须通过自己对用户，场景，心理更加深入的理解去呈现更好的产品形态，
+没有最好，只有更好</p>2018-04-23</li>
+<br><li>
+<span>刘容Caroline</span> 👍（1） 💬（0）<p>我最近也发现很多对话式的广告，原来如此</p>2018-04-22</li>
+<br><li>
+<span>方薇</span> 👍（0） 💬（0）<p>非常好</p>2022-10-19</li>
+<br><li>
+<span>刘洋3</span> 👍（0） 💬（0）<p>课程安排合理，推荐</p>2022-02-21</li>
+<br><li>
+<span>刘洋3</span> 👍（0） 💬（0）<p>超级棒的课程，推荐</p>2022-02-21</li>
+<br><li>
+<span>JianXu</span> 👍（0） 💬（0）<p>现在再看这些功能，就开始有意识思考功能背后所对应的人性了。怪不得二爷推荐我们去看关于游戏是怎么把我人性的书。</p>2020-12-20</li>
+<br><li>
+<span>黄康德</span> 👍（0） 💬（1）<p>感觉很多书本，教程可以用这种方式，交互式阅读更容易读下去。不过变现方式可能不适合，当你读的津津有味时，突然让你等半小时，学习的小火苗说不定就浇灭了。</p>2020-07-02</li>
+<br>
 </ul>
 
 
@@ -4064,7 +4093,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -4074,13 +4103,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../26%20-%20%E5%86%99%E5%A5%BD%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3%E7%9A%84%E8%AF%80%E7%AA%8D/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 26   写好产品文档的诀窍">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -4105,7 +4134,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

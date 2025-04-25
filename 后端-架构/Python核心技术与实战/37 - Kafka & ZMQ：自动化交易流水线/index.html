@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -28,7 +26,7 @@
     
     
       
-        <title>37 Kafka & ZMQ：自动化交易流水线 - 极客时间文档</title>
+        <title>37 Kafka &amp; ZMQ：自动化交易流水线 - 极客时间文档</title>
       
     
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              37   Kafka & ZMQ：自动化交易流水线
+              37   Kafka &amp; ZMQ：自动化交易流水线
             
           </span>
         </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -3901,7 +3900,7 @@
         
   
   <span class="md-ellipsis">
-    31   pdb & cProfile：调试和性能分析的法宝
+    31   pdb &amp; cProfile：调试和性能分析的法宝
     
   </span>
   
@@ -3967,7 +3966,7 @@
         
   
   <span class="md-ellipsis">
-    34   RESTful & Socket：搭建交易执行层核心
+    34   RESTful &amp; Socket：搭建交易执行层核心
     
   </span>
   
@@ -3989,7 +3988,7 @@
         
   
   <span class="md-ellipsis">
-    35   RESTful & Socket：行情数据对接和抓取
+    35   RESTful &amp; Socket：行情数据对接和抓取
     
   </span>
   
@@ -4011,7 +4010,7 @@
         
   
   <span class="md-ellipsis">
-    36   Pandas & Numpy：策略与回测系统
+    36   Pandas &amp; Numpy：策略与回测系统
     
   </span>
   
@@ -4040,7 +4039,7 @@
           
   
   <span class="md-ellipsis">
-    37   Kafka & ZMQ：自动化交易流水线
+    37   Kafka &amp; ZMQ：自动化交易流水线
     
   </span>
   
@@ -4052,7 +4051,7 @@
         
   
   <span class="md-ellipsis">
-    37   Kafka & ZMQ：自动化交易流水线
+    37   Kafka &amp; ZMQ：自动化交易流水线
     
   </span>
   
@@ -4293,7 +4292,7 @@
         
   
   <span class="md-ellipsis">
-    43   Q&A：聊一聊职业发展和选择
+    43   Q&amp;A：聊一聊职业发展和选择
     
   </span>
   
@@ -9999,7 +9998,7 @@
       
   
   <span class="md-ellipsis">
-    深入拆解Tomcat & Jetty
+    深入拆解Tomcat &amp; Jetty
     
   </span>
   
@@ -13312,7 +13311,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -13416,7 +13415,7 @@
   
 
 
-  <h1>37   Kafka & ZMQ：自动化交易流水线</h1>
+  <h1>37   Kafka &amp; ZMQ：自动化交易流水线</h1>
 
 <p>你好，我是景霄。</p>
 <p>在进行这节课的学习前，我们先来回顾一下，前面三节课，我们学了些什么。</p>
@@ -13429,7 +13428,7 @@
 <p>这个概念听起来并不难理解，我们再举个例子让你彻底明白。比如拿数据库来说，底层数据库有很多很多种，从关系型数据库 MySQL 到非关系型数据库 NoSQL，从分布式数据库 Spanner 到内存数据库 Redis，不同的数据库有不同的使用场景，也有着不同的优缺点，更有着不同的调用方式。那么中间件起什么作用呢？</p>
 <p>中间件，等于在这些不同的数据库上加了一层逻辑，这一层逻辑专门用来和数据库打交道，而对外只需要暴露同一个接口即可。这样一来，上层的程序员调用中间件接口时，只需要让中间件指定好数据库即可，其他参数完全一致，极大地方便了上层的开发；同时，下层技术栈在更新换代的时候，也可以做到和上层完全分离，不影响程序员的使用。</p>
 <p>它们之间的逻辑关系，你可以参照下面我画的这张图。我习惯性把中间件的作用调侃为：没有什么事情是加一层解决不了的；如果有，那就加两层。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/f4/50/f49f221a8191d8fa95eeea146bbbf550.png?wh=968%2A628" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/f4/50/f49f221a8191d8fa95eeea146bbbf550.png?wh=968%2A628"></p>
 <p>当然，这只是其中一个例子，也只是中间件的一种形式。事实上，比如在阿里，中间件主要有分布式关系型数据库 DRDS、消息队列和分布式服务这么三种形式。而我们今天，主要会用到消息队列，因为它非常符合量化交易系统的应用场景，即事件驱动模型。</p>
 <h2 id="_2">消息队列</h2>
 <p>那么，什么是消息队列呢？一如其名，消息，即互联网信息传递的个体；而队列，学过算法和数据结构的你，应该很清楚这个 FIFO（先进先出）的数据结构吧。（如果算法基础不太牢，建议你可以学习极客时间平台上王争老师的“数据结构与算法之美”专栏，<a href="https://time.geekbang.org/column/article/41330">第 09讲</a>即为队列知识）</p>
@@ -13440,7 +13439,7 @@
 <p>说到队列的特点，简单提一句，与“先进先出“相对的是栈这种数据结构，它是先进后出的，你丢给它 <code>1, 2, 3</code>，再从里面取出来的时候，拿到的就是<code>3, 2, 1</code>了，这一点一定要区分清楚。</p>
 <p>其次，是分布式网络系统的老生常谈问题。如何保证消息不丢失？如何保证消息不重复？这一切，消息队列在设计的时候都已经考虑好了，你只需要拿来用就可以，不必过多深究。</p>
 <p>不过，很重要的一点，消息队列是如何降低系统复杂度，起到中间件的解耦作用呢？我们来看下面这张图。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/f6/f0/f6a5e84033070f5ee7746ca85680aef0.png?wh=749%2A527" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/f6/f0/f6a5e84033070f5ee7746ca85680aef0.png?wh=749%2A527"></p>
 <p>消息队列的模式是发布和订阅，一个或多个消息发布者可以发布消息，一个或多个消息接受者可以订阅消息。 从图中你可以看到，消息发布者和消息接受者之间没有直接耦合，其中，</p>
 <ul>
 <li>消息发布者将消息发送到分布式消息队列后，就结束了对消息的处理；</li>
@@ -13468,26 +13467,26 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>def run():
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    context = zmq.Context()
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    socket = context.socket(zmq.SUB)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    socket.connect(&#39;tcp://127.0.0.1:6666&#39;)
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    socket.setsockopt_string(zmq.SUBSCRIBE, &#39;&#39;)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    socket.connect('tcp://127.0.0.1:6666')
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    socket.setsockopt_string(zmq.SUBSCRIBE, '')
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    print(&#39;client 1&#39;)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    print('client 1')
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    while True:
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        msg = socket.recv()
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        print(&quot;msg: %s&quot; % msg)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        print("msg: %s" % msg)
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>if __name__ == &#39;__main__&#39;:
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>if __name__ == '__main__':
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    run()
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>########## 输出 ##########
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>client 1
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>msg: b&#39;server cnt 1&#39;
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>msg: b&#39;server cnt 2&#39;
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>msg: b&#39;server cnt 3&#39;
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>msg: b&#39;server cnt 4&#39;
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>msg: b&#39;server cnt 5&#39;
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>msg: b'server cnt 1'
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>msg: b'server cnt 2'
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>msg: b'server cnt 3'
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>msg: b'server cnt 4'
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>msg: b'server cnt 5'
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># 订阅者 2
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import zmq
@@ -13496,26 +13495,26 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>def run():
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    context = zmq.Context()
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    socket = context.socket(zmq.SUB)
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    socket.connect(&#39;tcp://127.0.0.1:6666&#39;)
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    socket.setsockopt_string(zmq.SUBSCRIBE, &#39;&#39;)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    socket.connect('tcp://127.0.0.1:6666')
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    socket.setsockopt_string(zmq.SUBSCRIBE, '')
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    print(&#39;client 2&#39;)
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    print('client 2')
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    while True:
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        msg = socket.recv()
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        print(&quot;msg: %s&quot; % msg)
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        print("msg: %s" % msg)
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>if __name__ == &#39;__main__&#39;:
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>if __name__ == '__main__':
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    run()
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>########## 输出 ##########
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>client 2
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>msg: b&#39;server cnt 1&#39;
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>msg: b&#39;server cnt 2&#39;
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>msg: b&#39;server cnt 3&#39;
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>msg: b&#39;server cnt 4&#39;
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>msg: b&#39;server cnt 5&#39;
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>msg: b'server cnt 1'
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>msg: b'server cnt 2'
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>msg: b'server cnt 3'
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>msg: b'server cnt 4'
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>msg: b'server cnt 5'
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># 发布者
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import time
@@ -13525,18 +13524,18 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>def run():
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    context = zmq.Context()
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    socket = context.socket(zmq.PUB)
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    socket.bind(&#39;tcp://*:6666&#39;)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    socket.bind('tcp://*:6666')
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    cnt = 1
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    while True:
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        time.sleep(1)
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        socket.send_string(&#39;server cnt {}&#39;.format(cnt))
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        print(&#39;send {}&#39;.format(cnt))
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        socket.send_string('server cnt {}'.format(cnt))
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        print('send {}'.format(cnt))
 <a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        cnt += 1
 <a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
 <a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>if __name__ == &#39;__main__&#39;:
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>if __name__ == '__main__':
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    run()
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
 <a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>########## 输出 ##########
@@ -13550,7 +13549,7 @@
 <p>这里要注意的一点是，如果你想要运行代码，请先运行两个订阅者，然后再打开发布者。</p>
 <p>接下来，我来简单讲解一下。</p>
 <p>对于订阅者，我们要做的是创建一个 zmq Context，连接 socket 到指定端口。其中，setsockopt_string() 函数用来过滤特定的消息，而下面这行代码：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>socket.setsockopt_string(zmq.SUBSCRIBE, &#39;&#39;) 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>socket.setsockopt_string(zmq.SUBSCRIBE, '') 
 </code></pre></div>
 <p>则表示不过滤任何消息。最后，我们调用 socket.recv() 来接受消息就行了，这条语句会阻塞在这里，直到有新消息来临。</p>
 <p>对于发布者，我们同样要创建一个 zmq Context，绑定到指定端口，不过请注意，这里用的是 bind 而不是 connect。因为在任何情况下，同一个地址端口 bind 只能有一个，但却可以有很多个 connect 链接到这个地方。初始化完成后，再调用 socket.send_string ，即可将我们想要发送的内容发送给 ZMQ。</p>
@@ -13562,14 +13561,14 @@
 <p>通过代码实现你也可以发现，ZMQ 的优点主要在轻量、开源和方便易用上，但在工业级别的应用中，大部分人还是会转向 Kafka 这样的有充足支持的轮子上。</p>
 <p>相比而言，Kafka 提供了点对点网络和发布订阅模型的支持，这也是用途最广泛的两种消息队列模型。而且和 ZMQ 一样，Kafka 也是完全开源的，因此你也能得到开源社区的充分支持。</p>
 <p>Kafka的代码实现，和ZMQ大同小异，这里我就不专门讲解了。关于Kafka的更多内容，极客时间平台也有对 Kafka 的专门详细的介绍，对此有兴趣的同学，可以在极客时间中搜索“<a href="https://time.geekbang.org/column/intro/191">Kafka核心技术与实战</a>”，这个专栏里，胡夕老师用详实的篇幅，讲解了 Kafka 的实战和内核，你可以加以学习和使用。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/d4/27/d401e91a10826773067857e3c9974a27.png?wh=1804%2A1132" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/d4/27/d401e91a10826773067857e3c9974a27.png?wh=1804%2A1132"></p>
 <p>来自极客时间专栏“Kafka核心技术与实战”</p>
 <h2 id="orderbook">基于消息队列的 Orderbook 数据流</h2>
 <p>最后回到我们的量化交易系统上。</p>
 <p>量化交易系统中，获取 orderbook 一般有两种用途：策略端获取实时数据，用来做决策；备份在文件或者数据库中，方便让策略和回测系统将来使用。</p>
 <p>如果我们直接单机监听交易所的消息，风险将会变得很大，这在分布式系统中叫做 Single Point Failure。一旦这台机器出了故障，或者网络连接突然中断，我们的交易系统将立刻暴露于风险中。</p>
 <p>于是，一个很自然的想法就是，我们可以在不同地区放置不同的机器，使用不同的网络同时连接到交易所，然后将这些机器收集到的信息汇总、去重，最后生成我们需要的准确数据。相应的拓扑图如下：</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/ab/dc/ab08e31f805d1f7ea596ae4ccdea48dc.png?wh=760%2A837" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/ab/dc/ab08e31f805d1f7ea596ae4ccdea48dc.png?wh=760%2A837"></p>
 <p>当然，这种做法也有很明显的缺点：因为要同时等待多个数据服务器的数据，再加上消息队列的潜在处理延迟和网络延迟，对策略服务器而言，可能要增加几十到数百毫秒的延迟。如果是一些高频或者滑点要求比较高的策略，这种做法需要谨慎考虑。</p>
 <p>但是，对于低频策略、波段策略，这种延迟换来的整个系统的稳定性和架构的解耦性，还是非常值得的。不过，你仍然需要注意，这种情况下，消息队列服务器有可能成为瓶颈，也就是刚刚所说的Single Point Failure，一旦此处断开，依然会将系统置于风险之中。</p>
 <p>事实上，我们可以使用一些很成熟的系统，例如阿里的消息队列，AWS 的 Simple Queue Service 等等，使用这些非常成熟的消息队列系统，风险也将会最小化。</p>
@@ -13585,24 +13584,54 @@
 <p>欢迎留言写下你的思考和疑惑，也欢迎你把这篇文章分享给更多的人一起学习。</p>
 <div><strong>精选留言（15）</strong></div>
 <ul>
-<li><span>Jingxiao</span> 👍（23） 💬（3）<p>第一个问题，大家的回复很正确，time.sleep(1) 后置，则第一条消息会丢失，因为建立连接需要时间，建立成功之前的所有消息都会丢失。
-第二个问题，在 linux socket 中, 一个连接就是一个 socket , 但在 ZMQ 中, 一个 socket 上可以承载多个数据连接. 这里 socket 和connection不再是同个层次上的等价词汇, 要把socket理解为程序员访问数据连接的一个入口。因此，我们在绑定一个 socket 之后，可以让多个发布者连接到这里即可，和多个订阅者的使用是同样的方式。</p>2019-08-19</li><br/><li><span>秋天的透明雨🌧️</span> 👍（3） 💬（1）<p>本机环境python 3.7.6， 需要把context = zmq.Context() 改成 context = zmq.Context.instance()</p>2020-04-01</li><br/><li><span>Skrpy</span> 👍（34） 💬（4）<p>我以为实战篇会有量化交易平台的实现的…可是老师只讲了一些 Kafka 的概念，39讲的 Django 也只是官方文档的例子…老师有没有更好的实战教程？</p>2019-08-08</li><br/><li><span>SCAR</span> 👍（9） 💬（0）<p>思考题
+<li>
+<span>Jingxiao</span> 👍（23） 💬（3）<p>第一个问题，大家的回复很正确，time.sleep(1) 后置，则第一条消息会丢失，因为建立连接需要时间，建立成功之前的所有消息都会丢失。
+第二个问题，在 linux socket 中, 一个连接就是一个 socket , 但在 ZMQ 中, 一个 socket 上可以承载多个数据连接. 这里 socket 和connection不再是同个层次上的等价词汇, 要把socket理解为程序员访问数据连接的一个入口。因此，我们在绑定一个 socket 之后，可以让多个发布者连接到这里即可，和多个订阅者的使用是同样的方式。</p>2019-08-19</li>
+<br><li>
+<span>秋天的透明雨🌧️</span> 👍（3） 💬（1）<p>本机环境python 3.7.6， 需要把context = zmq.Context() 改成 context = zmq.Context.instance()</p>2020-04-01</li>
+<br><li>
+<span>Skrpy</span> 👍（34） 💬（4）<p>我以为实战篇会有量化交易平台的实现的…可是老师只讲了一些 Kafka 的概念，39讲的 Django 也只是官方文档的例子…老师有没有更好的实战教程？</p>2019-08-08</li>
+<br><li>
+<span>SCAR</span> 👍（9） 💬（0）<p>思考题
 1.如果把time.sleep(1)放在while 循环的最后，订阅者会接收不到发布者发布的第一个消息‘server cnt 1’，因为订阅者和发布者建立连接需要时间，连接好后已经是在第一个消息发布之后了，自然订阅者会手不到第一个消息的。
-2.多个发布者的话，不同的发布者使用不同的端口，而后订阅者根据匹配的端口读取消息。</p>2019-08-02</li><br/><li><span>hlz-123</span> 👍（7） 💬（1）<p>思考题
+2.多个发布者的话，不同的发布者使用不同的端口，而后订阅者根据匹配的端口读取消息。</p>2019-08-02</li>
+<br><li>
+<span>hlz-123</span> 👍（7） 💬（1）<p>思考题
 1.如果把time.sleep(1)放在while循环最后，订阅者接收不到发布者的第一条消息，因为，发布者和订阅者建立连接需要时间，在我的电脑中，建立连接的时间不低于0.5秒，并且通过程序运行表明，只在发布者while循环中第一次执行sleep(1)，以后每次循环不执行sleep(1),接收者也能正常接收到发布者信息，
 至于具体原因，需要老师讲解一下。
 2.如果有多个发布者，每个发布者应该绑定一个socket
-              例如，发布者1，socket.bind(&#39;tcp:&#47;&#47;*:6666&#39;)
-                        发布者2，socket.bind(&#39;tcp:&#47;&#47;*:6667&#39;)
+              例如，发布者1，socket.bind('tcp://*:6666')
+                        发布者2，socket.bind('tcp://*:6667')
    对于接收者来讲，可以接收一个或多个发布者的消息，
-              接收发布者1消息，socket.connect(&#39;tcp:&#47;&#47;127.0.0.1:6666&#39;)
-              接收发布者2消息，socket.connect(&#39;tcp:&#47;&#47;127.0.0.1:6667&#39;)</p>2019-08-02</li><br/><li><span>宝仔</span> 👍（6） 💬（0）<p>把发布者的time.sleep(1)放到循环语句后面，会导致第一条消息(server cnt 1)丢失。原因是此时发布者应该还没有和zmq完全建立通讯通道，导致消息丢失</p>2019-08-02</li><br/><li><span>教授</span> 👍（2） 💬（0）<p>老师，我用pyzmq，发布者&#47;订阅者模式，发现有一个订阅者突然接收不到信息了，之前能接收，请老师指点一下</p>2021-02-08</li><br/><li><span>宝仔</span> 👍（2） 💬（0）<p>把time.sleep(1)放到while后面，消费者第一个数据包(server cnt 1)收不到</p>2019-08-02</li><br/><li><span>Carl</span> 👍（1） 💬（0）<p>我理解新增一个发布者2，将bind方法改为connect，但是测试发现并不能够接收到发布者2发布的信息</p>2020-03-23</li><br/><li><span>建强</span> 👍（1） 💬（0）<p>思考题：
+              接收发布者1消息，socket.connect('tcp://127.0.0.1:6666')
+              接收发布者2消息，socket.connect('tcp://127.0.0.1:6667')</p>2019-08-02</li>
+<br><li>
+<span>宝仔</span> 👍（6） 💬（0）<p>把发布者的time.sleep(1)放到循环语句后面，会导致第一条消息(server cnt 1)丢失。原因是此时发布者应该还没有和zmq完全建立通讯通道，导致消息丢失</p>2019-08-02</li>
+<br><li>
+<span>教授</span> 👍（2） 💬（0）<p>老师，我用pyzmq，发布者/订阅者模式，发现有一个订阅者突然接收不到信息了，之前能接收，请老师指点一下</p>2021-02-08</li>
+<br><li>
+<span>宝仔</span> 👍（2） 💬（0）<p>把time.sleep(1)放到while后面，消费者第一个数据包(server cnt 1)收不到</p>2019-08-02</li>
+<br><li>
+<span>Carl</span> 👍（1） 💬（0）<p>我理解新增一个发布者2，将bind方法改为connect，但是测试发现并不能够接收到发布者2发布的信息</p>2020-03-23</li>
+<br><li>
+<span>建强</span> 👍（1） 💬（0）<p>思考题：
 （1）time.sleep(1)放到循环最后，发布者第一次发送的消息，没有被订阅者接受到。
 由于对zmq知之甚少，个人肤浅理解：可能是zmq的发布者在绑定端口时，中间件可能会做一系列的检测，如检测网络，检查端口的可用性等等，会有一定的延迟，因此需要在端口绑定后延迟一秒。
 
 （2）对于有多个发布者，zmq要求不同的发布者绑定到不同的端口，多个发布者还是可以正常发送信息，而对于订阅者，需要绑定对应的发布者端口才能接受到发布者发送的信息。
 
-以上见解，有错误之处请老师指正。</p>2020-03-07</li><br/><li><span>hel793</span> 👍（1） 💬（0）<p>需安装 pyzmq</p>2019-09-14</li><br/><li><span>小侠龙旋风</span> 👍（1） 💬（0）<p>socket.bind(&#39;tcp:&#47;&#47;*:6666&#39;)这句话里域名写成*是不是指任意域名？</p>2019-08-04</li><br/><li><span>张申傲</span> 👍（0） 💬（0）<p>第37讲打卡~</p>2024-07-17</li><br/><li><span>Geek_fc975d</span> 👍（0） 💬（0）<p>老师，使用pip install zmq的安装方式安装后，发现很多函数不能用，请教这是怎么回事？</p>2022-04-23</li><br/><li><span>06</span> 👍（0） 💬（0）<p>文章提到中低频策略可以使用消息队列提高稳定性，那么高频策略有没有类似的实现？</p>2021-09-04</li><br/>
+以上见解，有错误之处请老师指正。</p>2020-03-07</li>
+<br><li>
+<span>hel793</span> 👍（1） 💬（0）<p>需安装 pyzmq</p>2019-09-14</li>
+<br><li>
+<span>小侠龙旋风</span> 👍（1） 💬（0）<p>socket.bind('tcp://*:6666')这句话里域名写成*是不是指任意域名？</p>2019-08-04</li>
+<br><li>
+<span>张申傲</span> 👍（0） 💬（0）<p>第37讲打卡~</p>2024-07-17</li>
+<br><li>
+<span>Geek_fc975d</span> 👍（0） 💬（0）<p>老师，使用pip install zmq的安装方式安装后，发现很多函数不能用，请教这是怎么回事？</p>2022-04-23</li>
+<br><li>
+<span>06</span> 👍（0） 💬（0）<p>文章提到中低频策略可以使用消息队列提高稳定性，那么高频策略有没有类似的实现？</p>2021-09-04</li>
+<br>
 </ul>
 
 
@@ -13628,7 +13657,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -13638,20 +13667,20 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../36%20-%20Pandas%20%26%20Numpy%EF%BC%9A%E7%AD%96%E7%95%A5%E4%B8%8E%E5%9B%9E%E6%B5%8B%E7%B3%BB%E7%BB%9F/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 36   Pandas &amp; Numpy：策略与回测系统">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 上一页
               </span>
               <div class="md-ellipsis">
-                36   Pandas & Numpy：策略与回测系统
+                36   Pandas &amp; Numpy：策略与回测系统
               </div>
             </div>
           </a>
@@ -13669,7 +13698,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         

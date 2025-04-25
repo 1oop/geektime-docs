@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <!--geek time docs 🚀, MIT license-->
-
-
-<!doctype html>
 <html lang="zh" class="no-js">
   <head>
     
@@ -49,7 +47,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -65,7 +63,8 @@
     
     
     
-  </head>
+  <meta name="referrer" content="no-referrer">
+</head>
   
   
     
@@ -113,12 +112,12 @@
     <a href="../../.." title="极客时间文档" class="md-header__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,9 +129,9 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08 Option<T>与Result<T, E>、迭代器
+              08 Option<t>与Result<t e>、迭代器
             
-          </span>
+          </t></t></span>
         </div>
       </div>
     </div>
@@ -143,30 +142,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -183,7 +182,7 @@
         <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -358,7 +357,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -372,7 +371,7 @@
     <a href="../../.." title="极客时间文档" class="md-nav__button md-logo" aria-label="极客时间文档" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     极客时间文档
@@ -382,7 +381,7 @@
       <a href="https://github.com/zkep/my-geektime" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     zkep/my-geektime
@@ -4056,9 +4055,9 @@
           
   
   <span class="md-ellipsis">
-    08 Option<T>与Result<T, E>、迭代器
+    08 Option<t>与Result<t e>、迭代器
     
-  </span>
+  </t></t></span>
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -4068,9 +4067,9 @@
         
   
   <span class="md-ellipsis">
-    08 Option<T>与Result<T, E>、迭代器
+    08 Option<t>与Result<t e>、迭代器
     
-  </span>
+  </t></t></span>
   
 
       </a>
@@ -4095,7 +4094,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option<T> 与 Result<T, E>">
+    <nav class="md-nav" aria-label="Option&lt;T&gt; 与 Result&lt;T, E&gt;">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4141,7 +4140,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option<T> 与 Result<T, E> 的相互转换">
+    <nav class="md-nav" aria-label="Option&lt;T&gt; 与 Result&lt;T, E&gt; 的相互转换">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9850,7 +9849,7 @@
       
   
   <span class="md-ellipsis">
-    深入拆解Tomcat & Jetty
+    深入拆解Tomcat &amp; Jetty
     
   </span>
   
@@ -13163,7 +13162,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -13186,7 +13185,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option<T> 与 Result<T, E>">
+    <nav class="md-nav" aria-label="Option&lt;T&gt; 与 Result&lt;T, E&gt;">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -13232,7 +13231,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option<T> 与 Result<T, E> 的相互转换">
+    <nav class="md-nav" aria-label="Option&lt;T&gt; 与 Result&lt;T, E&gt; 的相互转换">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -13360,15 +13359,19 @@
   
 
 
-  <h1>08 Option<T>与Result<T, E>、迭代器</h1>
+  <h1>08 Option<t>与Result<t e>、迭代器</t></t>
+</h1>
 
 <p>你好，我是Mike，今天我们一起来重点学习在Rust中高频使用的 <code>Option&lt;T&gt;</code>、<code>Result&lt;T, E&gt;</code>、迭代器，通过学习这些内容，我们可以继续夯实集合中所有权相关的知识点。</p>
 <p><code>Option&lt;T&gt;</code> 和 <code>Result&lt;T, E&gt;</code> 并不是Rust的独创设计，在Rust之前，OCaml、Haskell、Scala等已经使用它们很久了。新兴的一批语言Kotlin、Swift 等也和Rust一样引入了这两种类型。而C++17之后也引入了它们。</p>
 <p>这其实能说明使用 <code>Option&lt;T&gt;</code> 和 <code>Result&lt;T, E&gt;</code> 逐渐成了编程语言圈子的一种新共识。而迭代器已经是目前几乎所有主流语言的标配了，所以我们也来看看Rust中的迭代器有什么独到的地方。</p>
 <p>如果你习惯了命令式编程或OOP编程，那么这节课我们提到各种操作对你来说可能有点陌生，不过也不用担心，这节课我设计了大量示例，你可以通过熟悉这些示例代码，掌握Rust中地道的编程风格。</p>
-<h2 id="optiont-resultt-e"><code>Option&lt;T&gt;</code> 与 <code>Result&lt;T, E&gt;</code></h2>
+<h2 id="optiont-resultt-e">
+<code>Option&lt;T&gt;</code> 与 <code>Result&lt;T, E&gt;</code>
+</h2>
 <p><code>Option&lt;T&gt;</code> 与 <code>Result&lt;T, E&gt;</code> 在Rust代码中随处可见，但是我们到现在才开始正式介绍，就是因为它们实际是带类型参数的枚举类型。</p>
-<h3 id="optiont"><code>Option&lt;T&gt;</code> 的定义</h3>
+<h3 id="optiont">
+<code>Option&lt;T&gt;</code> 的定义</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pub enum Option&lt;T&gt; {
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    None,
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Some(T),
@@ -13378,14 +13381,15 @@
 <p>你可以把 <code>Option&lt;T&gt;</code> 理解为把空值单独提出来了一个维度。在没有 <code>Option&lt;T&gt;</code> 的语言中，空值是分散在其他类型中的。比如空字符串、空数组、数字0、NULL指针等。并且有的语言还把空值区分为空值和未定义的值，如 nil、undefined等。</p>
 <p>Rust做了两件事情来解决这个混乱的场面。第一，Rust中所有的变量定义后使用前都必须初始化，所以不存在未定义值这个情况。第二，Rust把空值单独提出来统一定义成 <code>Option&lt;T&gt;::None</code>，并在标准库层面上就做好了规范，上层的应用在设计时也应该遵循这个规范。</p>
 <p>我们来看一个示例。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>let s = String::from(&quot;&quot;);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>let s = String::from("");
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>let a: Option&lt;String&gt; = Some(s);
 </code></pre></div>
 <p>变量a是携带空字符串的 <code>Option&lt;String&gt;</code> 类型。这里，空字符串""的“空”与None所表示的“无”表达了不同的意义。</p>
 <p>如果早点发明Option，Tony Hoare就不会自责了。Tony Hoare在<a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/">一次分享</a>中说，他在1965年发明的空引用（Null references）是一个“十亿美元”的错误。</p>
 <p>他是这样说的：我把它叫做我的十亿美元错误。那个时候，我正在为一个面向对象语言中的引用设计第一个全面的类型系统。我的目标是让编译器自动施加检查，来确保对引用的所有使用都是绝对安全的。但是我当时无法抵抗空引用的诱惑，就是因为它非常容易实现。这导致了难以计数的错误、漏洞和系统崩溃，在后续40年里这可能已经导致了十亿美元的痛苦和破坏。</p>
 <p>Rust通过所有权并借用检查器、<code>Option&lt;T&gt;</code>、<code>Result&lt;T, E&gt;</code> 等一整套机制全面解决了Hoare想解决的问题。</p>
-<h3 id="resultt-e"><code>Result&lt;T, E&gt;</code> 的定义</h3>
+<h3 id="resultt-e">
+<code>Result&lt;T, E&gt;</code> 的定义</h3>
 <p>我们先来看一个示例。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pub enum Result&lt;T, E&gt; {
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Ok(T),
@@ -13408,39 +13412,39 @@
 <h3 id="_1">解包</h3>
 <p>现在我们遇到了一个问题，比如 <code>Option&lt;u32&gt;::Some(10)</code> 和 <code>10u32</code> 明显已经不是同一种类型了。我们真正想要的值被“包裹”在了另外一种类型里面。这种“包裹”是通过枚举变体来实现的。那我们想获取被包在里面的值应该怎么做呢？</p>
 <p>其实有很多办法，我们先讲一类解包操作。这里我列出了三种方法，分别是 <code>expect()</code>、<code>unwrap()</code>、<code>unwrap_or()</code>。我给出了它们解包的具体操作和示例代码，你可以看一下有什么不同。</p>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/2c/4e/2c6688bff17d22b516a83e8063fb094e.jpg?wh=1920x439" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/2c/4e/2c6688bff17d22b516a83e8063fb094e.jpg?wh=1920x439"></p>
 <p>示例：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>// Option
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>let x = Some(&quot;value&quot;);
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>assert_eq!(x.expect(&quot;fruits are healthy&quot;), &quot;value&quot;);
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>let x = Some("value");
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>assert_eq!(x.expect("fruits are healthy"), "value");
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>// Result
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>let path = std::env::var(&quot;IMPORTANT_PATH&quot;)
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    .expect(&quot;env variable `IMPORTANT_PATH` should be set by `wrapper_script.sh`&quot;);
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>let path = std::env::var("IMPORTANT_PATH")
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    .expect("env variable `IMPORTANT_PATH` should be set by `wrapper_script.sh`");
 </code></pre></div>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/95/ed/959455893ca1ae8c43ffyye251c015ed.jpg?wh=1920x413" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/95/ed/959455893ca1ae8c43ffyye251c015ed.jpg?wh=1920x413"></p>
 <p>示例：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>// Option
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>let x = Some(&quot;air&quot;);
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>assert_eq!(x.unwrap(), &quot;air&quot;);
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>let x = Some("air");
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>assert_eq!(x.unwrap(), "air");
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>// Result
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>let x: Result&lt;u32, &amp;str&gt; = Ok(2);
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>assert_eq!(x.unwrap(), 2);
 </code></pre></div>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/ca/e5/ca69bfe4787585c0e16529c5ddd8b5e5.jpg?wh=1920x485" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/ca/e5/ca69bfe4787585c0e16529c5ddd8b5e5.jpg?wh=1920x485"></p>
 <p>示例：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>// Option
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>assert_eq!(Some(&quot;car&quot;).unwrap_or(&quot;bike&quot;), &quot;car&quot;);
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>assert_eq!(None.unwrap_or(&quot;bike&quot;), &quot;bike&quot;);
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>assert_eq!(Some("car").unwrap_or("bike"), "car");
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>assert_eq!(None.unwrap_or("bike"), "bike");
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>// Result
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>let default = 2;
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>let x: Result&lt;u32, &amp;str&gt; = Ok(9);
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>assert_eq!(x.unwrap_or(default), 9);
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>let x: Result&lt;u32, &amp;str&gt; = Err(&quot;error&quot;);
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>let x: Result&lt;u32, &amp;str&gt; = Err("error");
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>assert_eq!(x.unwrap_or(default), default);
 </code></pre></div>
-<p><img alt="图片" src="https://static001.geekbang.org/resource/image/71/08/7170a2fcaec48fd123158f99e88ce708.jpg?wh=1920x415" /></p>
+<p><img alt="图片" src="https://static001.geekbang.org/resource/image/71/08/7170a2fcaec48fd123158f99e88ce708.jpg?wh=1920x415"></p>
 <p>示例：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>// Option
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>let x: Option&lt;u32&gt; = None;
@@ -13450,8 +13454,8 @@
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>assert_eq!(y.unwrap_or_default(), 12);
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>// Result
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>let good_year_from_input = &quot;1909&quot;;
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>let bad_year_from_input = &quot;190blarg&quot;;
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>let good_year_from_input = "1909";
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>let bad_year_from_input = "190blarg";
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>let good_year = good_year_from_input.parse().unwrap_or_default();
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>let bad_year = bad_year_from_input.parse().unwrap_or_default();
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
@@ -13465,7 +13469,7 @@
 <ul>
 <li>map()：在 Option 是 Some 的情况下，通过 map 中提供的函数或闭包把 Option 里的类型转换成另一种类型。在 Option 是 None 的情况下，保持 None 不变。map() 会消耗原类型，也就是获取所有权。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>let maybe_some_string = Some(String::from(&quot;Hello, World!&quot;));
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>let maybe_some_string = Some(String::from("Hello, World!"));
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>let maybe_some_len = maybe_some_string.map(|s| s.len());
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>assert_eq!(maybe_some_len, Some(13));
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> 
@@ -13502,9 +13506,9 @@
 <ul>
 <li>as_ref()：把 <code>Option&lt;T&gt;</code> 或 <code>&amp;Option&lt;T&gt;</code> 转换成 <code>Option&lt;&amp;T&gt;</code>。创建一个新 Option，里面的类型是原来类型的引用，就是从 <code>Option&lt;T&gt;</code> 到 <code>Option&lt;&amp;T&gt;</code>。原来那个 <code>Option&lt;T&gt;</code> 实例保持不变。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>let text: Option&lt;String&gt; = Some(&quot;Hello, world!&quot;.to_string());
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>let text: Option&lt;String&gt; = Some("Hello, world!".to_string());
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>let text_length: Option&lt;usize&gt; = text.as_ref().map(|s| s.len());
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>println!(&quot;still can print text: {text:?}&quot;);
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>println!("still can print text: {text:?}");
 </code></pre></div>
 <ul>
 <li>as_mut()：把 <code>Option&lt;T&gt;</code> 或 <code>&amp;mut Option&lt;T&gt;</code> 转换成 <code>Option&lt;&amp;mut T&gt;</code>。</li>
@@ -13557,11 +13561,11 @@
 <ul>
 <li>map()：当 Result 是 Ok 的时候，把 Ok 里的类型通过参数里提供的函数运算并且可以转换成另外一种类型。当 Result 是 Err 的时候，原样返回 Err 和它携带的内容。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>let line = &quot;1\n2\n3\n4\n&quot;;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>let line = "1\n2\n3\n4\n";
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a> 
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>for num in line.lines() {
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>match num.parse::&lt;i32&gt;().map(|i| i * 2) {
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Ok(n) =&gt; println!(&quot;{n}&quot;),
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Ok(n) =&gt; println!("{n}"),
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>Err(..) =&gt; {}
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>}
 <a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>}
@@ -13572,7 +13576,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>let x: Result&lt;i32, &amp;str&gt; = Ok(-3);
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>assert_eq!(x.is_ok(), true);
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a> 
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>let x: Result&lt;i32, &amp;str&gt; = Err(&quot;Some error message&quot;);
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>let x: Result&lt;i32, &amp;str&gt; = Err("Some error message");
 <a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>assert_eq!(x.is_ok(), false);
 </code></pre></div>
 <ul>
@@ -13581,7 +13585,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>let x: Result&lt;i32, &amp;str&gt; = Ok(-3);
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>assert_eq!(x.is_err(), false);
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a> 
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>let x: Result&lt;i32, &amp;str&gt; = Err(&quot;Some error message&quot;);
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>let x: Result&lt;i32, &amp;str&gt; = Err("Some error message");
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>assert_eq!(x.is_err(), true);
 </code></pre></div>
 <ul>
@@ -13590,8 +13594,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>let x: Result&lt;u32, &amp;str&gt; = Ok(2);
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>assert_eq!(x.as_ref(), Ok(&amp;2));
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a> 
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>let x: Result&lt;u32, &amp;str&gt; = Err(&quot;Error&quot;);
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>assert_eq!(x.as_ref(), Err(&amp;&quot;Error&quot;));
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>let x: Result&lt;u32, &amp;str&gt; = Err("Error");
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>assert_eq!(x.as_ref(), Err(&amp;"Error"));
 </code></pre></div>
 <ul>
 <li>as_mut()：创建一个新 Result，里面的两种类型分别是原来两种类型的可变引用，就是从 <code>Result&lt;T, E&gt;</code> 到 <code>Result&lt;&amp;mut T, &amp;mut E&gt;</code>。原来那个 <code>Result&lt;T, E&gt;</code> 实例保持不变。</li>
@@ -13612,48 +13616,53 @@
 <ul>
 <li>and_then()：当 Result 是 Ok 时，把这个方法提供的函数或闭包应用到 Ok 携带的内容上面，并返回一个新的 Result。当 Result 是 Err 的时候，这个方法直接传递返回这个 Err 和它的负载。这个方法常常用于一路链式操作，前提是过程里的每一步都需要返回 Result。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>fn sq_then_to_string(x: u32) -&gt; Result&lt;String, &amp;&#39;static str&gt; {
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>x.checked_mul(x).map(|sq| sq.to_string()).ok_or(&quot;overflowed&quot;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>fn sq_then_to_string(x: u32) -&gt; Result&lt;String, &amp;'static str&gt; {
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>x.checked_mul(x).map(|sq| sq.to_string()).ok_or("overflowed")
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>}
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a> 
 <a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>assert_eq!(Ok(2).and_then(sq_then_to_string), Ok(4.to_string()));
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>assert_eq!(Ok(1_000_000).and_then(sq_then_to_string), Err(&quot;overflowed&quot;));
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>assert_eq!(Err(&quot;not a number&quot;).and_then(sq_then_to_string), Err(&quot;not a number&quot;));
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>assert_eq!(Ok(1_000_000).and_then(sq_then_to_string), Err("overflowed"));
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>assert_eq!(Err("not a number").and_then(sq_then_to_string), Err("not a number"));
 </code></pre></div>
 <ul>
 <li>map_err()：当 Result 是 Ok 时，传递原样返回。当 Result 是 Err时，对 Err 携带的内容使用这个方法提供的函数或闭包进行运算及类型转换。这个方法常常用于转换 Result 的 Err 的负载的类型，在错误处理流程中大量使用。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>fn stringify(x: u32) -&gt; String { format!(&quot;error code: {x}&quot;) }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>fn stringify(x: u32) -&gt; String { format!("error code: {x}") }
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>let x: Result&lt;u32, u32&gt; = Ok(2);
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>assert_eq!(x.map_err(stringify), Ok(2));
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>let x: Result&lt;u32, u32&gt; = Err(13);
-<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>assert_eq!(x.map_err(stringify), Err(&quot;error code: 13&quot;.to_string()));
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>assert_eq!(x.map_err(stringify), Err("error code: 13".to_string()));
 </code></pre></div>
-<h3 id="optiont-resultt-e_1"><code>Option&lt;T&gt;</code> 与 <code>Result&lt;T, E&gt;</code> 的相互转换</h3>
+<h3 id="optiont-resultt-e_1">
+<code>Option&lt;T&gt;</code> 与 <code>Result&lt;T, E&gt;</code> 的相互转换</h3>
 <p><code>Option&lt;T&gt;</code> 与 <code>Result&lt;T, E&gt;</code> 之间是可以互相转换的。转换的时候需要注意，<code>Result&lt;T, E&gt;</code> 比 <code>Option&lt;T&gt;</code> 多一个类型参数，所以它带的信息比 <code>Option&lt;T&gt;</code> 多一份，因此核心要点就是<strong>要注意信息的添加与抛弃</strong>。</p>
-<h4 id="optiont-resultt-eok_or"><code>从Option&lt;T&gt;</code> 到 <code>Result&lt;T, E&gt;：ok_or()</code></h4>
+<h4 id="optiont-resultt-eok_or">
+<code>从Option&lt;T&gt;</code> 到 <code>Result&lt;T, E&gt;：ok_or()</code>
+</h4>
 <p><code>Option&lt;T&gt;</code> 实例如果是 <code>Some</code>，直接把内容重新包在 <code>Result&lt;T, E&gt;::Ok()</code> 里。如果是 <code>None</code>，使用 <code>ok_or()</code> 里提供的参数作为 <code>Err</code> 的内容。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>let x = Some(&quot;foo&quot;);
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>assert_eq!(x.ok_or(0), Ok(&quot;foo&quot;));
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>let x = Some("foo");
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>assert_eq!(x.ok_or(0), Ok("foo"));
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>let x: Option&lt;&amp;str&gt; = None;
 <a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>assert_eq!(x.ok_or(0), Err(0));
 </code></pre></div>
-<h4 id="resultt-e-optiontok">从 <code>Result&lt;T, E&gt;</code> 到 <code>Option&lt;T&gt;：ok()</code></h4>
+<h4 id="resultt-e-optiontok">从 <code>Result&lt;T, E&gt;</code> 到 <code>Option&lt;T&gt;：ok()</code>
+</h4>
 <p>如果 <code>Result&lt;T, E&gt;</code> 是 <code>Ok</code>，就把内容重新包在 <code>Some</code> 里。如果 <code>Result&lt;T, E&gt;</code> 是 <code>Err</code>，就直接换成 <code>None</code>，丢弃 <code>Err</code> 里的内容，同时原 <code>Result&lt;T, E&gt;</code> 实例被消费。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>let x: Result&lt;u32, &amp;str&gt; = Ok(2);
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>assert_eq!(x.ok(), Some(2));
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>let x: Result&lt;u32, &amp;str&gt; = Err(&quot;Nothing here&quot;);
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>let x: Result&lt;u32, &amp;str&gt; = Err("Nothing here");
 <a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>assert_eq!(x.ok(), None);
 </code></pre></div>
-<h4 id="resultt-e-optionterr">从 <code>Result&lt;T, E&gt;</code> 到 <code>Option&lt;T&gt;：err()</code></h4>
+<h4 id="resultt-e-optionterr">从 <code>Result&lt;T, E&gt;</code> 到 <code>Option&lt;T&gt;：err()</code>
+</h4>
 <p>如果 <code>Result&lt;T, E&gt;</code> 是 <code>Ok</code>，直接换成 <code>None</code>，丢弃 <code>Ok</code> 里的内容。如果 <code>Result&lt;T, E&gt;</code> 是 <code>Err</code>，把内容重新包在 <code>Some</code> 里，同时原 <code>Result&lt;T, E&gt;</code> 实例被消费。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>let x: Result&lt;u32, &amp;str&gt; = Ok(2);
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>assert_eq!(x.err(), None);
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>let x: Result&lt;u32, &amp;str&gt; = Err(&quot;Nothing here&quot;);
-<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>assert_eq!(x.err(), Some(&quot;Nothing here&quot;));
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>let x: Result&lt;u32, &amp;str&gt; = Err("Nothing here");
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>assert_eq!(x.err(), Some("Nothing here"));
 </code></pre></div>
 <p>下面我们讲讲迭代器。</p>
 <h2 id="_3">迭代器</h2>
@@ -13663,14 +13672,15 @@
 <li>惰性计算，可以用来表达无限区间，比如第一讲我们说的range，可以表达1到无限这个集合，这种在其他有些语言中很难表达。</li>
 <li>可以安全地访问边界，不需要使用有访问风险的下标操作符。</li>
 </ol>
-<h3 id="next"><code>next()</code> 方法</h3>
+<h3 id="next">
+<code>next()</code> 方法</h3>
 <p>迭代器上有一个标准方法，叫作 <code>next()</code>，这个方法返回 <code>Option&lt;Item&gt;</code>，其中 Item 就是组成迭代器的元素。这个方法的字面意思就是<strong>迭代出下一个元素</strong>。如果这个集合被迭代完成了，那么最后一次执行会返回 <code>None</code>。比如下面的例子，在迭代器上调用 <code>.next()</code> 返回 <code>u32</code> 数字。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>fn main() {
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    let a: Vec&lt;u32&gt; = vec![1, 2, 3, 4, 5];
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    let mut an_iter = a.into_iter();    // 将Vec&lt;u32&gt;转换为迭代器
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    while let Some(i) = an_iter.next() {  // 调用 .next() 方法
-<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>        println!(&quot;{i}&quot;);
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>        println!("{i}");
 <a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    }
 <a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>}
 <a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>// 输出
@@ -13681,7 +13691,8 @@
 <a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>5
 </code></pre></div>
 <p>实际上，Rust中不止 <code>into_iter()</code> 这一种将集合转换成迭代器的方法。</p>
-<h3 id="iteriter_mutinto_iter"><code>iter()</code>、<code>iter_mut()</code>、<code>into_iter()</code>与三种迭代器</h3>
+<h3 id="iteriter_mutinto_iter">
+<code>iter()</code>、<code>iter_mut()</code>、<code>into_iter()</code>与三种迭代器</h3>
 <p>Rust中的迭代器根据所有权三态可以分成三种。</p>
 <ol>
 <li>获取集合元素不可变引用的迭代器，对应方法为 <code>iter()</code>。</li>
@@ -13714,34 +13725,34 @@
 <a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a>    assert_eq!(Some(3), an_iter.next());
 <a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a>    assert_eq!(None, an_iter.next());
 <a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a>
-<a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a>    println!(&quot;{:?}&quot;, a);
+<a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a>    println!("{:?}", a);
 <a id="__codelineno-29-26" name="__codelineno-29-26" href="#__codelineno-29-26"></a>}
 </code></pre></div>
 <p>你还可以与字符串数组进行对比加深理解。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>fn main() {
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    let mut a = [&quot;1&quot;.to_string(), &quot;2&quot;.to_string(), &quot;3&quot;.to_string()];
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    let mut a = ["1".to_string(), "2".to_string(), "3".to_string()];
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    let mut an_iter = a.iter();
 <a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    
-<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    assert_eq!(Some(&amp;&quot;1&quot;.to_string()), an_iter.next());
-<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    assert_eq!(Some(&amp;&quot;2&quot;.to_string()), an_iter.next());
-<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    assert_eq!(Some(&amp;&quot;3&quot;.to_string()), an_iter.next());
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    assert_eq!(Some(&amp;"1".to_string()), an_iter.next());
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    assert_eq!(Some(&amp;"2".to_string()), an_iter.next());
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    assert_eq!(Some(&amp;"3".to_string()), an_iter.next());
 <a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    assert_eq!(None, an_iter.next());
 <a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>
 <a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>    let mut an_iter = a.iter_mut();
 <a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>    
-<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>    assert_eq!(Some(&amp;mut &quot;1&quot;.to_string()), an_iter.next());
-<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>    assert_eq!(Some(&amp;mut &quot;2&quot;.to_string()), an_iter.next());
-<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>    assert_eq!(Some(&amp;mut &quot;3&quot;.to_string()), an_iter.next());
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>    assert_eq!(Some(&amp;mut "1".to_string()), an_iter.next());
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>    assert_eq!(Some(&amp;mut "2".to_string()), an_iter.next());
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>    assert_eq!(Some(&amp;mut "3".to_string()), an_iter.next());
 <a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>    assert_eq!(None, an_iter.next());
 <a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>
 <a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>    let mut an_iter = a.into_iter();
 <a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>    
-<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a>    assert_eq!(Some(&quot;1&quot;.to_string()), an_iter.next());
-<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>    assert_eq!(Some(&quot;2&quot;.to_string()), an_iter.next());
-<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a>    assert_eq!(Some(&quot;3&quot;.to_string()), an_iter.next());
+<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a>    assert_eq!(Some("1".to_string()), an_iter.next());
+<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>    assert_eq!(Some("2".to_string()), an_iter.next());
+<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a>    assert_eq!(Some("3".to_string()), an_iter.next());
 <a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a>    assert_eq!(None, an_iter.next());
 <a id="__codelineno-30-23" name="__codelineno-30-23" href="#__codelineno-30-23"></a>    
-<a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a>    println!(&quot;{:?}&quot;, a);    // 请你试试这一行有没有问题？
+<a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a>    println!("{:?}", a);    // 请你试试这一行有没有问题？
 <a id="__codelineno-30-25" name="__codelineno-30-25" href="#__codelineno-30-25"></a>}
 </code></pre></div>
 <p>对于整数数组 <code>[1,2,3]</code> 而言，调用 <code>into_iter()</code> 实际会复制一份这个数组，再将复制后的数组转换成迭代器，并消耗掉这个复制后的数组，因此最后的打印语句能把原来那个a打印出来。对于字符串数组 <code>["1".to_string(), "2".to_string(), "3".to_string()]</code> 而言，调用 <code>into_iter()</code> 会直接消耗掉这个字符串数组，因此最后的打印语句不能把原来那个a打印出来。</p>
@@ -13762,21 +13773,21 @@
 <p>用这两种形式就不会消耗原集合所有权。</p>
 <p>我们来看示例。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>fn main() {
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    let mut a = [&quot;1&quot;.to_string(), &quot;2&quot;.to_string(), &quot;3&quot;.to_string()];
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    let mut a = ["1".to_string(), "2".to_string(), "3".to_string()];
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>    
 <a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>    for item in &amp;a {  
-<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>        println!(&quot;{}&quot;, item);
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>        println!("{}", item);
 <a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>    }
 <a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>    
 <a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>    for item in &amp;mut a {
-<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>        println!(&quot;{}&quot;, item);
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>        println!("{}", item);
 <a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>    }
 <a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>    
 <a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>    for item in a {    // 请想一想为什么要把这一句放在后面
-<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>        println!(&quot;{}&quot;, item);
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>        println!("{}", item);
 <a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>    }
 <a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>    
-<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>    // println!(&quot;{:?}&quot;, a);  // 你可以试试把这一句打开
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>    // println!("{:?}", a);  // 你可以试试把这一句打开
 <a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a>}
 <a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a>// 输出
 <a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>1
@@ -13793,10 +13804,10 @@
 <h3 id="_4">获取集合类型中元素的所有权</h3>
 <p>我们来看一个简单的例子，一般来说，我们想要获取Vec里的一个元素，只需要下标操作就可以了。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>fn main() {
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    let s1 = String::from(&quot;aaa&quot;);
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>    let s2 = String::from(&quot;bbb&quot;);
-<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    let s3 = String::from(&quot;ccc&quot;);
-<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    let s4 = String::from(&quot;ddd&quot;);
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    let s1 = String::from("aaa");
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>    let s2 = String::from("bbb");
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    let s3 = String::from("ccc");
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    let s4 = String::from("ddd");
 <a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>
 <a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>    let v = vec![s1, s2, s3, s4];
 <a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    let a = v[0];    // 这里，我们想访问 s1 的内容
@@ -13816,10 +13827,10 @@
 </code></pre></div>
 <p>提示不能从 <code>Vec&lt;String&gt;</code> 中用下标操作符移出元素。我们改一下代码。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>fn main() {
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    let s1 = String::from(&quot;aaa&quot;);
-<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    let s2 = String::from(&quot;bbb&quot;);
-<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>    let s3 = String::from(&quot;ccc&quot;);
-<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>    let s4 = String::from(&quot;ddd&quot;);
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    let s1 = String::from("aaa");
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    let s2 = String::from("bbb");
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>    let s3 = String::from("ccc");
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>    let s4 = String::from("ddd");
 <a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>
 <a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>    let v = vec![s1, s2, s3, s4];
 <a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>    let a = &amp;v[0];  // 明确a只获得v中第一个元素的引用
@@ -13828,14 +13839,14 @@
 <p>明确a只获得v中第一个元素的引用，这下可以编译通过了。这里，你可以顺便思考一下，对于 <code>Vec&lt;u32&gt;</code> 这种类型的动态数组，let a = v[0]; 这种代码可以编译通过吗？你可以立即动手测试一下。</p>
 <p>在上面示例中，你可能为了从集合中获得 s1 的所有权，而不得不使用 <code>let a = v[0].clone()</code>。而根据我们这节课讲的迭代器知识，使用 <code>into_iter()</code> 就可以拿到并操作上述动态数组v中元素的所有权。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>fn main() {
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    let s1 = String::from(&quot;aaa&quot;);
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    let s2 = String::from(&quot;bbb&quot;);
-<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    let s3 = String::from(&quot;ccc&quot;);
-<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>    let s4 = String::from(&quot;ddd&quot;);
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    let s1 = String::from("aaa");
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    let s2 = String::from("bbb");
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    let s3 = String::from("ccc");
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>    let s4 = String::from("ddd");
 <a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>
 <a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>    let v = vec![s1, s2, s3, s4];
 <a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>    for s in v {      // 这里，s拿到了集合元素的所有权
-<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>        println!(&quot;{}&quot;, s);
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>        println!("{}", s);
 <a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>    }
 <a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>}
 </code></pre></div>
@@ -13843,7 +13854,7 @@
 <h2 id="_5">小结</h2>
 <p>我们这节课详细探讨了Rust中的 <code>Option&lt;T&gt;</code> 和 <code>Result&lt;T, E&gt;</code> 的定义及常见操作。学习了如何以解包和不解包方式使用它们。内容比较细，风格可能也是你不太熟悉的。不过现在你只需要先了解这种代码风格，以后的项目实践中再慢慢掌握它们。</p>
 <p>我们还介绍了迭代器的概念。迭代器的 <code>next()</code> 方法会返回一个 <code>Option&lt;Item&gt;</code> 类型。在所有权三态理论的指导下Rust中的迭代器也划分成了三种，可以通过不同的方法获取到集合元素的不可变引用、可变引用和所有权，这是Rust和其他语言的迭代器很不一样的地方。每种迭代器都有各自适用的场景，正确使用迭代器能提高代码的可靠性和可阅读性。</p>
-<p><img alt="" src="https://static001.geekbang.org/resource/image/d3/32/d300204ce7c0e9a948b486d617e7fa32.jpg?wh=1646x1233" /></p>
+<p><img alt="" src="https://static001.geekbang.org/resource/image/d3/32/d300204ce7c0e9a948b486d617e7fa32.jpg?wh=1646x1233"></p>
 <p>学习完这节课的内容之后，你应该能更深刻地感受到所有权概念在Rust语言中的支配地位。</p>
 <h2 id="_6">思考题</h2>
 <p>你可以用同样的思路去研究一下，看看如何拿到 HashMap 中值的所有权。</p>
@@ -13851,27 +13862,57 @@
 <p>欢迎你把你的成果展示在评论区，也欢迎你把这节课的内容分享给需要的朋友，邀他一起学习，我们下节课再见！</p>
 <div><strong>精选留言（15）</strong></div>
 <ul>
-<li><span>天高地迥</span> 👍（17） 💬（1）<p>Vec&lt;String&gt; []索引不能move的原因思考：
-Vec实现了Index trait的index方法，该方法返回一个引用。然后使用［］语法糖的时候，编译器会自动解引用：v［0］变成*v.index(&amp;0)。其实错误的本质是borrowed value不能move out。</p>2023-11-06</li><br/><li><span>Ransang</span> 👍（7） 💬（1）<p>HashMap实现了into_iter()，因此可以用for语句获取其所有权，另外我在老师发的hashmap的文档中发现HashMap的iter()和iter_mut()是分类在Implementations中，而into_iter()是在Trait Implementations中，请问这里面有什么特殊之处吗</p>2023-11-15</li><br/><li><span>小可爱(`へ´*)ノ</span> 👍（4） 💬（1）<p>老师讲的很好，多了解rust底层规则，才能写出更好的代码。</p>2023-12-13</li><br/><li><span>鸠摩智</span> 👍（2） 💬（1）<p>    let arr = vec![1,3,3,4];
+<li>
+<span>天高地迥</span> 👍（17） 💬（1）<p>Vec&lt;String&gt; []索引不能move的原因思考：
+Vec实现了Index trait的index方法，该方法返回一个引用。然后使用［］语法糖的时候，编译器会自动解引用：v［0］变成*v.index(&amp;0)。其实错误的本质是borrowed value不能move out。</p>2023-11-06</li>
+<br><li>
+<span>Ransang</span> 👍（7） 💬（1）<p>HashMap实现了into_iter()，因此可以用for语句获取其所有权，另外我在老师发的hashmap的文档中发现HashMap的iter()和iter_mut()是分类在Implementations中，而into_iter()是在Trait Implementations中，请问这里面有什么特殊之处吗</p>2023-11-15</li>
+<br><li>
+<span>小可爱(`へ´*)ノ</span> 👍（4） 💬（1）<p>老师讲的很好，多了解rust底层规则，才能写出更好的代码。</p>2023-12-13</li>
+<br><li>
+<span>鸠摩智</span> 👍（2） 💬（1）<p>    let arr = vec![1,3,3,4];
     let a = arr[0];
-    println!(&quot;{}&quot;, a);
-    println!(&quot;{:?}&quot;, arr);
-对于Vec&lt;u32&gt;是可以用v[0]的，因为u32是可以Copy的</p>2023-11-09</li><br/><li><span>Marco</span> 👍（2） 💬（1）<p>老师你好。
-&quot;next() 方法&quot;这一节的例子也可以改为如下结构吧
+    println!("{}", a);
+    println!("{:?}", arr);
+对于Vec&lt;u32&gt;是可以用v[0]的，因为u32是可以Copy的</p>2023-11-09</li>
+<br><li>
+<span>Marco</span> 👍（2） 💬（1）<p>老师你好。
+"next() 方法"这一节的例子也可以改为如下结构吧
     loop {
         match an_iter.next() {
-            Some(i) =&gt; println!(&quot;{i}&quot;),
+            Some(i) =&gt; println!("{i}"),
             None =&gt; break,
         }
-    }</p>2023-11-07</li><br/><li><span>PEtFiSh</span> 👍（1） 💬（1）<p>for (k, v) in myhash { &#47;&#47;`myhash` moved due to this implicit call to `.into_iter()`
-    &#47;&#47; todo:
-    &#47;&#47; 这里会获得v的所有权，并且消耗掉myhash
+    }</p>2023-11-07</li>
+<br><li>
+<span>PEtFiSh</span> 👍（1） 💬（1）<p>for (k, v) in myhash { //`myhash` moved due to this implicit call to `.into_iter()`
+    // todo:
+    // 这里会获得v的所有权，并且消耗掉myhash
 }
 
-println!(&quot;{:?}&quot;, myhash); &#47;&#47;value borrowed here after move</p>2023-11-06</li><br/><li><span>-</span> 👍（1） 💬（1）<p> 定义了类型以后，let a: Vec&lt;u32&gt; = [1, 2, 3, 4, 5];语法错误
-修改为let a= [1, 2, 3, 4, 5];</p>2023-11-06</li><br/><li><span>Calvin</span> 👍（0） 💬（1）<p>请教下老师，文章中“不解包的情况下如何操作？”小节部分说到 Result&lt;T, E&gt; 的常用方法 map() 时，里面示例代码的模式匹配的 Err(..) 分支是什么意思？我试了 Err(_) 也是可以执行通过的，_ 忽略元组枚举变体 Err 的负载，（和 .. 相比）它们两个有什么区别？分别什么时候使用哪个呢？</p>2024-03-28</li><br/><li><span>wcf</span> 👍（0） 💬（2）<p>为什么会有这个差异呢？你可以从我们第 2 讲所有权相关知识中找到答案。
+println!("{:?}", myhash); //value borrowed here after move</p>2023-11-06</li>
+<br><li>
+<span>-</span> 👍（1） 💬（1）<p> 定义了类型以后，let a: Vec&lt;u32&gt; = [1, 2, 3, 4, 5];语法错误
+修改为let a= [1, 2, 3, 4, 5];</p>2023-11-06</li>
+<br><li>
+<span>Calvin</span> 👍（0） 💬（1）<p>请教下老师，文章中“不解包的情况下如何操作？”小节部分说到 Result&lt;T, E&gt; 的常用方法 map() 时，里面示例代码的模式匹配的 Err(..) 分支是什么意思？我试了 Err(_) 也是可以执行通过的，_ 忽略元组枚举变体 Err 的负载，（和 .. 相比）它们两个有什么区别？分别什么时候使用哪个呢？</p>2024-03-28</li>
+<br><li>
+<span>wcf</span> 👍（0） 💬（2）<p>为什么会有这个差异呢？你可以从我们第 2 讲所有权相关知识中找到答案。
 ============
-没看出来为什么?</p>2024-01-24</li><br/><li><span>当初莫相识</span> 👍（0） 💬（0）<p>C++ 现在有Option，但是没有Result，可以如何设计自行设计一个Result呢</p>2024-11-26</li><br/><li><span>落星野</span> 👍（0） 💬（0）<p>上面对Go语言返回值的说法有一点小问题，Go语言不限制返回值的数量与类型，最后一个返回的 err 只是一种编码习惯，一般用于返回实现了 Error 接口的实例，亦即只要实现了 error.Error() 方法的实例返回都皆可。如果用户为了简便起见，在最后返回string类型（字符串），则返回的 err 就是一个字符串。</p>2024-10-21</li><br/><li><span>Geek_93cb91</span> 👍（0） 💬（0）<p>买过好几本书了&#xff0c;反复入门再入门&#xff0c;感觉唐老师的内容比书全面多了&#xff0c;再入门一遍&#xff0c;最后一遍&#xff01;</p>2024-08-11</li><br/><li><span>wbytts</span> 👍（0） 💬（0）<p>unwrap_or_default 的配图，Result那一列写错文字了</p>2024-05-19</li><br/><li><span>Massdama</span> 👍（0） 💬（0）<p>持有使用权的数据需要所有时要考虑借 也就是引用</p>2024-05-15</li><br/><li><span>独钓寒江</span> 👍（0） 💬（0）<p>第三次刷基础篇，之前不知道Some(T)是什么，具体来说是不知道Some是什么类型，因为枚举内可以包含多种类型，那么Some是什么类型？看得好懵，心里慌得一批。这次搜索了一下，大多只是说Some是Option类型，只看到Rust By Example里说了一句Some(value)是元组结构体，噢， 终于没那么懵了</p>2024-04-30</li><br/>
+没看出来为什么?</p>2024-01-24</li>
+<br><li>
+<span>当初莫相识</span> 👍（0） 💬（0）<p>C++ 现在有Option，但是没有Result，可以如何设计自行设计一个Result呢</p>2024-11-26</li>
+<br><li>
+<span>落星野</span> 👍（0） 💬（0）<p>上面对Go语言返回值的说法有一点小问题，Go语言不限制返回值的数量与类型，最后一个返回的 err 只是一种编码习惯，一般用于返回实现了 Error 接口的实例，亦即只要实现了 error.Error() 方法的实例返回都皆可。如果用户为了简便起见，在最后返回string类型（字符串），则返回的 err 就是一个字符串。</p>2024-10-21</li>
+<br><li>
+<span>Geek_93cb91</span> 👍（0） 💬（0）<p>买过好几本书了，反复入门再入门，感觉唐老师的内容比书全面多了，再入门一遍，最后一遍！</p>2024-08-11</li>
+<br><li>
+<span>wbytts</span> 👍（0） 💬（0）<p>unwrap_or_default 的配图，Result那一列写错文字了</p>2024-05-19</li>
+<br><li>
+<span>Massdama</span> 👍（0） 💬（0）<p>持有使用权的数据需要所有时要考虑借 也就是引用</p>2024-05-15</li>
+<br><li>
+<span>独钓寒江</span> 👍（0） 💬（0）<p>第三次刷基础篇，之前不知道Some(T)是什么，具体来说是不知道Some是什么类型，因为枚举内可以包含多种类型，那么Some是什么类型？看得好懵，心里慌得一批。这次搜索了一下，大多只是说Some是Option类型，只看到Rust By Example里说了一句Some(value)是元组结构体，噢， 终于没那么懵了</p>2024-04-30</li>
+<br>
 </ul>
 
 
@@ -13897,7 +13938,7 @@ println!(&quot;{:?}&quot;, myhash); &#47;&#47;value borrowed here after move</p>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -13907,13 +13948,13 @@ println!(&quot;{:?}&quot;, myhash); &#47;&#47;value borrowed here after move</p>
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
           <a href="../07-%E7%B1%BB%E5%9E%8B%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0%EF%BC%9A%E7%BB%99Rust%E5%B0%8F%E5%8A%A9%E6%89%8B%E6%8F%90%E4%BE%9B%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 07 类型与类型参数：给Rust小助手提供更多信息">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -13938,7 +13979,7 @@ println!(&quot;{:?}&quot;, myhash); &#47;&#47;value borrowed here after move</p>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
